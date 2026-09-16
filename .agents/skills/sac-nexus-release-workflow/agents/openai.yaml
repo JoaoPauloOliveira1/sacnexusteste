@@ -1,0 +1,4 @@
+interface:
+  display_name: "SAC Nexus Release Workflow"
+  short_description: "Promote and deploy Nexus changes safely"
+  default_prompt: "Use $sac-nexus-release-workflow to validate a staging-to-production promotion or rollback."

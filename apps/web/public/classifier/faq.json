@@ -1,0 +1,156 @@
+[
+  {
+    "id": "faq_01",
+    "pergunta": "O que é a classificação de risco de uma edificação?",
+    "resposta": "A classificação de risco é o enquadramento da edificação com base em critérios definidos na legislação de segurança contra incêndio, considerando fatores como atividade desenvolvida, área, altura e características construtivas.",
+    "categoria": "geral",
+    "ordem": "1"
+  },
+  {
+    "id": "faq_02",
+    "pergunta": "Para que serve a classificação de risco?",
+    "resposta": "A classificação de risco define quais medidas de segurança contra incêndio devem ser adotadas na edificação, bem como o tipo de processo necessário para sua regularização junto ao Corpo de Bombeiros Militar de Pernambuco.",
+    "categoria": "geral",
+    "ordem": "2"
+  },
+  {
+    "id": "faq_03",
+    "pergunta": "O resultado apresentado pelo sistema tem validade legal?",
+    "resposta": "Não. O resultado fornecido por este sistema tem caráter apenas orientativo e não substitui a análise oficial realizada pelo CBMPE.",
+    "categoria": "legal",
+    "ordem": "3"
+  },
+  {
+    "id": "faq_04",
+    "pergunta": "O que é necessário para regularizar meu imóvel?",
+    "resposta": "A regularização depende do nível de risco da edificação. Pode incluir a apresentação de um Projeto de Segurança Contra Incêndio e Pânico (PCI) elaborado por profissional habilitado ou ser dispensado da regularização através da Declaração de Dispensa de Licenciamento do Corpo de Bombeiros (DDLCB).",
+    "categoria": "regularizacao",
+    "ordem": "4"
+  },
+  {
+    "id": "faq_05",
+    "pergunta": "O que é DDLCB (Declaração de Dispensa de Licenciamento do Corpo de Bombeiros)?",
+    "resposta": "A DDLCB é um documento que dispensa determinadas edificações do processo de licenciamento junto ao Corpo de Bombeiros, por apresentarem baixo risco e atenderem a critérios específicos definidos na legislação.",
+    "categoria": "regularizacao",
+    "ordem": "20"
+  },
+  {
+    "id": "faq_06",
+    "pergunta": "O que é o AVCB?",
+    "resposta": "O Auto de Vistoria do Corpo de Bombeiros (AVCB) é o documento que certifica que a edificação atende às normas de segurança contra incêndio e pânico.",
+    "categoria": "regularizacao",
+    "ordem": "6"
+  },
+  {
+    "id": "faq_07",
+    "pergunta": "O que é o COSCIP?",
+    "resposta": "",
+    "categoria": "geral",
+    "ordem": "7"
+  },
+  {
+    "id": "faq_08",
+    "pergunta": "Toda edificação precisa de AVCB?",
+    "resposta": "Nem todas. A obrigatoriedade depende do nível de risco da edificação, conforme legislação vigente.",
+    "categoria": "regularizacao",
+    "ordem": "8"
+  },
+  {
+    "id": "faq_09",
+    "pergunta": "O que é um projeto de segurança contra incêndio e pânico (PCI)?",
+    "resposta": "É o conjunto de documentos técnicos que define as medidas de segurança da edificação, como extintores, saídas de emergência, sinalização e sistemas de combate a incêndio.",
+    "categoria": "regularizacao",
+    "ordem": "9"
+  },
+  {
+    "id": "faq_10",
+    "pergunta": "Preciso contratar um engenheiro ou arquiteto?",
+    "resposta": "Para edificações de risco alto, é necessário contratar um profissional habilitado para elaboração do projeto de segurança contra incêndio e pânico. Para nível baixo ou médio não é necessário.",
+    "categoria": "regularizacao",
+    "ordem": "10"
+  },
+  {
+    "id": "faq_11",
+    "pergunta": "Como sei se minha atividade é de alto risco?",
+    "resposta": "O sistema realiza essa identificação, utilizando a classificação prevista na legislação estadual, com base na atividade informada, características físicas da edificação e seu uso.",
+    "categoria": "geral",
+    "ordem": "11"
+  },
+  {
+    "id": "faq_12",
+    "pergunta": "Posso alterar as informações após responder o formulário?",
+    "resposta": "Sim. Você pode reiniciar o preenchimento do formulário a qualquer momento para corrigir ou atualizar as informações.",
+    "categoria": "sistema",
+    "ordem": "12"
+  },
+  {
+    "id": "faq_13",
+    "pergunta": "O sistema armazena meus dados?",
+    "resposta": "Não. O sistema não armazena informações pessoais ou dados da edificação, sendo utilizado apenas para processamento imediato das respostas.",
+    "categoria": "sistema",
+    "ordem": "13"
+  },
+  {
+    "id": "faq_14",
+    "pergunta": "Como iniciar o processo de regularização?",
+    "resposta": "Após identificar o nível de risco, siga as orientações apresentadas no resultado e acesse o link indicado para iniciar o processo junto ao CBMPE.",
+    "categoria": "regularizacao",
+    "ordem": "14"
+  },
+  {
+    "id": "faq_15",
+    "pergunta": "Quanto tempo leva para regularizar uma edificação?",
+    "resposta": "O prazo varia conforme o nível de risco e a complexidade da edificação, podendo ser mais rápido em processos simplificados e mais detalhado em casos de maior risco.",
+    "categoria": "geral",
+    "ordem": "15"
+  },
+  {
+    "id": "faq_16",
+    "pergunta": "Quais são as principais medidas de segurança contra incêndio?",
+    "resposta": "As medidas podem incluir extintores, hidrantes, sinalização de emergência, iluminação de emergência, saídas de evacuação e sistemas automáticos de combate a incêndio.",
+    "categoria": "tecnico",
+    "ordem": "16"
+  },
+  {
+    "id": "faq_17",
+    "pergunta": "O que acontece se o imóvel não estiver regularizado?",
+    "resposta": "A edificação pode estar sujeita a penalidades legais, além de oferecer riscos à segurança das pessoas e do patrimônio.",
+    "categoria": "legal",
+    "ordem": "17"
+  },
+  {
+    "id": "faq_18",
+    "pergunta": "O que é área construída?",
+    "resposta": "Área construída é a soma das áreas cobertas de uma edificação, incluindo todos os pavimentos,  e que o piso abaixo dessa área coberta seja trabalhado (não esteja diretamente sobre o solo).",
+    "categoria": "tecnico",
+    "ordem": "18"
+  },
+  {
+    "id": "faq_19",
+    "pergunta": "O que é COSCIP?",
+    "resposta": "COSCIP é o Código de Segurança Contra Incêndio e Pânico, que estabelece normas e diretrizes para prevenção e combate a incêndios nas edificações, visando à proteção da vida, do patrimônio e do meio ambiente.",
+    "categoria": "legal",
+    "ordem": "19"
+  },
+  {
+    "id": "faq_20",
+    "pergunta": "O que são gases inflamáveis?",
+    "resposta": "Gases inflamáveis são substâncias que podem entrar em combustão quando misturadas com o ar em determinadas concentrações. Exemplos incluem gás natural (GN), hidrogênio e acetileno.",
+    "categoria": "tecnico",
+    "ordem": "20"
+  },
+  {
+    "id": "faq_21",
+    "pergunta": "O que são líquidos inflamáveis?",
+    "resposta": "Líquidos inflamáveis são substâncias que pegam fogo com facilidade, principalmente quando expostas ao calor ou a uma faísca. Eles liberam vapores que podem se incendiar rapidamente. Exemplos incluem gasolina, álcool, solventes, thinner e querosene.",
+    "categoria": "tecnico",
+    "ordem": "21"
+  },
+  {
+    "id": "faq_22",
+    "pergunta": "O que é área de dispersão?",
+    "resposta": "Área de dispersão é um espaço aberto e seguro destinado à reunião temporária de pessoas em caso de evacuação da edificação, permitindo o afastamento da zona de risco e facilitando o controle e a organização durante emergências.",
+    "categoria": "tecnico",
+    "ordem": "22"
+  }
+]

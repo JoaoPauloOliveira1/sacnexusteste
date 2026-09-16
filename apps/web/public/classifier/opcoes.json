@@ -1,0 +1,277 @@
+[
+  {
+    "input_id": "area",
+    "opcoes": "ate_200",
+    "opcoes_label": "Até 200 m²"
+  },
+  {
+    "input_id": "area",
+    "opcoes": "de_200_a_930",
+    "opcoes_label": "Acima de 200 e até 930 m²"
+  },
+  {
+    "input_id": "area",
+    "opcoes": "acima_de_930",
+    "opcoes_label": "Acima de 930 m²"
+  },
+  {
+    "input_id": "pavimentos",
+    "opcoes": "exclusivamente_terreo",
+    "opcoes_label": "Exclusivamente Térreo"
+  },
+  {
+    "input_id": "pavimentos",
+    "opcoes": "2_ou_3_pavimentos",
+    "opcoes_label": "02 ou 03 pavimentos"
+  },
+  {
+    "input_id": "pavimentos",
+    "opcoes": "4_ou_mais_pavimentos",
+    "opcoes_label": "04 ou mais pavimentos"
+  },
+  {
+    "input_id": "booleano",
+    "opcoes": "true",
+    "opcoes_label": "Sim"
+  },
+  {
+    "input_id": "booleano",
+    "opcoes": "false",
+    "opcoes_label": "Não"
+  },
+  {
+    "input_id": "area_imovel_hospedeiro",
+    "opcoes": "ate_200",
+    "opcoes_label": "Até 200 m²"
+  },
+  {
+    "input_id": "area_imovel_hospedeiro",
+    "opcoes": "de_200_a_930",
+    "opcoes_label": "Acima de 200 e até 930 m²"
+  },
+  {
+    "input_id": "area_imovel_hospedeiro",
+    "opcoes": "acima_de_930",
+    "opcoes_label": "Acima de 930 m²"
+  },
+  {
+    "input_id": "imovel_reuniao_publico_lotacao",
+    "opcoes": "nao_se_aplica",
+    "opcoes_label": "Não se aplica (não é destinado a reunião de público)"
+  },
+  {
+    "input_id": "imovel_reuniao_publico_lotacao",
+    "opcoes": "ate_100",
+    "opcoes_label": "Até 100 pessoas"
+  },
+  {
+    "input_id": "imovel_reuniao_publico_lotacao",
+    "opcoes": "mais_de_100",
+    "opcoes_label": "Mais de 100 pessoas"
+  },
+  {
+    "input_id": "imovel_hotel_leitos",
+    "opcoes": "nao_se_aplica",
+    "opcoes_label": "Não se aplica (não é hotel/pousada/pensão)"
+  },
+  {
+    "input_id": "imovel_hotel_leitos",
+    "opcoes": "ate_16",
+    "opcoes_label": "Até 16 leitos"
+  },
+  {
+    "input_id": "imovel_hotel_leitos",
+    "opcoes": "de_16_ate_40",
+    "opcoes_label": "Mais de 16 e até 40 leitos"
+  },
+  {
+    "input_id": "imovel_hotel_leitos",
+    "opcoes": "mais_de_40",
+    "opcoes_label": "Mais de 40 leitos"
+  },
+  {
+    "input_id": "quantidade_botijoes",
+    "opcoes": "nao_possui",
+    "opcoes_label": "Não possui"
+  },
+  {
+    "input_id": "quantidade_botijoes",
+    "opcoes": "ate_39",
+    "opcoes_label": "Até 39 kg (ou 3 botijões de 13 kg)"
+  },
+  {
+    "input_id": "quantidade_botijoes",
+    "opcoes": "de_39_ate_190",
+    "opcoes_label": "Mais de 39 kg até 190 kg"
+  },
+  {
+    "input_id": "quantidade_botijoes",
+    "opcoes": "mais_de_190",
+    "opcoes_label": "Mais de 190 kg"
+  },
+  {
+    "input_id": "quantidade_liquidos_inflamaveis",
+    "opcoes": "nao_possui",
+    "opcoes_label": "Não possui"
+  },
+  {
+    "input_id": "quantidade_liquidos_inflamaveis",
+    "opcoes": "ate_150",
+    "opcoes_label": "Até 150 litros"
+  },
+  {
+    "input_id": "quantidade_liquidos_inflamaveis",
+    "opcoes": "de_150_ate_1000",
+    "opcoes_label": "Mais de 150 e até 1.000 litros"
+  },
+  {
+    "input_id": "quantidade_liquidos_inflamaveis",
+    "opcoes": "mais_de_1000",
+    "opcoes_label": "Mais de 1.000 litros"
+  },
+  {
+    "input_id": "area_imovel_vizinho",
+    "opcoes": "ate_200",
+    "opcoes_label": "Até 200 m²"
+  },
+  {
+    "input_id": "area_imovel_vizinho",
+    "opcoes": "de_200_a_930",
+    "opcoes_label": "Acima de 200 e até 930 m²"
+  },
+  {
+    "input_id": "area_imovel_vizinho",
+    "opcoes": "acima_de_930",
+    "opcoes_label": "Acima de 930 m²"
+  },
+  {
+    "input_id": "pavimentos_hospedeiro",
+    "opcoes": "exclusivamente_terreo",
+    "opcoes_label": "Exclusivamente Térreo"
+  },
+  {
+    "input_id": "pavimentos_hospedeiro",
+    "opcoes": "2_ou_3_pavimentos",
+    "opcoes_label": "02 ou 03 pavimentos"
+  },
+  {
+    "input_id": "pavimentos_hospedeiro",
+    "opcoes": "4_ou_mais_pavimentos",
+    "opcoes_label": "04 ou mais pavimentos"
+  },
+  {
+    "input_id": "pavimentos_vizinho",
+    "opcoes": "exclusivamente_terreo",
+    "opcoes_label": "Exclusivamente Térreo"
+  },
+  {
+    "input_id": "pavimentos_vizinho",
+    "opcoes": "2_ou_3_pavimentos",
+    "opcoes_label": "02 ou 03 pavimentos"
+  },
+  {
+    "input_id": "pavimentos_vizinho",
+    "opcoes": "4_ou_mais_pavimentos",
+    "opcoes_label": "04 ou mais pavimentos"
+  },
+  {
+    "input_id": "area_espaco_saida",
+    "opcoes": "ate_200",
+    "opcoes_label": "Até 200 m²"
+  },
+  {
+    "input_id": "area_espaco_saida",
+    "opcoes": "de_200_a_930",
+    "opcoes_label": "Acima de 200 e até 930 m²"
+  },
+  {
+    "input_id": "area_espaco_saida",
+    "opcoes": "acima_de_930",
+    "opcoes_label": "Acima de 930 m²"
+  },
+  {
+    "input_id": "enquadramento_risco_i",
+    "opcoes": "atividade_residencia_unifamiliar",
+    "opcoes_label": "Exercida em residência unifamiliar (casa)"
+  },
+  {
+    "input_id": "enquadramento_risco_i",
+    "opcoes": "atividade_tipicamente_digital",
+    "opcoes_label": "Tipicamente digital ou exercida na dependência de clientes (ex: pintor, encanador, pedreiro, eletricista)"
+  },
+  {
+    "input_id": "enquadramento_risco_i",
+    "opcoes": "atividade_transitoria",
+    "opcoes_label": "Exercida transitoriamente (ambulante) — ex: carrinho de lanche, veículo de alimento, comércio ambulante"
+  },
+  {
+    "input_id": "enquadramento_risco_i",
+    "opcoes": "atividade_barraca",
+    "opcoes_label": "Exercida em local fixo, sem endereço formal, com tendas/toldos/barracas, área de apoio até 200 m²"
+  },
+  {
+    "input_id": "enquadramento_risco_i",
+    "opcoes": "estacao_elevada",
+    "opcoes_label": "Torre de transmissão/antena/estação de bombeamento/elevatória/energia solar ou eólica, isolada, sem caráter habitável, até 200 m² de área construída"
+  },
+  {
+    "input_id": "enquadramento_risco_i",
+    "opcoes": "nenhuma",
+    "opcoes_label": "Nenhuma das anteriores"
+  },
+  {
+    "input_id": "evento_temporario_caracteristicas",
+    "opcoes": "evento_temporario_controle",
+    "opcoes_label": "Tem controle e/ou restrição de acesso de público (contagem ou cobrança de ingresso)"
+  },
+  {
+    "input_id": "evento_temporario_caracteristicas",
+    "opcoes": "camarote_evento_temporario",
+    "opcoes_label": "Tem camarote ou arquibancada com capacidade de público acima de 100 pessoas"
+  },
+  {
+    "input_id": "evento_temporario_caracteristicas",
+    "opcoes": "nenhuma_evento",
+    "opcoes_label": "Nenhuma das anteriores"
+  },
+  {
+    "input_id": "caracteristicas_terreo",
+    "opcoes": "imovel_saida_direta",
+    "opcoes_label": "Possui saída direta para área externa (logradouro, via pública ou área de dispersão)"
+  },
+  {
+    "input_id": "caracteristicas_terreo",
+    "opcoes": "imovel_sem_abertura_vizinho",
+    "opcoes_label": "Não tem abertura (porta, janela etc.) para outra edificação comercial adjacente"
+  },
+  {
+    "input_id": "outra_atividade_risco_maior",
+    "opcoes": "sim",
+    "opcoes_label": "Sim"
+  },
+  {
+    "input_id": "outra_atividade_risco_maior",
+    "opcoes": "nao",
+    "opcoes_label": "Não"
+  },
+  {
+    "input_id": "outra_atividade_risco_maior",
+    "opcoes": "nao_sei",
+    "opcoes_label": "Não sei"
+  },
+  {
+    "input_id": "isolamento_corta_fogo",
+    "opcoes": "sim",
+    "opcoes_label": "Sim"
+  },
+  {
+    "input_id": "isolamento_corta_fogo",
+    "opcoes": "nao",
+    "opcoes_label": "Não"
+  },
+  {
+    "input_id": "isolamento_corta_fogo",
+    "opcoes": "nao_sei_dizer",
+    "opcoes_label": "Não sei dizer"
+  }
+]

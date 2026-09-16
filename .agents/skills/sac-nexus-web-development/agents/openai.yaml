@@ -1,0 +1,4 @@
+interface:
+  display_name: "SAC Nexus Web Development"
+  short_description: "Build the Nexus React frontend safely"
+  default_prompt: "Use $sac-nexus-web-development to implement this web change with project conventions."

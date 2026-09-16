@@ -1,0 +1,62 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1779928910905,
+      "tag": "0000_eager_slapstick",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1780443562872,
+      "tag": "0001_optimal_tomorrow_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1780445653503,
+      "tag": "0002_wide_rafael_vega",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1789181235303,
+      "tag": "0003_military_terror",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1789433530103,
+      "tag": "0004_thankful_gamora",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1789473865943,
+      "tag": "0005_shallow_invisible_woman",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1789570825809,
+      "tag": "0006_long_lady_bullseye",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1789583529176,
+      "tag": "0007_lucky_violations",
+      "breakpoints": true
+    }
+  ]
+}

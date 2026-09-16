@@ -1,0 +1,209 @@
+[
+  {
+    "categoria": "1",
+    "id": "atividade_economica",
+    "pergunta": "Exerce atividade econômica na edificação?",
+    "tipo": "booleano",
+    "origem_opcoes": "booleano",
+    "obrigatorio": "sim",
+    "descricao": ""
+  },
+  {
+    "categoria": "1",
+    "id": "atividade",
+    "pergunta": "Qual a atividade exercida?",
+    "tipo": "lista",
+    "origem_opcoes": "ATIVIDADES",
+    "obrigatorio": "não",
+    "descricao": ""
+  },
+  {
+    "categoria": "2",
+    "id": "enquadramento_risco_i",
+    "pergunta": "Sua atividade se enquadra em alguma destas situações?",
+    "tipo": "multipla",
+    "origem_opcoes": "enquadramento_risco_i",
+    "obrigatorio": "sim",
+    "descricao": "Você pode marcar mais de uma opção. Se nenhuma se aplicar, marque \"Nenhuma das anteriores\"."
+  },
+  {
+    "categoria": "2",
+    "id": "atividade_transitoria_espaco",
+    "pergunta": "Essa atividade é exercida em um espaço com limite físico definido (terreno, praça de alimentação, parque de food trucks etc.), reunindo outros vendedores no mesmo local?",
+    "tipo": "booleano",
+    "origem_opcoes": "booleano",
+    "obrigatorio": "não",
+    "descricao": "Considere limite físico qualquer contorno identificável — muro, cerca, marcação no chão, estrutura montada — que delimite o espaço onde vários vendedores estão concentrados."
+  },
+  {
+    "categoria": "2",
+    "id": "imovel_reuniao_publico_lotacao",
+    "pergunta": "Qual a lotação do estabelecimento?",
+    "tipo": "lista",
+    "origem_opcoes": "imovel_reuniao_publico_lotacao",
+    "obrigatorio": "não",
+    "descricao": "Some funcionários e clientes presentes ao mesmo tempo, no horário de maior movimento (pico)."
+  },
+  {
+    "categoria": "2",
+    "id": "imovel_hotel_leitos",
+    "pergunta": "Quantos leitos o estabelecimento possui?",
+    "tipo": "lista",
+    "origem_opcoes": "imovel_hotel_leitos",
+    "obrigatorio": "não",
+    "descricao": ""
+  },
+  {
+    "categoria": "2",
+    "id": "imovel_hospital",
+    "pergunta": "Seu imóvel é destinado a hospital ou local com pacientes que necessitem de cuidados especiais que dificulte, ainda que temporariamente, a locomoção?",
+    "tipo": "booleano",
+    "origem_opcoes": "booleano",
+    "obrigatorio": "não",
+    "descricao": ""
+  },
+  {
+    "categoria": "2",
+    "id": "evento_temporario",
+    "pergunta": "Seu imóvel recepciona evento temporário que reúna público?",
+    "tipo": "booleano",
+    "origem_opcoes": "booleano",
+    "obrigatorio": "não",
+    "descricao": ""
+  },
+  {
+    "categoria": "2",
+    "id": "evento_temporario_caracteristicas",
+    "pergunta": "O evento temporário tem alguma destas características?",
+    "tipo": "multipla",
+    "origem_opcoes": "evento_temporario_caracteristicas",
+    "obrigatorio": "não",
+    "descricao": "Você pode marcar mais de uma opção. Se nenhuma se aplicar, marque \"Nenhuma das anteriores\"."
+  },
+  {
+    "categoria": "2",
+    "id": "venda_glp",
+    "pergunta": "Seu imóvel é destinado a comercialização ou revenda de gás liquefeito do petróleo (GLP)?",
+    "tipo": "booleano",
+    "origem_opcoes": "booleano",
+    "obrigatorio": "não",
+    "descricao": ""
+  },
+  {
+    "categoria": "3",
+    "id": "area",
+    "pergunta": "Qual a área construída da edificação ou evento, em m²? (considere a área total do prédio/condomínio, se seu estabelecimento estiver dentro de uma edificação ou condomínio maior)\n",
+    "tipo": "lista",
+    "origem_opcoes": "area",
+    "obrigatorio": "sim",
+    "descricao": "OBS1: A área construída é a parte da construção que possui piso trabalhado e é coberta.\nOBS2: Desconsiderar para o cômputo da área construída total, a área destinada à residência unifamiliar (uma casa, não um prédio de apartamentos) com acesso independente direto para a via pública."
+  },
+  {
+    "categoria": "3",
+    "id": "pavimentos",
+    "pergunta": "Quantos pavimentos possui o prédio/edificação?",
+    "tipo": "lista",
+    "origem_opcoes": "pavimentos",
+    "obrigatorio": "sim",
+    "descricao": "OBS1: Considere o térreo como um pavimento e desconsidere subsolo exclusivamente utilizado para estacionamento, sem abastecimento de combustível no local.\nOBS2: Desconsiderar para o cômputo dos pavimentos a área destinada à residência unifamiliar (uma casa, não um prédio de apartamentos) com acesso independente direto para a via pública."
+  },
+  {
+    "categoria": "3",
+    "id": "confirma_exclusivamente_terreo",
+    "pergunta": "Confirma que não há nenhuma construção acima do seu estabelecimento?",
+    "tipo": "booleano",
+    "origem_opcoes": "booleano",
+    "obrigatorio": "não",
+    "descricao": "Se houver apenas uma residência acima, com entrada própria e independente do seu estabelecimento, marque Sim. Se houver qualquer construção acima que compartilhe o sistema de prevenção contra incêndio, o acesso ou a saída com o seu estabelecimento, marque Não."
+  },
+  {
+    "categoria": "3",
+    "id": "caracteristicas_terreo",
+    "pergunta": "Marque tudo que se aplica ao seu estabelecimento:",
+    "tipo": "multipla",
+    "origem_opcoes": "caracteristicas_terreo",
+    "obrigatorio": "não",
+    "descricao": "Você pode marcar mais de uma opção. Deixe sem marcar o que não se aplica."
+  },
+  {
+    "categoria": "3",
+    "id": "area_espaco_saida",
+    "pergunta": "Qual a área construída do espaço que conecta a saída do seu imóvel até o logradouro, via pública ou área de dispersão (incluindo a área do seu)? \n",
+    "tipo": "lista",
+    "origem_opcoes": "area_espaco_saida",
+    "obrigatorio": "não",
+    "descricao": "OBS: A área  construída é a parte  da construção que possui piso trabalhado e é coberta. Desconsidere a área de unidade habitacional unifamiliar com acesso independente direto à via pública."
+  },
+  {
+    "categoria": "3",
+    "id": "area_imovel_vizinho",
+    "pergunta": "Qual a área construída da edificação adjacente que seu imóvel tem abertura (incluindo a área do seu)? \n",
+    "tipo": "lista",
+    "origem_opcoes": "area_imovel_vizinho",
+    "obrigatorio": "não",
+    "descricao": ""
+  },
+  {
+    "categoria": "3",
+    "id": "pavimentos_imovel_vizinho",
+    "pergunta": "Quantos pavimentos possui a edificação vizinha?",
+    "tipo": "lista",
+    "origem_opcoes": "pavimentos_vizinho",
+    "obrigatorio": "não",
+    "descricao": ""
+  },
+  {
+    "categoria": "4",
+    "id": "quantidade_botijoes",
+    "pergunta": "Quantos kg de GLP o imóvel possui?",
+    "tipo": "lista",
+    "origem_opcoes": "quantidade_botijoes",
+    "obrigatorio": "não",
+    "descricao": "OBS: Um botijão P13 tem 13 kg de GLP."
+  },
+  {
+    "categoria": "4",
+    "id": "gases_inflamaveis",
+    "pergunta": "Seu imóvel possui recipientes com outros tipos de gases inflamáveis?",
+    "tipo": "booleano",
+    "origem_opcoes": "booleano",
+    "obrigatorio": "não",
+    "descricao": ""
+  },
+  {
+    "categoria": "4",
+    "id": "quantidade_liquidos_inflamaveis",
+    "pergunta": "Quantos litros de líquidos inflamáveis em tanques ou recipientes o imóvel possui?",
+    "tipo": "lista",
+    "origem_opcoes": "quantidade_liquidos_inflamaveis",
+    "obrigatorio": "não",
+    "descricao": ""
+  },
+  {
+    "categoria": "4",
+    "id": "produto_perigoso",
+    "pergunta": "Seu imóvel possui algum produto perigoso à saúde humana, ao meio ambiente ou ao patrimônio, tais como: explosivos, peróxidos orgânicos, substâncias oxidantes, substâncias tóxicas, substâncias infectantes, substâncias radioativas, substâncias corrosivas e substâncias perigosas diversas; sólidos inflamáveis, substâncias sujeitas à combustão espontânea; e substâncias que, em contato com água, emitem gases inflamáveis.",
+    "tipo": "booleano",
+    "origem_opcoes": "booleano",
+    "obrigatorio": "não",
+    "descricao": ""
+  },
+  {
+    "categoria": "5",
+    "id": "outra_atividade_risco_maior",
+    "pergunta": "No mesmo imóvel, terreno ou edificação do seu estabelecimento, existe alguma outra atividade, mesmo que desempenhada por outra empresa, com risco maior?",
+    "tipo": "lista",
+    "origem_opcoes": "outra_atividade_risco_maior",
+    "obrigatorio": "sim",
+    "descricao": "Exemplos: um posto de combustível, uma indústria, um depósito de botijão de gás ou comércio com central de gás — mas também um restaurante, bar ou espaço de reunião de público com mais de 100 pessoas."
+  },
+  {
+    "categoria": "5",
+    "id": "isolamento_corta_fogo",
+    "pergunta": "O seu espaço é separado dessa área de risco maior por uma parede ou porta corta-fogo resistente ao fogo, sem nenhuma comunicação direta (porta, passagem ou abertura comum) entre os dois espaços?",
+    "tipo": "lista",
+    "origem_opcoes": "isolamento_corta_fogo",
+    "obrigatorio": "não",
+    "descricao": "Isolamento significa que existe uma parede corta-fogo (ou porta corta-fogo, quando houver abertura) com resistência mínima de 60 minutos ao fogo, separando totalmente o seu espaço da área de risco maior — não bastam apenas paredes comuns ou portas convencionais."
+  }
+]

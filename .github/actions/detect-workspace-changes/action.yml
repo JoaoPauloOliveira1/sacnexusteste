@@ -1,0 +1,50 @@
+name: Detect workspace changes
+description: Detect whether a workspace pipeline should run.
+
+inputs:
+  workspace_name:
+    description: Workspace/package name, such as web or idp.
+    required: true
+  workspace_path:
+    description: Workspace path from the repository root.
+    required: true
+
+outputs:
+  changed:
+    description: Whether workspace-affecting files changed.
+    value: ${{ steps.detect.outputs.changed }}
+
+runs:
+  using: composite
+  steps:
+    - name: Detect workspace-affecting paths
+      id: detect
+      shell: bash
+      run: |
+        set -euo pipefail
+
+        changed_files="${RUNNER_TEMP}/${{ inputs.workspace_name }}-changed-files.txt"
+
+        if [ "${{ github.event_name }}" = "pull_request" ]; then
+          git diff --name-only "${{ github.event.pull_request.base.sha }}" "${{ github.event.pull_request.head.sha }}" > "$changed_files"
+        elif [ -n "${{ github.event.before }}" ] && [ "${{ github.event.before }}" != "0000000000000000000000000000000000000000" ]; then
+          git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" > "$changed_files"
+        else
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          exit 0
+        fi
+
+        changed=false
+        workspace_path="${{ inputs.workspace_path }}"
+        workflow_prefix=".github/workflows/${{ inputs.workspace_name }}-"
+
+        while IFS= read -r file; do
+          case "$file" in
+            "$workspace_path"/*|.github/actions/setup-node-pnpm/*|.github/actions/detect-workspace-changes/*|"$workflow_prefix"*.yml|package.json|pnpm-lock.yaml|pnpm-workspace.yaml|turbo.json|biome.json|.node-version)
+              changed=true
+              break
+              ;;
+          esac
+        done < "$changed_files"
+
+        echo "changed=$changed" >> "$GITHUB_OUTPUT"

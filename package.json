@@ -1,0 +1,40 @@
+{
+  "name": "sac-nexus",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "turbo run build",
+    "check": "turbo run check",
+    "dev": "turbo run dev",
+    "format": "turbo run format",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "test:coverage": "turbo run test:coverage",
+    "typecheck": "turbo run typecheck"
+  },
+  "packageManager": "pnpm@10.33.3+sha512.a19744364a7e248b92657a4ca5973f9354d21caf982579674b1c539f32c7420c47138ad8b1254df07aba9bc782d9b3029e3db34d5dbff974326eb74dac8ff489",
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.14",
+    "@commitlint/cli": "^20.5.3",
+    "@commitlint/config-conventional": "^20.5.3",
+    "lefthook": "^2.1.6",
+    "turbo": "^2.9.9"
+  },
+  "pnpm": {
+    "overrides": {
+      "brace-expansion": "5.0.7",
+      "esbuild@<=0.24.2": "0.25.12",
+      "hono": "4.12.25",
+      "ip-address": "10.1.1",
+      "qs": "6.15.2",
+      "undici": "7.28.0",
+      "ws": "8.21.0",
+      "js-yaml": "4.3.0",
+      "hono@>=4.3.3 <4.12.27": ">=4.12.27",
+      "hono@>=4.11.8 <4.12.27": ">=4.12.27",
+      "hono@>=4.0.0 <4.12.27": ">=4.12.27",
+      "brace-expansion@<=5.0.7": ">=5.0.8"
+    }
+  }
+}

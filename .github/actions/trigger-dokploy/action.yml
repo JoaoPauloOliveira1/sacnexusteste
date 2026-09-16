@@ -1,0 +1,91 @@
+name: Trigger Dokploy
+description: Trigger a Dokploy webhook with a GitHub push-compatible payload.
+
+inputs:
+  webhook_url:
+    description: Dokploy webhook URL.
+    required: true
+  webhook_token:
+    description: Optional bearer token for the Dokploy webhook.
+    required: false
+    default: ""
+  environment:
+    description: Target deployment environment.
+    required: true
+  ref_name:
+    description: Git branch name expected by Dokploy.
+    required: true
+  commit_sha:
+    description: Commit SHA being deployed.
+    required: true
+  image:
+    description: Image tag being deployed.
+    required: false
+    default: ""
+  digest:
+    description: Immutable image digest being deployed or rolled back to.
+    required: false
+    default: ""
+  committed_path:
+    description: Path used to satisfy Dokploy watch path matching.
+    required: true
+  rollback:
+    description: Whether this trigger represents a rollback.
+    required: false
+    default: "false"
+
+runs:
+  using: composite
+  steps:
+    - name: Trigger webhook
+      shell: bash
+      env:
+        DOKPLOY_WEBHOOK_URL: ${{ inputs.webhook_url }}
+        DOKPLOY_WEBHOOK_TOKEN: ${{ inputs.webhook_token }}
+        DEPLOY_ENVIRONMENT: ${{ inputs.environment }}
+        DEPLOY_REF_NAME: ${{ inputs.ref_name }}
+        DEPLOY_COMMIT_SHA: ${{ inputs.commit_sha }}
+        DEPLOY_IMAGE: ${{ inputs.image }}
+        DEPLOY_DIGEST: ${{ inputs.digest }}
+        DEPLOY_COMMITTED_PATH: ${{ inputs.committed_path }}
+        DEPLOY_ROLLBACK: ${{ inputs.rollback }}
+      run: |
+        cat > payload.json <<JSON
+        {
+          "ref": "refs/heads/${DEPLOY_REF_NAME}",
+          "after": "${DEPLOY_COMMIT_SHA}",
+          "environment": "${DEPLOY_ENVIRONMENT}",
+          "commitSha": "${DEPLOY_COMMIT_SHA}",
+          "image": "${DEPLOY_IMAGE}",
+          "digest": "${DEPLOY_DIGEST}",
+          "rollback": ${DEPLOY_ROLLBACK},
+          "head_commit": {
+            "id": "${DEPLOY_COMMIT_SHA}",
+            "message": "Deploy ${DEPLOY_ENVIRONMENT}",
+            "modified": ["${DEPLOY_COMMITTED_PATH}"]
+          },
+          "commits": [
+            {
+              "id": "${DEPLOY_COMMIT_SHA}",
+              "message": "Deploy ${DEPLOY_ENVIRONMENT}",
+              "modified": ["${DEPLOY_COMMITTED_PATH}"]
+            }
+          ]
+        }
+        JSON
+
+        args=(
+          -X POST "$DOKPLOY_WEBHOOK_URL"
+          -H "Content-Type: application/json"
+          -H "X-GitHub-Event: push"
+          --data @payload.json
+        )
+        if [ -n "${DOKPLOY_WEBHOOK_TOKEN:-}" ]; then
+          args+=(--header "Authorization: Bearer $DOKPLOY_WEBHOOK_TOKEN")
+        fi
+
+        response="$(curl --fail-with-body "${args[@]}")"
+        printf '%s\n' "$response"
+        if [[ "$response" == *"Branch Not Match"* ]]; then
+          exit 1
+        fi

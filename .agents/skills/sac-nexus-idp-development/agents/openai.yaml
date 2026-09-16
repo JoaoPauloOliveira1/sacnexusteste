@@ -1,0 +1,4 @@
+interface:
+  display_name: "SAC Nexus IDP Development"
+  short_description: "Build secure Nexus identity workflows"
+  default_prompt: "Use $sac-nexus-idp-development to implement this IDP change with project conventions."

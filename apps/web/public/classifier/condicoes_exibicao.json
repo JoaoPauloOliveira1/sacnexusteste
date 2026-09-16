@@ -1,0 +1,170 @@
+[
+  {
+    "input_id": "atividade",
+    "campo_dependente": "atividade_economica",
+    "operador": "==",
+    "valor": "true"
+  },
+  {
+    "input_id": "enquadramento_risco_i",
+    "campo_dependente": "atividade_economica",
+    "operador": "==",
+    "valor": "true"
+  },
+  {
+    "input_id": "atividade_transitoria_espaco",
+    "campo_dependente": "atividade_transitoria",
+    "operador": "==",
+    "valor": "true"
+  },
+  {
+    "input_id": "imovel_reuniao_publico_lotacao",
+    "campo_dependente": "atividade_economica",
+    "operador": "==",
+    "valor": "true"
+  },
+  {
+    "input_id": "imovel_hotel_leitos",
+    "campo_dependente": "atividade_economica",
+    "operador": "==",
+    "valor": "true"
+  },
+  {
+    "input_id": "imovel_hospital",
+    "campo_dependente": "atividade_economica",
+    "operador": "==",
+    "valor": "true"
+  },
+  {
+    "input_id": "evento_temporario",
+    "campo_dependente": "atividade_economica",
+    "operador": "==",
+    "valor": "true"
+  },
+  {
+    "input_id": "venda_glp",
+    "campo_dependente": "atividade_economica",
+    "operador": "==",
+    "valor": "true"
+  },
+  {
+    "input_id": "confirma_exclusivamente_terreo",
+    "campo_dependente": "pavimentos",
+    "operador": "==",
+    "valor": "exclusivamente_terreo"
+  },
+  {
+    "input_id": "area_imovel_hospedeiro",
+    "campo_dependente": "imovel_acesso_independente",
+    "operador": "==",
+    "valor": "false"
+  },
+  {
+    "input_id": "pavimentos_imovel_hospedeiro",
+    "campo_dependente": "imovel_acesso_independente",
+    "operador": "==",
+    "valor": "false"
+  },
+  {
+    "input_id": "caracteristicas_terreo",
+    "campo_dependente": "pavimentos",
+    "operador": "==",
+    "valor": "exclusivamente_terreo"
+  },
+  {
+    "input_id": "area_espaco_saida",
+    "campo_dependente": "imovel_saida_direta",
+    "operador": "==",
+    "valor": "false"
+  },
+  {
+    "input_id": "area_imovel_vizinho",
+    "campo_dependente": "imovel_sem_abertura_vizinho",
+    "operador": "==",
+    "valor": "false"
+  },
+  {
+    "input_id": "pavimentos_imovel_vizinho",
+    "campo_dependente": "imovel_sem_abertura_vizinho",
+    "operador": "==",
+    "valor": "false"
+  },
+  {
+    "input_id": "gases_inflamaveis",
+    "campo_dependente": "atividade_economica",
+    "operador": "==",
+    "valor": "true"
+  },
+  {
+    "input_id": "quantidade_liquidos_inflamaveis",
+    "campo_dependente": "atividade_economica",
+    "operador": "==",
+    "valor": "true"
+  },
+  {
+    "input_id": "produto_perigoso",
+    "campo_dependente": "atividade_economica",
+    "operador": "==",
+    "valor": "true"
+  },
+  {
+    "input_id": "imovel_reuniao_publico_lotacao",
+    "campo_dependente": "atividade_transitoria_espaco",
+    "operador": "!=",
+    "valor": "true"
+  },
+  {
+    "input_id": "imovel_hotel_leitos",
+    "campo_dependente": "atividade_transitoria_espaco",
+    "operador": "!=",
+    "valor": "true"
+  },
+  {
+    "input_id": "imovel_hospital",
+    "campo_dependente": "atividade_transitoria_espaco",
+    "operador": "!=",
+    "valor": "true"
+  },
+  {
+    "input_id": "evento_temporario",
+    "campo_dependente": "atividade_transitoria_espaco",
+    "operador": "!=",
+    "valor": "true"
+  },
+  {
+    "input_id": "venda_glp",
+    "campo_dependente": "atividade_transitoria_espaco",
+    "operador": "!=",
+    "valor": "true"
+  },
+  {
+    "input_id": "quantidade_botijoes",
+    "campo_dependente": "atividade_economica",
+    "operador": "==",
+    "valor": "true"
+  },
+  {
+    "input_id": "evento_temporario_caracteristicas",
+    "campo_dependente": "evento_temporario",
+    "operador": "==",
+    "valor": "true"
+  },
+  {
+    "input_id": "evento_temporario_caracteristicas",
+    "campo_dependente": "atividade_transitoria_espaco",
+    "operador": "!=",
+    "valor": "true"
+  },
+  {
+    "input_id": "outra_atividade_risco_maior",
+    "campo_dependente": "atividade_economica",
+    "operador": "==",
+    "valor": "true"
+  },
+  {
+    "input_id": "isolamento_corta_fogo",
+    "campo_dependente": "outra_atividade_risco_maior",
+    "operador": "==",
+    "valor": "sim"
+  }
+]

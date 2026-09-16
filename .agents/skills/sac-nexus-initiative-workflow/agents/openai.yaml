@@ -1,0 +1,4 @@
+interface:
+  display_name: "SAC Nexus Initiative Workflow"
+  short_description: "Plan initiatives with evidence and tradeoffs"
+  default_prompt: "Use $sac-nexus-initiative-workflow to create or review this initiative."

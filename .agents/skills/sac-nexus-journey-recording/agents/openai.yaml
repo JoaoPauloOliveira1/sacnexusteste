@@ -1,0 +1,4 @@
+interface:
+  display_name: "SAC Nexus Journey Recording"
+  short_description: "Record guided stakeholder journey videos"
+  default_prompt: "Use $sac-nexus-journey-recording to create and validate a guided SAC Nexus journey recording."

@@ -1,0 +1,1 @@
+ALTER TABLE "sac_processo" ADD COLUMN "dados_complementares" jsonb;

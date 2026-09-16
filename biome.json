@@ -1,0 +1,68 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.4.14/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "includes": ["**", "!**/routeTree.gen.ts", "!**/*.svg"]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "semicolons": "asNeeded"
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "style": {
+        "noRestrictedImports": {
+          "level": "error",
+          "options": {
+            "patterns": [
+              {
+                "group": ["@/modules/*/**", "!@/modules/shared/**"],
+                "message": "Import business modules through their public API: @/modules/<module>. Use relative imports inside the same module."
+              }
+            ]
+          }
+        },
+        "useImportType": {
+          "level": "error",
+          "options": {
+            "style": "inlineType"
+          }
+        }
+      },
+      "nursery": {
+        "useSortedClasses": {
+          "level": "error",
+          "options": {
+            "functions": ["cn", "clsx", "cva"]
+          }
+        }
+      }
+    }
+  }
+}

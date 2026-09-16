@@ -1,0 +1,26 @@
+[
+  {
+    "categoria": "0",
+    "mensagem": "Olá! Seja bem-vindo ao Classificador Digital de Risco do Corpo de Bombeiros de Pernambuco. Aqui você vai responder algumas perguntas simples sobre o seu imóvel e o que acontece nele. Com base nas suas respostas, o sistema vai identificar o nível de risco da sua edificação. Não se preocupe, é rápido e fácil!"
+  },
+  {
+    "categoria": "1",
+    "mensagem": "Primeiro, vamos entender o que acontece no seu imóvel."
+  },
+  {
+    "categoria": "2",
+    "mensagem": "Agora, vamos conhecer um pouco mais sobre como sua atividade é exercida."
+  },
+  {
+    "categoria": "3",
+    "mensagem": "Ótimo! Agora vamos falar sobre o prédio ou espaço onde você trabalha."
+  },
+  {
+    "categoria": "4",
+    "mensagem": "Quase lá! Agora nos diga o que tem dentro do seu imóvel."
+  },
+  {
+    "categoria": "5",
+    "mensagem": "Agora vamos avaliar se o seu estabelecimento está isolado do risco de outro estabelecimento ou atividade de risco maior no mesmo imóvel."
+  }
+]

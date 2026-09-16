@@ -1,0 +1,4 @@
+interface:
+  display_name: "SAC Nexus Architecture"
+  short_description: "Place changes in the right Nexus boundary"
+  default_prompt: "Use $sac-nexus-architecture to decide where this change belongs."

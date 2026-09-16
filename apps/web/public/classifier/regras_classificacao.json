@@ -1,0 +1,578 @@
+[
+  {
+    "regra_id": "R0",
+    "prioridade": "0",
+    "campo": "atividade_economica",
+    "operador": "==",
+    "valor": "false",
+    "acao": "encerrar_sem_classificacao",
+    "encerrar": "true"
+  },
+  {
+    "regra_id": "R1",
+    "prioridade": "1",
+    "campo": "atividade",
+    "operador": "==",
+    "valor": "alto",
+    "acao": "definir_alto",
+    "encerrar": "true"
+  },
+  {
+    "regra_id": "R2",
+    "prioridade": "2",
+    "campo": "area",
+    "operador": "==",
+    "valor": "acima_de_930",
+    "acao": "definir_alto",
+    "encerrar": "true"
+  },
+  {
+    "regra_id": "R3",
+    "prioridade": "3",
+    "campo": "area_imovel_hospedeiro",
+    "operador": "==",
+    "valor": "acima_de_930",
+    "acao": "definir_alto",
+    "encerrar": "true"
+  },
+  {
+    "regra_id": "R4",
+    "prioridade": "4",
+    "campo": "pavimentos",
+    "operador": "==",
+    "valor": "4_ou_mais_pavimentos",
+    "acao": "definir_alto",
+    "encerrar": "true"
+  },
+  {
+    "regra_id": "R5",
+    "prioridade": "5",
+    "campo": "imovel_reuniao_publico_lotacao",
+    "operador": "==",
+    "valor": "mais_de_100",
+    "acao": "definir_alto",
+    "encerrar": "true"
+  },
+  {
+    "regra_id": "R6",
+    "prioridade": "6",
+    "campo": "imovel_hotel_leitos",
+    "operador": "==",
+    "valor": "mais_de_40",
+    "acao": "definir_alto",
+    "encerrar": "true"
+  },
+  {
+    "regra_id": "R7",
+    "prioridade": "7",
+    "campo": "quantidade_liquidos_inflamaveis",
+    "operador": "==",
+    "valor": "mais_de_1000",
+    "acao": "definir_alto",
+    "encerrar": "true"
+  },
+  {
+    "regra_id": "R8",
+    "prioridade": "8",
+    "campo": "imovel_hospital",
+    "operador": "==",
+    "valor": "true",
+    "acao": "definir_alto",
+    "encerrar": "true"
+  },
+  {
+    "regra_id": "R9",
+    "prioridade": "9",
+    "campo": "venda_glp",
+    "operador": "==",
+    "valor": "true",
+    "acao": "definir_alto",
+    "encerrar": "true"
+  },
+  {
+    "regra_id": "R10",
+    "prioridade": "10",
+    "campo": "quantidade_botijoes",
+    "operador": "==",
+    "valor": "mais_de_190",
+    "acao": "definir_alto",
+    "encerrar": "true"
+  },
+  {
+    "regra_id": "R11",
+    "prioridade": "11",
+    "campo": "gases_inflamaveis",
+    "operador": "==",
+    "valor": "true",
+    "acao": "definir_alto",
+    "encerrar": "true"
+  },
+  {
+    "regra_id": "R12",
+    "prioridade": "12",
+    "campo": "produto_perigoso",
+    "operador": "==",
+    "valor": "true",
+    "acao": "definir_alto",
+    "encerrar": "true"
+  },
+  {
+    "regra_id": "R13",
+    "prioridade": "13",
+    "campo": "evento_temporario_controle",
+    "operador": "==",
+    "valor": "true",
+    "acao": "definir_alto",
+    "encerrar": "true"
+  },
+  {
+    "regra_id": "R14",
+    "prioridade": "14",
+    "campo": "camarote_evento_temporario",
+    "operador": "==",
+    "valor": "true",
+    "acao": "definir_alto",
+    "encerrar": "true"
+  },
+  {
+    "regra_id": "R15",
+    "prioridade": "15",
+    "campo": "atividade",
+    "operador": "==",
+    "valor": "baixo",
+    "acao": "manter_baixo",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R16",
+    "prioridade": "16",
+    "campo": "atividade",
+    "operador": "==",
+    "valor": "medio",
+    "acao": "definir_medio",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R17",
+    "prioridade": "17",
+    "campo": "area",
+    "operador": "==",
+    "valor": "ate_200",
+    "acao": "manter_baixo",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R18",
+    "prioridade": "18",
+    "campo": "area",
+    "operador": "==",
+    "valor": "de_200_a_930",
+    "acao": "definir_medio",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R19",
+    "prioridade": "19",
+    "campo": "pavimentos",
+    "operador": "==",
+    "valor": "exclusivamente_terreo",
+    "acao": "manter_baixo",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R20",
+    "prioridade": "20",
+    "campo": "pavimentos",
+    "operador": "==",
+    "valor": "2_ou_3_pavimentos",
+    "acao": "definir_medio",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R21",
+    "prioridade": "21",
+    "campo": "atividade_residencia_unifamiliar",
+    "operador": "==",
+    "valor": "true",
+    "acao": "manter_baixo",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R22",
+    "prioridade": "22",
+    "campo": "atividade_tipicamente_digital",
+    "operador": "==",
+    "valor": "true",
+    "acao": "manter_baixo",
+    "encerrar": "true"
+  },
+  {
+    "regra_id": "R22",
+    "prioridade": "22",
+    "campo": "atividade_transitoria",
+    "operador": "==",
+    "valor": "false",
+    "acao": "manter_baixo",
+    "encerrar": "true"
+  },
+  {
+    "regra_id": "R23",
+    "prioridade": "23",
+    "campo": "atividade_transitoria",
+    "operador": "==",
+    "valor": "true",
+    "acao": "manter_baixo",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R24",
+    "prioridade": "24",
+    "campo": "atividade_barraca",
+    "operador": "==",
+    "valor": "true",
+    "acao": "manter_baixo",
+    "encerrar": "true"
+  },
+  {
+    "regra_id": "R24",
+    "prioridade": "24",
+    "campo": "atividade_transitoria",
+    "operador": "==",
+    "valor": "false",
+    "acao": "manter_baixo",
+    "encerrar": "true"
+  },
+  {
+    "regra_id": "R25",
+    "prioridade": "25",
+    "campo": "estacao_elevada",
+    "operador": "==",
+    "valor": "true",
+    "acao": "manter_baixo",
+    "encerrar": "true"
+  },
+  {
+    "regra_id": "R25",
+    "prioridade": "25",
+    "campo": "atividade_transitoria",
+    "operador": "==",
+    "valor": "false",
+    "acao": "manter_baixo",
+    "encerrar": "true"
+  },
+  {
+    "regra_id": "R26",
+    "prioridade": "26",
+    "campo": "imovel_acesso_independente",
+    "operador": "==",
+    "valor": "true",
+    "acao": "manter_baixo",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R27",
+    "prioridade": "27",
+    "campo": "area_imovel_hospedeiro",
+    "operador": "==",
+    "valor": "ate_200",
+    "acao": "manter_baixo",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R28",
+    "prioridade": "28",
+    "campo": "area_imovel_hospedeiro",
+    "operador": "==",
+    "valor": "de_200_a_930",
+    "acao": "definir_medio",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R29",
+    "prioridade": "29",
+    "campo": "area_imovel_hospedeiro",
+    "operador": "==",
+    "valor": "acima_de_930",
+    "acao": "definir_alto",
+    "encerrar": "true"
+  },
+  {
+    "regra_id": "R30",
+    "prioridade": "30",
+    "campo": "pavimentos_imovel_hospedeiro",
+    "operador": "==",
+    "valor": "4_ou_mais_pavimentos",
+    "acao": "definir_alto",
+    "encerrar": "true"
+  },
+  {
+    "regra_id": "R31",
+    "prioridade": "31",
+    "campo": "pavimentos_imovel_hospedeiro",
+    "operador": "==",
+    "valor": "exclusivamente_terreo",
+    "acao": "manter_baixo",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R32",
+    "prioridade": "32",
+    "campo": "pavimentos_imovel_hospedeiro",
+    "operador": "==",
+    "valor": "2_ou_3_pavimentos",
+    "acao": "definir_medio",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R33",
+    "prioridade": "33",
+    "campo": "imovel_saida_direta",
+    "operador": "==",
+    "valor": "true",
+    "acao": "manter_baixo",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R34",
+    "prioridade": "34",
+    "campo": "area_espaco_saida",
+    "operador": "==",
+    "valor": "ate_200",
+    "acao": "manter_baixo",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R35",
+    "prioridade": "35",
+    "campo": "area_espaco_saida",
+    "operador": "==",
+    "valor": "de_200_a_930",
+    "acao": "definir_medio",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R36",
+    "prioridade": "36",
+    "campo": "area_espaco_saida",
+    "operador": "==",
+    "valor": "acima_de_930",
+    "acao": "definir_alto",
+    "encerrar": "true"
+  },
+  {
+    "regra_id": "R37",
+    "prioridade": "37",
+    "campo": "imovel_sem_abertura_vizinho",
+    "operador": "==",
+    "valor": "true",
+    "acao": "manter_baixo",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R38",
+    "prioridade": "38",
+    "campo": "area_imovel_vizinho",
+    "operador": "==",
+    "valor": "ate_200",
+    "acao": "manter_baixo",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R39",
+    "prioridade": "39",
+    "campo": "area_imovel_vizinho",
+    "operador": "==",
+    "valor": "de_200_a_930",
+    "acao": "definir_medio",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R40",
+    "prioridade": "40",
+    "campo": "area_imovel_vizinho",
+    "operador": "==",
+    "valor": "acima_de_930",
+    "acao": "definir_alto",
+    "encerrar": "true"
+  },
+  {
+    "regra_id": "R41",
+    "prioridade": "41",
+    "campo": "pavimentos_imovel_vizinho",
+    "operador": "==",
+    "valor": "4_ou_mais_pavimentos",
+    "acao": "definir_alto",
+    "encerrar": "true"
+  },
+  {
+    "regra_id": "R42",
+    "prioridade": "42",
+    "campo": "pavimentos_imovel_vizinho",
+    "operador": "==",
+    "valor": "exclusivamente_terreo",
+    "acao": "manter_baixo",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R43",
+    "prioridade": "43",
+    "campo": "pavimentos_imovel_vizinho",
+    "operador": "==",
+    "valor": "2_ou_3_pavimentos",
+    "acao": "definir_medio",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R44",
+    "prioridade": "44",
+    "campo": "imovel_reuniao_publico_lotacao",
+    "operador": "==",
+    "valor": "ate_100",
+    "acao": "manter_baixo",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R45",
+    "prioridade": "45",
+    "campo": "imovel_hotel_leitos",
+    "operador": "==",
+    "valor": "ate_16",
+    "acao": "manter_baixo",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R46",
+    "prioridade": "46",
+    "campo": "imovel_hotel_leitos",
+    "operador": "==",
+    "valor": "de_16_ate_40",
+    "acao": "definir_medio",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R47",
+    "prioridade": "47",
+    "campo": "imovel_hospital",
+    "operador": "==",
+    "valor": "false",
+    "acao": "manter_baixo",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R48",
+    "prioridade": "48",
+    "campo": "venda_glp",
+    "operador": "==",
+    "valor": "false",
+    "acao": "manter_baixo",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R49",
+    "prioridade": "49",
+    "campo": "quantidade_botijoes",
+    "operador": "==",
+    "valor": "ate_39",
+    "acao": "manter_baixo",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R50",
+    "prioridade": "50",
+    "campo": "quantidade_botijoes",
+    "operador": "==",
+    "valor": "de_39_ate_190",
+    "acao": "definir_medio",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R51",
+    "prioridade": "51",
+    "campo": "gases_inflamaveis",
+    "operador": "==",
+    "valor": "false",
+    "acao": "manter_baixo",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R52",
+    "prioridade": "52",
+    "campo": "quantidade_liquidos_inflamaveis",
+    "operador": "==",
+    "valor": "ate_150",
+    "acao": "manter_baixo",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R53",
+    "prioridade": "53",
+    "campo": "quantidade_liquidos_inflamaveis",
+    "operador": "==",
+    "valor": "de_150_ate_1000",
+    "acao": "definir_medio",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R54",
+    "prioridade": "54",
+    "campo": "produto_perigoso",
+    "operador": "==",
+    "valor": "false",
+    "acao": "manter_baixo",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R55",
+    "prioridade": "55",
+    "campo": "evento_temporario",
+    "operador": "==",
+    "valor": "false",
+    "acao": "manter_baixo",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R56",
+    "prioridade": "56",
+    "campo": "atividade_transitoria_espaco",
+    "operador": "==",
+    "valor": "false",
+    "acao": "manter_baixo",
+    "encerrar": "true"
+  },
+  {
+    "regra_id": "R57",
+    "prioridade": "57",
+    "campo": "imovel_hotel_leitos",
+    "operador": "==",
+    "valor": "nao_se_aplica",
+    "acao": "manter_baixo",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R58",
+    "prioridade": "58",
+    "campo": "imovel_reuniao_publico_lotacao",
+    "operador": "==",
+    "valor": "nao_se_aplica",
+    "acao": "manter_baixo",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R59",
+    "prioridade": "59",
+    "campo": "quantidade_botijoes",
+    "operador": "==",
+    "valor": "nao_possui",
+    "acao": "manter_baixo",
+    "encerrar": "false"
+  },
+  {
+    "regra_id": "R60",
+    "prioridade": "60",
+    "campo": "quantidade_liquidos_inflamaveis",
+    "operador": "==",
+    "valor": "nao_possui",
+    "acao": "manter_baixo",
+    "encerrar": "false"
+  }
+]

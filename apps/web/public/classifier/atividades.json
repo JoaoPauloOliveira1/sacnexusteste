@@ -1,0 +1,5607 @@
+[
+  { "codigo": "0111-3/01", "atividade_label": "Cultivo de arroz", "risco_base": "baixo" },
+  { "codigo": "0111-3/02", "atividade_label": "Cultivo de milho", "risco_base": "baixo" },
+  { "codigo": "0111-3/03", "atividade_label": "Cultivo de trigo", "risco_base": "baixo" },
+  {
+    "codigo": "0111-3/99",
+    "atividade_label": "Cultivo de outros cereais não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0112-1/01",
+    "atividade_label": "Cultivo de algodão herbáceo",
+    "risco_base": "baixo"
+  },
+  { "codigo": "0112-1/02", "atividade_label": "Cultivo de juta", "risco_base": "baixo" },
+  {
+    "codigo": "0112-1/99",
+    "atividade_label": "Cultivo de outras fibras de lavoura temporária não especificadas anteriormente",
+    "risco_base": "baixo"
+  },
+  { "codigo": "0113-0/00", "atividade_label": "Cultivo de cana-de-açúcar", "risco_base": "baixo" },
+  { "codigo": "0114-8/00", "atividade_label": "Cultivo de fumo", "risco_base": "baixo" },
+  { "codigo": "0115-6/00", "atividade_label": "Cultivo de soja", "risco_base": "baixo" },
+  { "codigo": "0116-4/01", "atividade_label": "Cultivo de amendoim", "risco_base": "baixo" },
+  { "codigo": "0116-4/02", "atividade_label": "Cultivo de girassol", "risco_base": "baixo" },
+  { "codigo": "0116-4/03", "atividade_label": "Cultivo de mamona", "risco_base": "baixo" },
+  {
+    "codigo": "0116-4/99",
+    "atividade_label": "Cultivo de outras oleaginosas de lavoura temporária não especificadas anteriormente",
+    "risco_base": "baixo"
+  },
+  { "codigo": "0119-9/01", "atividade_label": "Cultivo de abacaxi", "risco_base": "baixo" },
+  { "codigo": "0119-9/02", "atividade_label": "Cultivo de alho", "risco_base": "baixo" },
+  { "codigo": "0119-9/03", "atividade_label": "Cultivo de batata-inglesa", "risco_base": "baixo" },
+  { "codigo": "0119-9/04", "atividade_label": "Cultivo de cebola", "risco_base": "baixo" },
+  { "codigo": "0119-9/05", "atividade_label": "Cultivo de feijão", "risco_base": "baixo" },
+  { "codigo": "0119-9/06", "atividade_label": "Cultivo de mandioca", "risco_base": "baixo" },
+  { "codigo": "0119-9/07", "atividade_label": "Cultivo de melão", "risco_base": "baixo" },
+  { "codigo": "0119-9/08", "atividade_label": "Cultivo de melancia", "risco_base": "baixo" },
+  { "codigo": "0119-9/09", "atividade_label": "Cultivo de tomate rasteiro", "risco_base": "baixo" },
+  {
+    "codigo": "0119-9/99",
+    "atividade_label": "Cultivo de outras plantas de lavoura temporária não especificadas anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0121-1/01",
+    "atividade_label": "Horticultura, exceto morango",
+    "risco_base": "baixo"
+  },
+  { "codigo": "0121-1/02", "atividade_label": "Cultivo de morango", "risco_base": "baixo" },
+  { "codigo": "0122-9/00", "atividade_label": "Floricultura", "risco_base": "baixo" },
+  { "codigo": "0131-8/00", "atividade_label": "Cultivo de laranja", "risco_base": "baixo" },
+  { "codigo": "0132-6/00", "atividade_label": "Cultivo de uva", "risco_base": "baixo" },
+  { "codigo": "0133-4/01", "atividade_label": "Cultivo de açaí", "risco_base": "baixo" },
+  { "codigo": "0133-4/02", "atividade_label": "Cultivo de banana", "risco_base": "baixo" },
+  { "codigo": "0133-4/03", "atividade_label": "Cultivo de caju", "risco_base": "baixo" },
+  {
+    "codigo": "0133-4/04",
+    "atividade_label": "Cultivo de cítricos, exceto laranja",
+    "risco_base": "baixo"
+  },
+  { "codigo": "0133-4/05", "atividade_label": "Cultivo de coco-da-baía", "risco_base": "baixo" },
+  { "codigo": "0133-4/06", "atividade_label": "Cultivo de guaraná", "risco_base": "baixo" },
+  { "codigo": "0133-4/07", "atividade_label": "Cultivo de maçã", "risco_base": "baixo" },
+  { "codigo": "0133-4/08", "atividade_label": "Cultivo de mamão", "risco_base": "baixo" },
+  { "codigo": "0133-4/09", "atividade_label": "Cultivo de maracujá", "risco_base": "baixo" },
+  { "codigo": "0133-4/10", "atividade_label": "Cultivo de manga", "risco_base": "baixo" },
+  { "codigo": "0133-4/11", "atividade_label": "Cultivo de pêssego", "risco_base": "baixo" },
+  {
+    "codigo": "0133-4/99",
+    "atividade_label": "Cultivo de frutas de lavoura permanente não especificadas anteriormente",
+    "risco_base": "baixo"
+  },
+  { "codigo": "0134-2/00", "atividade_label": "Cultivo de café", "risco_base": "baixo" },
+  { "codigo": "0135-1/00", "atividade_label": "Cultivo de cacau", "risco_base": "baixo" },
+  { "codigo": "0139-3/01", "atividade_label": "Cultivo de chá-da-índia", "risco_base": "baixo" },
+  { "codigo": "0139-3/02", "atividade_label": "Cultivo de erva-mate", "risco_base": "baixo" },
+  {
+    "codigo": "0139-3/03",
+    "atividade_label": "Cultivo de pimenta-do-reino",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0139-3/04",
+    "atividade_label": "Cultivo de plantas para condimento, exceto pimenta-do-reino",
+    "risco_base": "baixo"
+  },
+  { "codigo": "0139-3/05", "atividade_label": "Cultivo de dendê", "risco_base": "baixo" },
+  { "codigo": "0139-3/06", "atividade_label": "Cultivo de seringueira", "risco_base": "baixo" },
+  {
+    "codigo": "0139-3/99",
+    "atividade_label": "Cultivo de outras plantas de lavoura permanente não especificadas anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0141-5/01",
+    "atividade_label": "Produção de sementes certificadas, exceto de forrageiras para pasto",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0141-5/02",
+    "atividade_label": "Produção de sementes certificadas de forrageiras para formação de pasto",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0142-3/00",
+    "atividade_label": "Produção de mudas e outras formas de propagação vegetal, certificadas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0151-2/01",
+    "atividade_label": "Criação de bovinos para corte",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0151-2/02",
+    "atividade_label": "Criação de bovinos para leite",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0151-2/03",
+    "atividade_label": "Criação de bovinos, exceto para corte e leite",
+    "risco_base": "baixo"
+  },
+  { "codigo": "0152-1/01", "atividade_label": "Criação de bufalinos", "risco_base": "baixo" },
+  { "codigo": "0152-1/02", "atividade_label": "Criação de eqüinos", "risco_base": "baixo" },
+  {
+    "codigo": "0152-1/03",
+    "atividade_label": "Criação de asininos e muares",
+    "risco_base": "baixo"
+  },
+  { "codigo": "0153-9/01", "atividade_label": "Criação de caprinos", "risco_base": "baixo" },
+  {
+    "codigo": "0153-9/02",
+    "atividade_label": "Criação de ovinos, inclusive para produção de lã",
+    "risco_base": "baixo"
+  },
+  { "codigo": "0154-7/00", "atividade_label": "Criação de suínos", "risco_base": "medio" },
+  {
+    "codigo": "0155-5/01",
+    "atividade_label": "Criação de frangos para corte",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "0155-5/02",
+    "atividade_label": "Produção de pintos de um dia",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "0155-5/03",
+    "atividade_label": "Criação de outros galináceos, exceto para corte",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "0155-5/04",
+    "atividade_label": "Criação de aves, exceto galináceos",
+    "risco_base": "medio"
+  },
+  { "codigo": "0155-5/05", "atividade_label": "Produção de ovos", "risco_base": "medio" },
+  { "codigo": "0159-8/01", "atividade_label": "Apicultura", "risco_base": "baixo" },
+  {
+    "codigo": "0159-8/02",
+    "atividade_label": "Criação de animais de estimação",
+    "risco_base": "baixo"
+  },
+  { "codigo": "0159-8/03", "atividade_label": "Criação de escargô", "risco_base": "baixo" },
+  { "codigo": "0159-8/04", "atividade_label": "Criação de bicho-da-seda", "risco_base": "baixo" },
+  {
+    "codigo": "0159-8/99",
+    "atividade_label": "Criação de outros animais não especificados anteriormente",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "0161-0/01",
+    "atividade_label": "Serviço de pulverização e controle de pragas agrícolas",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "0161-0/02",
+    "atividade_label": "Serviço de poda de árvores para lavouras",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0161-0/03",
+    "atividade_label": "Serviço de preparação de terreno, cultivo e colheita",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0161-0/99",
+    "atividade_label": "Atividades de apoio à agricultura não especificadas anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0162-8/01",
+    "atividade_label": "Serviço de inseminação artificial de animais *",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0162-8/02",
+    "atividade_label": "Serviço de tosquiamento de ovinos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0162-8/03",
+    "atividade_label": "Serviço de manejo de animais",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0162-8/99",
+    "atividade_label": "Atividades de apoio à pecuária não especificadas anteriormente",
+    "risco_base": "baixo"
+  },
+  { "codigo": "0163-6/00", "atividade_label": "Atividades de pós-colheita", "risco_base": "baixo" },
+  {
+    "codigo": "0170-9/00",
+    "atividade_label": "Caça e serviços relacionados",
+    "risco_base": "medio"
+  },
+  { "codigo": "0210-1/01", "atividade_label": "Cultivo de eucalipto", "risco_base": "baixo" },
+  { "codigo": "0210-1/02", "atividade_label": "Cultivo de acácia-negra", "risco_base": "baixo" },
+  { "codigo": "0210-1/03", "atividade_label": "Cultivo de pinus", "risco_base": "baixo" },
+  { "codigo": "0210-1/04", "atividade_label": "Cultivo de teca", "risco_base": "baixo" },
+  {
+    "codigo": "0210-1/05",
+    "atividade_label": "Cultivo de espécies madeireiras, exceto eucalipto, acácia-negra, pinus e teca",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0210-1/06",
+    "atividade_label": "Cultivo de mudas em viveiros florestais",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "0210-1/07",
+    "atividade_label": "Extração de madeira em florestas plantadas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0210-1/08",
+    "atividade_label": "Produção de carvão vegetal - florestas plantadas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0210-1/09",
+    "atividade_label": "Produção de casca de acácia-negra -florestas plantadas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0210-1/99",
+    "atividade_label": "Produção de produtos não-madeireiros não especificados anteriormente em florestas plantadas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0220-9/01",
+    "atividade_label": "Extração de madeira em florestas nativas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0220-9/02",
+    "atividade_label": "Produção de carvão vegetal - florestas nativas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0220-9/03",
+    "atividade_label": "Coleta de castanha-do-pará em florestas nativas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0220-9/04",
+    "atividade_label": "Coleta de látex em florestas nativas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0220-9/05",
+    "atividade_label": "Coleta de palmito em florestas nativas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0220-9/06",
+    "atividade_label": "Conservação de florestas nativas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0220-9/99",
+    "atividade_label": "Coleta de produtos não-madeireiros não",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0230-6/00",
+    "atividade_label": "Atividades de apoio à produção florestal",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0311-6/01",
+    "atividade_label": "Pesca de peixes em água salgada",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "0311-6/02",
+    "atividade_label": "Pesca de crustáceos e moluscos em água salgada",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "0311-6/03",
+    "atividade_label": "Coleta de outros produtos marinhos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "0311-6/04",
+    "atividade_label": "Atividades de apoio à pesca em água salgada",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0312-4/01",
+    "atividade_label": "Pesca de peixes em água doce",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "0312-4/02",
+    "atividade_label": "Pesca de crustáceos e moluscos em água doce",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "0312-4/03",
+    "atividade_label": "Coleta de outros produtos aquáticos de água doce",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "0312-4/04",
+    "atividade_label": "Atividades de apoio à pesca em água doce",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0321-3/01",
+    "atividade_label": "Criação de peixes em água salgada e salobra",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0321-3/02",
+    "atividade_label": "Criação de camarões em água salgada e salobra",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0321-3/03",
+    "atividade_label": "Criação de ostras e mexilhões em água salgada e salobra",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0321-3/04",
+    "atividade_label": "Criação de peixes ornamentais em água salgada e salobra",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0321-3/05",
+    "atividade_label": "Atividades de apoio à aqüicultura em água salgada e salobra",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0321-3/99",
+    "atividade_label": "Cultivos e semicultivos da aqüicultura em água salgada e salobra não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0322-1/01",
+    "atividade_label": "Criação de peixes em água doce",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0322-1/02",
+    "atividade_label": "Criação de camarões em água doce",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0322-1/03",
+    "atividade_label": "Criação de ostras e mexilhões em água doce",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0322-1/04",
+    "atividade_label": "Criação de peixes ornamentais em água doce",
+    "risco_base": "baixo"
+  },
+  { "codigo": "0322-1/05", "atividade_label": "Ranicultura", "risco_base": "baixo" },
+  { "codigo": "0322-1/06", "atividade_label": "Criação de jacaré", "risco_base": "medio" },
+  {
+    "codigo": "0322-1/07",
+    "atividade_label": "Atividades de apoio à aqüicultura em água doce",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0322-1/99",
+    "atividade_label": "Cultivos e semicultivos da aqüicultura em água doce não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  { "codigo": "0500-3/01", "atividade_label": "Extração de carvão mineral", "risco_base": "baixo" },
+  {
+    "codigo": "0500-3/02",
+    "atividade_label": "Beneficiament o de carvão mineral",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0600-0/01",
+    "atividade_label": "Extração de petróleo e gás natural",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "0600-0/02",
+    "atividade_label": "Extração e beneficiament o de xisto",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0600-0/03",
+    "atividade_label": "Extração e beneficiament o de areias betuminosas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0710-3/01",
+    "atividade_label": "Extração de minério de ferro",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0710-3/02",
+    "atividade_label": "Pelotização, sinterização e outros beneficiament os de minério de ferro",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0721-9/01",
+    "atividade_label": "Extração de minério de alumínio",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0721-9/02",
+    "atividade_label": "Beneficiament o de minério de alumínio",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0722-7/01",
+    "atividade_label": "Extração de minério de estanho",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0722-7/02",
+    "atividade_label": "Beneficiament o de minério de estanho",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0723-5/01",
+    "atividade_label": "Extração de minério de manganês",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0723-5/02",
+    "atividade_label": "Beneficiament o de minério de manganês",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0724-3/01",
+    "atividade_label": "Extração de minério de metais preciosos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0724-3/02",
+    "atividade_label": "Beneficiament o de minério de metais preciosos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0725-1/00",
+    "atividade_label": "Extração de minerais radioativos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0729-4/01",
+    "atividade_label": "Extração de minérios de nióbio e titânio",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0729-4/02",
+    "atividade_label": "Extração de minério de tungstênio",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0729-4/03",
+    "atividade_label": "Extração de minério de níquel",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0729-4/04",
+    "atividade_label": "Extração de minérios de cobre, chumbo, zinco e outros minerais metálicos não-ferrosos não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0729-4/05",
+    "atividade_label": "Beneficiament o de minérios de cobre, chumbo, zinco e outros minerais metálicos não-ferrosos não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0810-0/01",
+    "atividade_label": "Extração de ardósia e beneficiament o associado",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0810-0/02",
+    "atividade_label": "Extração de granito e beneficiament o associado",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0810-0/03",
+    "atividade_label": "Extração de mármore e beneficiament o associado",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0810-0/04",
+    "atividade_label": "Extração de calcário e dolomita e beneficiament o associado",
+    "risco_base": "baixo"
+  },
+  { "codigo": "0810-0/05", "atividade_label": "Extração de gesso e caulim", "risco_base": "baixo" },
+  {
+    "codigo": "0810-0/06",
+    "atividade_label": "Extração de areia, cascalho ou pedregulho e beneficiament o associado",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0810-0/07",
+    "atividade_label": "Extração de argila e beneficiament o associado",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0810-0/08",
+    "atividade_label": "Extração de saibro e beneficiament o associado",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0810-0/09",
+    "atividade_label": "Extração de basalto e beneficiament o associado",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0810-0/10",
+    "atividade_label": "Beneficiament o de gesso e caulim associado à extração",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0810-0/99",
+    "atividade_label": "Extração e britamento de pedras e outros materiais para construção e beneficiament o associado",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0891-6/00",
+    "atividade_label": "Extração de minerais para fabricação de adubos, fertilizantes e outros produtos químicos",
+    "risco_base": "baixo"
+  },
+  { "codigo": "0892-4/01", "atividade_label": "Extração de sal marinho", "risco_base": "baixo" },
+  { "codigo": "0892-4/02", "atividade_label": "Extração de sal-gema", "risco_base": "baixo" },
+  {
+    "codigo": "0892-4/03",
+    "atividade_label": "Refino e outros tratamentos do sal",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "0893-2/00",
+    "atividade_label": "Extração de gemas (pedras preciosas e semipreciosas )",
+    "risco_base": "baixo"
+  },
+  { "codigo": "0899-1/01", "atividade_label": "Extração de grafita", "risco_base": "baixo" },
+  { "codigo": "0899-1/02", "atividade_label": "Extração de quartzo", "risco_base": "baixo" },
+  { "codigo": "0899-1/03", "atividade_label": "Extração de amianto", "risco_base": "baixo" },
+  {
+    "codigo": "0899-1/99",
+    "atividade_label": "Extração de outros minerais não-metálicos não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0910-6/00",
+    "atividade_label": "Atividades de apoio à extração de petróleo e gás natural",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0990-4/01",
+    "atividade_label": "Atividades de apoio à extração de minério de ferro",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0990-4/02",
+    "atividade_label": "Atividades de apoio à extração de minerais metálicos não-ferrosos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "0990-4/03",
+    "atividade_label": "Atividades de apoio à extração de minerais não-metálicos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1011-2/01",
+    "atividade_label": "Frigorífico -abate de bovinos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1011-2/02",
+    "atividade_label": "Frigorífico -abate de eqüinos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1011-2/03",
+    "atividade_label": "Frigorífico -abate de ovinos e caprinos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1011-2/04",
+    "atividade_label": "Frigorífico -abate de bufalinos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1011-2/05",
+    "atividade_label": "Matadouro -abate de reses sob contrato -exceto abate de suínos",
+    "risco_base": "baixo"
+  },
+  { "codigo": "1012-1/01", "atividade_label": "Abate de aves", "risco_base": "baixo" },
+  { "codigo": "1012-1/02", "atividade_label": "Abate de pequenos animais", "risco_base": "baixo" },
+  {
+    "codigo": "1012-1/03",
+    "atividade_label": "Frigorífico -abate de suínos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1012-1/04",
+    "atividade_label": "Matadouro -abate de suínos sob contrato",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1013-9/01",
+    "atividade_label": "Fabricação de produtos de carne",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1013-9/02",
+    "atividade_label": "Preparação de subprodutos do abate",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1020-1/01",
+    "atividade_label": "Preservação de peixes, crustáceos e moluscos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1020-1/02",
+    "atividade_label": "Fabricação de conservas de peixes, crustáceos e moluscos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1031-7/00",
+    "atividade_label": "Fabricação de conservas de frutas",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1032-5/01",
+    "atividade_label": "Fabricação de conservas de palmito",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1032-5/99",
+    "atividade_label": "Fabricação de conservas de legumes e outros vegetais, exceto palmito",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1033-3/01",
+    "atividade_label": "Fabricação de sucos concentrados de frutas, hortaliças e legumes",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1033-3/02",
+    "atividade_label": "Fabricação de sucos de frutas, hortaliças e legumes, exceto concentrados",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1041-4/00",
+    "atividade_label": "Fabricação de óleos vegetais em bruto, exceto óleo de milho",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1042-2/00",
+    "atividade_label": "Fabricação de óleos vegetais refinados, exceto óleo de milho",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1043-1/00",
+    "atividade_label": "Fabricação de margarina e outras gorduras vegetais e de óleos não-comestíveis de animais",
+    "risco_base": "medio"
+  },
+  { "codigo": "1051-1/00", "atividade_label": "Preparação do leite", "risco_base": "medio" },
+  { "codigo": "1052-0/00", "atividade_label": "Fabricação de laticínios", "risco_base": "medio" },
+  {
+    "codigo": "1053-8/00",
+    "atividade_label": "Fabricação de sorvetes e outros gelados comestíveis",
+    "risco_base": "medio"
+  },
+  { "codigo": "1061-9/01", "atividade_label": "Beneficiament o de arroz", "risco_base": "medio" },
+  {
+    "codigo": "1061-9/02",
+    "atividade_label": "Fabricação de produtos do arroz",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1062-7/00",
+    "atividade_label": "Moagem de trigo e fabricação de derivados",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1063-5/00",
+    "atividade_label": "Fabricação de farinha de mandioca e derivados",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1064-3/00",
+    "atividade_label": "Fabricação de farinha de milho e derivados, exceto óleos de milho",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1065-1/01",
+    "atividade_label": "Fabricação de amidos e féculas de vegetais",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1065-1/02",
+    "atividade_label": "Fabricação de óleo de milho em bruto",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1065-1/03",
+    "atividade_label": "Fabricação de óleo de milho refinado",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1066-0/00",
+    "atividade_label": "Fabricação de alimentos para animais",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1069-4/00",
+    "atividade_label": "Moagem e fabricação de produtos de origem vegetal não especificados anteriormente",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1071-6/00",
+    "atividade_label": "Fabricação de açúcar em bruto",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1072-4/01",
+    "atividade_label": "Fabricação de açúcar de cana refinado",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1072-4/02",
+    "atividade_label": "Fabricação de açúcar de cereais (dextrose) e de beterraba",
+    "risco_base": "medio"
+  },
+  { "codigo": "1081-3/01", "atividade_label": "Beneficiament o de café", "risco_base": "medio" },
+  {
+    "codigo": "1081-3/02",
+    "atividade_label": "Torrefação e moagem de café",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1082-1/00",
+    "atividade_label": "Fabricação de produtos à base de café",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1091-1/01",
+    "atividade_label": "Fabricação de produtos de panificação industrial",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1091-1/02",
+    "atividade_label": "Fabricação de produtos de padaria e confeitaria com predominância de produção própria",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1092-9/00",
+    "atividade_label": "Fabricação de biscoitos e bolachas",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1093-7/01",
+    "atividade_label": "Fabricação de produtos derivados do cacau e de chocolates",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1093-7/02",
+    "atividade_label": "Fabricação de frutas cristalizadas, balas e semelhantes",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1094-5/00",
+    "atividade_label": "Fabricação de massas alimentícias",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1095-3/00",
+    "atividade_label": "Fabricação de especiarias, molhos, temperos e condimentos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1096-1/00",
+    "atividade_label": "Fabricação de alimentos e pratos prontos",
+    "risco_base": "medio"
+  },
+  { "codigo": "1099-6/01", "atividade_label": "Fabricação de vinagres", "risco_base": "baixo" },
+  {
+    "codigo": "1099-6/02",
+    "atividade_label": "Fabricação de pós alimentícios",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1099-6/03",
+    "atividade_label": "Fabricação de fermentos e leveduras",
+    "risco_base": "medio"
+  },
+  { "codigo": "1099-6/04", "atividade_label": "Fabricação de gelo comum", "risco_base": "baixo" },
+  {
+    "codigo": "1099-6/05",
+    "atividade_label": "Fabricação de produtos para infusão (chá, mate, etc.)",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1099-6/06",
+    "atividade_label": "Fabricação de adoçantes naturais e artificiais",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1099-6/07",
+    "atividade_label": "Fabricação de alimentos dietéticos e complementos alimentares",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1099-6/99",
+    "atividade_label": "Fabricação de outros produtos alimentícios não especificados anteriormente",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1111-9/01",
+    "atividade_label": "Fabricação de aguardente de cana-de-açúcar",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1111-9/02",
+    "atividade_label": "Fabricação de outras aguardentes e bebidas destiladas",
+    "risco_base": "baixo"
+  },
+  { "codigo": "1112-7/00", "atividade_label": "Fabricação de vinho", "risco_base": "baixo" },
+  {
+    "codigo": "1113-5/01",
+    "atividade_label": "Fabricação de malte, inclusive malte uísque",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1113-5/02",
+    "atividade_label": "Fabricação de cervejas e chopes",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1121-6/00",
+    "atividade_label": "Fabricação de águas envasadas",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1122-4/01",
+    "atividade_label": "Fabricação de refrigerantes",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1122-4/02",
+    "atividade_label": "Fabricação de chá mate e outros chás prontos para consumo",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1122-4/03",
+    "atividade_label": "Fabricação de refrescos, xaropes e pós para refrescos, exceto refrescos de frutas",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1122-4/04",
+    "atividade_label": "Fabricação de bebidas isotônicas",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1122-4/99",
+    "atividade_label": "Fabricação de outras bebidas não-alcoólicas não especificadas anteriormente",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1210-7/00",
+    "atividade_label": "Processament o industrial do fumo",
+    "risco_base": "baixo"
+  },
+  { "codigo": "1220-4/01", "atividade_label": "Fabricação de cigarros", "risco_base": "baixo" },
+  {
+    "codigo": "1220-4/02",
+    "atividade_label": "Fabricação de cigarrilhas e charutos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1220-4/03",
+    "atividade_label": "Fabricação de filtros para cigarros",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1220-4/99",
+    "atividade_label": "Fabricação de outros produtos do fumo, exceto cigarros, cigarrilhas e charutos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1311-1/00",
+    "atividade_label": "Preparação e fiação de fibras de algodão",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1312-0/00",
+    "atividade_label": "Preparação e fiação de fibras têxteis naturais, exceto algodão",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1313-8/00",
+    "atividade_label": "Fiação de fibras artificiais e sintéticas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1314-6/00",
+    "atividade_label": "Fabricação de linhas para costurar e bordar",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1321-9/00",
+    "atividade_label": "Tecelagem de fios de algodão",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1322-7/00",
+    "atividade_label": "Tecelagem de fios de fibras têxteis naturais, exceto algodão",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1323-5/00",
+    "atividade_label": "Tecelagem de fios de fibras artificiais e sintéticas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1330-8/00",
+    "atividade_label": "Fabricação de tecidos de malha",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1340-5/01",
+    "atividade_label": "Estamparia e texturização em fios, tecidos, artefatos têxteis e peças do vestuário",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1340-5/02",
+    "atividade_label": "Alvejamento, tingimento e torção em fios, tecidos, artefatos têxteis e peças do vestuário",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1340-5/99",
+    "atividade_label": "Outros serviços de acabamento em fios, tecidos, artefatos têxteis e peças do vestuário",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1351-1/00",
+    "atividade_label": "Fabricação de artefatos têxteis para uso doméstico",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1352-9/00",
+    "atividade_label": "Fabricação de artefatos de tapeçaria",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1353-7/00",
+    "atividade_label": "Fabricação de artefatos de cordoaria",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1354-5/00",
+    "atividade_label": "Fabricação de tecidos especiais, inclusive artefatos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1359-6/00",
+    "atividade_label": "Fabricação de outros produtos têxteis não especificados anteriormente",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1411-8/01",
+    "atividade_label": "Confecção de roupas íntimas",
+    "risco_base": "medio"
+  },
+  { "codigo": "1411-8/02", "atividade_label": "Facção de roupas íntimas", "risco_base": "baixo" },
+  {
+    "codigo": "1412-6/01",
+    "atividade_label": "Confecção de peças do vestuário, exceto roupas íntimas e as confeccionada s sob medida",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1412-6/02",
+    "atividade_label": "Confecção, sob medida, de peças do vestuário, exceto roupas íntimas",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1412-6/03",
+    "atividade_label": "Facção de peças do vestuário, exceto roupas íntimas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1413-4/01",
+    "atividade_label": "Confecção de roupas profissionais, exceto sob medida",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1413-4/02",
+    "atividade_label": "Confecção, sob medida, de roupas profissionais",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1413-4/03",
+    "atividade_label": "Facção de roupas profissionais",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1414-2/00",
+    "atividade_label": "Fabricação de acessórios do vestuário, exceto para segurança e proteção",
+    "risco_base": "baixo"
+  },
+  { "codigo": "1421-5/00", "atividade_label": "Fabricação de meias", "risco_base": "baixo" },
+  {
+    "codigo": "1422-3/00",
+    "atividade_label": "Fabricação de artigos do vestuário, produzidos em malharias e tricotagens, exceto meias",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1510-6/00",
+    "atividade_label": "Curtimento e outras preparações de couro",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1521-1/00",
+    "atividade_label": "Fabricação de artigos para viagem, bolsas e semelhantes de qualquer material",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1529-7/00",
+    "atividade_label": "Fabricação de artefatos de couro não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1531-9/01",
+    "atividade_label": "Fabricação de calçados de couro",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1531-9/02",
+    "atividade_label": "Acabamento de calçados de couro sob contrato",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1532-7/00",
+    "atividade_label": "Fabricação de tênis de qualquer material",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1533-5/00",
+    "atividade_label": "Fabricação de calçados de material sintético",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1539-4/00",
+    "atividade_label": "Fabricação de calçados de materiais não especificados anteriormente",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1540-8/00",
+    "atividade_label": "Fabricação de partes para calçados, de qualquer material",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1610-2/01",
+    "atividade_label": "Serrarias com desdobrament o de madeira",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1610-2/02",
+    "atividade_label": "Serrarias sem desdobrament o de madeira",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1610-2/03",
+    "atividade_label": "Serrarias com desdobrament o de madeira em bruto",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1610-2/04",
+    "atividade_label": "Serrarias sem desdobrament o de madeira em bruto -resserragem",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1610-2/05",
+    "atividade_label": "Serviço de tratamento de madeira realizado sob contrato",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1621-8/00",
+    "atividade_label": "Fabricação de madeira laminada e de chapas de madeira compensada, prensada e aglomerada",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1622-6/01",
+    "atividade_label": "Fabricação de casas de madeira pré-fabricadas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1622-6/02",
+    "atividade_label": "Fabricação de esquadrias de madeira e de peças de madeira para instalações industriais e comerciais",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1622-6/99",
+    "atividade_label": "Fabricação de outros artigos de carpintaria para construção",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1623-4/00",
+    "atividade_label": "Fabricação de artefatos de tanoaria e de embalagens de madeira",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1629-3/01",
+    "atividade_label": "Fabricação de artefatos diversos de madeira, exceto móveis",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1629-3/02",
+    "atividade_label": "Fabricação de artefatos diversos de cortiça, bambu, palha, vime e outros materiais trançados, exceto móveis",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1710-9/00",
+    "atividade_label": "Fabricação de celulose e outras pastas para a fabricação de papel",
+    "risco_base": "baixo"
+  },
+  { "codigo": "1721-4/00", "atividade_label": "Fabricação de papel", "risco_base": "baixo" },
+  {
+    "codigo": "1722-2/00",
+    "atividade_label": "Fabricação de cartolina e papel-cartão",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1731-1/00",
+    "atividade_label": "Fabricação de embalagens de papel",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1732-0/00",
+    "atividade_label": "Fabricação de embalagens de cartolina e papel-cartão",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1733-8/00",
+    "atividade_label": "Fabricação de chapas e de embalagens de papelão ondulado",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1741-9/01",
+    "atividade_label": "Fabricação de formulários contínuos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1741-9/02",
+    "atividade_label": "Fabricação de produtos de papel, cartolina, papel-cartão e papelão ondulado para uso industrial, comercial e de escritório, exceto formulário contínuo",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1742-7/01",
+    "atividade_label": "Fabricação de fraldas descartáveis",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1742-7/02",
+    "atividade_label": "Fabricação de absorventes higiênicos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "1742-7/99",
+    "atividade_label": "Fabricação de produtos de papel para uso doméstico e higiênico-sanitário não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1749-4/00",
+    "atividade_label": "Fabricação de produtos de pastas celulósicas, papel, cartolina, papel-cartão e papelão ondulado não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  { "codigo": "1811-3/01", "atividade_label": "Impressão de jornais", "risco_base": "baixo" },
+  {
+    "codigo": "1811-3/02",
+    "atividade_label": "Impressão de livros, revistas e outras publicações periódicas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1812-1/00",
+    "atividade_label": "Impressão de material de segurança",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1813-0/01",
+    "atividade_label": "Impressão de material para uso publicitário",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1813-0/99",
+    "atividade_label": "Impressão de material para outros usos",
+    "risco_base": "baixo"
+  },
+  { "codigo": "1821-1/00", "atividade_label": "Serviços de pré-impressão", "risco_base": "baixo" },
+  {
+    "codigo": "1822-9/01",
+    "atividade_label": "Serviços de encadernação e plastificação",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1822-9/99",
+    "atividade_label": "Serviços de acabamentos gráficos, exceto encadernação e plastificação",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1830-0/01",
+    "atividade_label": "Reprodução de som em qualquer",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1830-0/02",
+    "atividade_label": "Reprodução de vídeo em qualquer suporte",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "1830-0/03",
+    "atividade_label": "Reprodução de software em qualquer suporte",
+    "risco_base": "baixo"
+  },
+  { "codigo": "1910-1/00", "atividade_label": "Coquerias", "risco_base": "alto" },
+  {
+    "codigo": "1921-7/00",
+    "atividade_label": "Fabricação de produtos do refino de petróleo",
+    "risco_base": "alto"
+  },
+  { "codigo": "1922-5/01", "atividade_label": "Formulação de combustíveis", "risco_base": "alto" },
+  {
+    "codigo": "1922-5/02",
+    "atividade_label": "Rerrefino de óleos lubrificantes",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "1922-5/99",
+    "atividade_label": "Fabricação de outros produtos derivados do petróleo, exceto produtos do refino",
+    "risco_base": "alto"
+  },
+  { "codigo": "1931-4/00", "atividade_label": "Fabricação de álcool", "risco_base": "alto" },
+  {
+    "codigo": "1932-2/00",
+    "atividade_label": "Fabricação de biocombustívei s, exceto álcool",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "2011-8/00",
+    "atividade_label": "Fabricação de cloro e álcalis",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "2012-6/00",
+    "atividade_label": "Fabricação de intermediários para fertilizantes",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "2013-4/01",
+    "atividade_label": "Fabricação de adubos e fertilizantes organo-minerais",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "2013-4/02",
+    "atividade_label": "Fabricação de adubos e fertilizantes, exceto organo-minerais",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "2014-2/00",
+    "atividade_label": "Fabricação de gases industriais",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "2019-3/01",
+    "atividade_label": "Elaboração de combustíveis nucleares",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "2019-3/99",
+    "atividade_label": "Fabricação de outros produtos químicos inorgânicos não especificados anteriormente",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "2021-5/00",
+    "atividade_label": "Fabricação de produtos petroquímicos básicos",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "2022-3/00",
+    "atividade_label": "Fabricação de intermediários para plastificantes, resinas e fibras",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "2029-1/00",
+    "atividade_label": "Fabricação de produtos químicos orgânicos não especificados anteriormente",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "2031-2/00",
+    "atividade_label": "Fabricação de resinas termoplásticas",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "2032-1/00",
+    "atividade_label": "Fabricação de resinas termofixas",
+    "risco_base": "medio"
+  },
+  { "codigo": "2033-9/00", "atividade_label": "Fabricação de elastômeros", "risco_base": "medio" },
+  {
+    "codigo": "2040-1/00",
+    "atividade_label": "Fabricação de fibras artificiais e sintéticas",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "2051-7/00",
+    "atividade_label": "Fabricação de defensivos agrícolas",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "2052-5/00",
+    "atividade_label": "Fabricação de desinfestantes domissanitário s",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "2061-4/00",
+    "atividade_label": "Fabricação de sabões e detergentes sintéticos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "2062-2/00",
+    "atividade_label": "Fabricação de produtos de limpeza e polimento",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "2063-1/00",
+    "atividade_label": "Fabricação de cosméticos, produtos de perfumaria e de higiene pessoal",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "2071-1/00",
+    "atividade_label": "Fabricação de tintas, vernizes, esmaltes e lacas",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "2072-0/00",
+    "atividade_label": "Fabricação de tintas de impressão",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "2073-8/00",
+    "atividade_label": "Fabricação de impermeabiliz antes, solventes e produtos afins",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "2091-6/00",
+    "atividade_label": "Fabricação de adesivos e selantes",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "2092-4/01",
+    "atividade_label": "Fabricação de pólvoras, explosivos e detonantes",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "2092-4/02",
+    "atividade_label": "Fabricação de artigos pirotécnicos",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "2092-4/03",
+    "atividade_label": "Fabricação de fósforos de segurança",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "2093-2/00",
+    "atividade_label": "Fabricação de aditivos de uso industrial",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "2094-1/00",
+    "atividade_label": "Fabricação de catalisadores",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2099-1/01",
+    "atividade_label": "Fabricação de chapas, filmes, papéis e outros materiais e produtos químicos para fotografia",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2099-1/99",
+    "atividade_label": "Fabricação de outros produtos químicos não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2110-6/00",
+    "atividade_label": "Fabricação de produtos farmoquímicos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "2121-1/01",
+    "atividade_label": "Fabricação de medicamentos alopáticos para uso humano",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "2121-1/02",
+    "atividade_label": "Fabricação de medicamentos homeopáticos para uso humano",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "2121-1/03",
+    "atividade_label": "Fabricação de medicamentos fitoterápicos para uso humano",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "2122-0/00",
+    "atividade_label": "Fabricação de medicamentos para uso veterinário",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2123-8/00",
+    "atividade_label": "Fabricação de preparações farmacêuticas",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "2211-1/00",
+    "atividade_label": "Fabricação de pneumáticos e de câmaras-de-ar",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2212-9/00",
+    "atividade_label": "Reforma de pneumáticos usados",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2219-6/00",
+    "atividade_label": "Fabricação de artefatos de borracha não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2221-8/00",
+    "atividade_label": "Fabricação de laminados planos e tubulares de material plástico",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2222-6/00",
+    "atividade_label": "Fabricação de embalagens de material plástico",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2223-4/00",
+    "atividade_label": "Fabricação de tubos e acessórios de material plástico para uso na construção",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2229-3/01",
+    "atividade_label": "Fabricação de artefatos de material plástico para uso pessoal e doméstico",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2229-3/02",
+    "atividade_label": "Fabricação de artefatos de material plástico para usos industriais",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2229-3/03",
+    "atividade_label": "Fabricação de artefatos de material plástico para uso na construção, exceto tubos e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2229-3/99",
+    "atividade_label": "Fabricação de artefatos de material",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2311-7/00",
+    "atividade_label": "Fabricação de vidro plano e de segurança",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2312-5/00",
+    "atividade_label": "Fabricação de embalagens de vidro",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2319-2/00",
+    "atividade_label": "Fabricação de artigos de vidro",
+    "risco_base": "baixo"
+  },
+  { "codigo": "2320-6/00", "atividade_label": "Fabricação de cimento", "risco_base": "baixo" },
+  {
+    "codigo": "2330-3/01",
+    "atividade_label": "Fabricação de estruturas pré-moldadas de concreto armado, em série e sob encomenda",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2330-3/02",
+    "atividade_label": "Fabricação de artefatos de cimento para uso na construção",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2330-3/03",
+    "atividade_label": "Fabricação de artefatos de fibrocimento para uso na construção",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2330-3/04",
+    "atividade_label": "Fabricação de casas pré-moldadas de concreto",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2330-3/05",
+    "atividade_label": "Preparação de massa de concreto e argamassa para construção",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2330-3/99",
+    "atividade_label": "Fabricação de outros artefatos e produtos de concreto, cimento, fibrocimento, gesso e materiais semelhantes",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2341-9/00",
+    "atividade_label": "Fabricação de produtos cerâmicos refratários",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2342-7/01",
+    "atividade_label": "Fabricação de azulejos e pisos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2342-7/02",
+    "atividade_label": "Fabricação de artefatos de cerâmica e barro cozido para uso na construção, exceto azulejos e pisos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2349-4/01",
+    "atividade_label": "Fabricação de material sanitário de cerâmica",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2349-4/99",
+    "atividade_label": "Fabricação de produtos cerâmicos não-refratários não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2391-5/01",
+    "atividade_label": "Britamento de pedras, exceto associado à extração",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2391-5/02",
+    "atividade_label": "Aparelhament o de pedras para construção, exceto associado à extração",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2391-5/03",
+    "atividade_label": "Aparelhament o de placas e execução de trabalhos em mármore, granito, ardósia e outras pedras",
+    "risco_base": "baixo"
+  },
+  { "codigo": "2392-3/00", "atividade_label": "Fabricação de cal e gesso", "risco_base": "baixo" },
+  {
+    "codigo": "2399-1/01",
+    "atividade_label": "Decoração, lapidação, gravação, vitrificação e outros trabalhos em cerâmica, louça, vidro e cristal",
+    "risco_base": "baixo"
+  },
+  { "codigo": "2399-1/02", "atividade_label": "Fabricação de abrasivos", "risco_base": "baixo" },
+  {
+    "codigo": "2399-1/99",
+    "atividade_label": "Fabricação de outros produtos de minerais não-metálicos não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  { "codigo": "2411-3/00", "atividade_label": "Produção de ferro-gusa", "risco_base": "baixo" },
+  { "codigo": "2412-1/00", "atividade_label": "Produção de ferroligas", "risco_base": "baixo" },
+  {
+    "codigo": "2421-1/00",
+    "atividade_label": "Produção de semi-acabados de aço",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2422-9/01",
+    "atividade_label": "Produção de laminados planos de aço ao carbono, revestidos ou não",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2422-9/02",
+    "atividade_label": "Produção de laminados planos de aços especiais",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2423-7/01",
+    "atividade_label": "Produção de tubos de aço sem costura",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2423-7/02",
+    "atividade_label": "Produção de laminados longos de aço, exceto tubos",
+    "risco_base": "baixo"
+  },
+  { "codigo": "2424-5/01", "atividade_label": "Produção de arames de aço", "risco_base": "baixo" },
+  {
+    "codigo": "2424-5/02",
+    "atividade_label": "Produção de relaminados, trefilados e perfilados de aço, exceto arames",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2431-8/00",
+    "atividade_label": "Produção de tubos de aço com costura",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2439-3/00",
+    "atividade_label": "Produção de outros tubos de ferro e aço",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2441-5/01",
+    "atividade_label": "Produção de alumínio e suas ligas em formas primárias",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2441-5/02",
+    "atividade_label": "Produção de laminados de alumínio",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2442-3/00",
+    "atividade_label": "Metalurgia dos metais preciosos",
+    "risco_base": "baixo"
+  },
+  { "codigo": "2443-1/00", "atividade_label": "Metalurgia do cobre", "risco_base": "baixo" },
+  {
+    "codigo": "2449-1/01",
+    "atividade_label": "Produção de zinco em formas primárias",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2449-1/02",
+    "atividade_label": "Produção de laminados de zinco",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2449-1/03",
+    "atividade_label": "Fabricação de ânodos para galvanoplastia",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2449-1/99",
+    "atividade_label": "Metalurgia de outros metais não-ferrosos e suas ligas não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  { "codigo": "2451-2/00", "atividade_label": "Fundição de ferro e aço", "risco_base": "baixo" },
+  {
+    "codigo": "2452-1/00",
+    "atividade_label": "Fundição de metais não-ferrosos e suas ligas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2511-0/00",
+    "atividade_label": "Fabricação de estruturas metálicas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2512-8/00",
+    "atividade_label": "Fabricação de esquadrias de metal",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2513-6/00",
+    "atividade_label": "Fabricação de obras de caldeiraria pesada",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2521-7/00",
+    "atividade_label": "Fabricação de tanques, reservatórios metálicos e caldeiras para aquecimento central",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2522-5/00",
+    "atividade_label": "Fabricação de caldeiras geradoras de vapor, exceto para aquecimento central e para veículos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2531-4/01",
+    "atividade_label": "Produção de forjados de aço",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2531-4/02",
+    "atividade_label": "Produção de forjados de metais não-ferrosos e suas ligas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2532-2/01",
+    "atividade_label": "Produção de artefatos estampados de metal",
+    "risco_base": "baixo"
+  },
+  { "codigo": "2532-2/02", "atividade_label": "Metalurgia do pó", "risco_base": "baixo" },
+  {
+    "codigo": "2539-0/01",
+    "atividade_label": "Serviços de usinagem, tornearia e solda",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2539-0/02",
+    "atividade_label": "Serviços de tratamento e revestimento em metais",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2541-1/00",
+    "atividade_label": "Fabricação de artigos de cutelaria",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2542-0/00",
+    "atividade_label": "Fabricação de artigos de serralheria, exceto esquadrias",
+    "risco_base": "baixo"
+  },
+  { "codigo": "2543-8/00", "atividade_label": "Fabricação de ferramentas", "risco_base": "baixo" },
+  {
+    "codigo": "2550-1/01",
+    "atividade_label": "Fabricação de equipamento bélico pesado, exceto veículos militares de combate",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "2550-1/02",
+    "atividade_label": "Fabricação de armas de fogo, outras armas e munições",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "2591-8/00",
+    "atividade_label": "Fabricação de embalagens metálicas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2592-6/01",
+    "atividade_label": "Fabricação de produtos de trefilados de metal padronizados",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2592-6/02",
+    "atividade_label": "Fabricação de produtos de trefilados de metal, exceto padronizados",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2593-4/00",
+    "atividade_label": "Fabricação de artigos de metal para uso doméstico e pessoal",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2599-3/01",
+    "atividade_label": "Serviços de confecção de armações metálicas para a construção",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2599-3/02",
+    "atividade_label": "Serviço de corte e dobra de metais",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2599-3/99",
+    "atividade_label": "Fabricação de outros produtos de metal não especificados anteriormente",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "2610-8/00",
+    "atividade_label": "Fabricação de componentes eletrônicos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2621-3/00",
+    "atividade_label": "Fabricação de equipamentos de informática",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2622-1/00",
+    "atividade_label": "Fabricação de periféricos para equipamentos de informática",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2631-1/00",
+    "atividade_label": "Fabricação de equipamentos transmissores de comunicação, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2632-9/00",
+    "atividade_label": "Fabricação de aparelhos telefônicos e de outros equipamentos de comunicação, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2640-0/00",
+    "atividade_label": "Fabricação de aparelhos de recepção, reprodução, gravação e amplificação de áudio e vídeo",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2651-5/00",
+    "atividade_label": "Fabricação de aparelhos e equipamentos de medida, teste e controle",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2652-3/00",
+    "atividade_label": "Fabricação de cronômetros e relógios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2660-4/00",
+    "atividade_label": "Fabricação de aparelhos eletromédicos e eletroterapêuti cos e equipamentos de irradiação",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "2670-1/01",
+    "atividade_label": "Fabricação de equipamentos e instrumentos ópticos, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2670-1/02",
+    "atividade_label": "Fabricação de aparelhos fotográficos e cinematográfic os, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2680-9/00",
+    "atividade_label": "Fabricação de mídias virgens, magnéticas e ópticas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2710-4/01",
+    "atividade_label": "Fabricação de geradores de corrente contínua e alternada, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2710-4/02",
+    "atividade_label": "Fabricação de transformador es, indutores, conversores, sincronizadore s e semelhantes, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2710-4/03",
+    "atividade_label": "Fabricação de motores elétricos, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2721-0/00",
+    "atividade_label": "Fabricação de pilhas, baterias e acumuladores elétricos, exceto para veículos automotores",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "2722-8/01",
+    "atividade_label": "Fabricação de baterias e acumuladores para veículos automotores",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "2722-8/02",
+    "atividade_label": "Recondiciona mento de baterias e acumuladores para veículos automotores",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "2731-7/00",
+    "atividade_label": "Fabricação de aparelhos e equipamentos para distribuição e controle de energia",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2732-5/00",
+    "atividade_label": "Fabricação de material elétrico para instalações em circuito de consumo",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2733-3/00",
+    "atividade_label": "Fabricação de fios, cabos e condutores elétricos isolados",
+    "risco_base": "baixo"
+  },
+  { "codigo": "2740-6/01", "atividade_label": "Fabricação de lâmpadas", "risco_base": "baixo" },
+  {
+    "codigo": "2740-6/02",
+    "atividade_label": "Fabricação de luminárias e outros equipamentos de iluminação",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2751-1/00",
+    "atividade_label": "Fabricação de fogões, refrigeradores e máquinas de lavar e secar para uso doméstico, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2759-7/01",
+    "atividade_label": "Fabricação de aparelhos elétricos de uso pessoal, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2759-7/99",
+    "atividade_label": "Fabricação de outros aparelhos eletrodoméstic os não especificados anteriormente, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2790-2/01",
+    "atividade_label": "Fabricação de eletrodos, contatos e outros artigos de carvão e grafita para uso elétrico, eletroímãs e isoladores",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2790-2/02",
+    "atividade_label": "Fabricação de equipamentos para sinalização e alarme",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2790-2/99",
+    "atividade_label": "Fabricação de outros equipamentos e aparelhos elétricos não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2811-9/00",
+    "atividade_label": "Fabricação de motores e turbinas, peças e acessórios, exceto para aviões e veículos rodoviários",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2812-7/00",
+    "atividade_label": "Fabricação de equipamentos hidráulicos e pneumáticos, peças e acessórios, exceto válvulas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2813-5/00",
+    "atividade_label": "Fabricação de válvulas, registros e dispositivos semelhantes, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2814-3/01",
+    "atividade_label": "Fabricação de compressores para uso industrial, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2814-3/02",
+    "atividade_label": "Fabricação de compressores para uso não industrial, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2815-1/01",
+    "atividade_label": "Fabricação de rolamentos para fins industriais",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2815-1/02",
+    "atividade_label": "Fabricação de equipamentos de transmissão para fins industriais, exceto rolamentos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2821-6/01",
+    "atividade_label": "Fabricação de fornos industriais, aparelhos e equipamentos não-elétricos para instalações térmicas, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2821-6/02",
+    "atividade_label": "Fabricação de estufas e fornos elétricos para fins industriais, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2822-4/01",
+    "atividade_label": "Fabricação de máquinas, equipamentos e aparelhos para transporte e elevação de pessoas, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2822-4/02",
+    "atividade_label": "Fabricação de máquinas, equipamentos e aparelhos para transporte e elevação de cargas, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2823-2/00",
+    "atividade_label": "Fabricação de máquinas e aparelhos de refrigeração e ventilação para uso industrial e comercial, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2824-1/01",
+    "atividade_label": "Fabricação de aparelhos e equipamentos de ar condicionado para uso industrial",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2824-1/02",
+    "atividade_label": "Fabricação de aparelhos e equipamentos de ar condicionado para uso não-industrial",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2825-9/00",
+    "atividade_label": "Fabricação de máquinas e equipamentos para saneamento básico e ambiental, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2829-1/01",
+    "atividade_label": "Fabricação de máquinas de escrever, calcular e outros equipamentos não-eletrônicos para escritório, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2829-1/99",
+    "atividade_label": "Fabricação de outras máquinas e equipamentos de uso geral não especificados anteriormente, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2831-3/00",
+    "atividade_label": "Fabricação de tratores agrícolas, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2832-1/00",
+    "atividade_label": "Fabricação de equipamentos para irrigação agrícola, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2833-0/00",
+    "atividade_label": "Fabricação de máquinas e equipamentos para a agricultura e pecuária, peças e acessórios, exceto para irrigação",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2840-2/00",
+    "atividade_label": "Fabricação de máquinas-ferramenta, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2851-8/00",
+    "atividade_label": "Fabricação de máquinas e equipamentos para a prospecção e extração de petróleo, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2852-6/00",
+    "atividade_label": "Fabricação de outras máquinas e equipamentos para uso na extração mineral, peças e acessórios, exceto na extração de petróleo",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2853-4/00",
+    "atividade_label": "Fabricação de tratores, peças e acessórios, exceto agrícolas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2854-2/00",
+    "atividade_label": "Fabricação de máquinas e equipamentos para terraplenagem , pavimentação e construção, peças e acessórios, exceto tratores",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2861-5/00",
+    "atividade_label": "Fabricação de máquinas para a indústria metalúrgica, peças e acessórios, exceto máquinas-ferramenta",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2862-3/00",
+    "atividade_label": "Fabricação de máquinas e equipamentos para as indústrias de alimentos, bebidas e fumo, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2863-1/00",
+    "atividade_label": "Fabricação de máquinas e equipamentos para a indústria têxtil, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2864-0/00",
+    "atividade_label": "Fabricação de máquinas e equipamentos para as indústrias do vestuário, do couro e de calçados, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2865-8/00",
+    "atividade_label": "Fabricação de máquinas e equipamentos para as indústrias de celulose, papel e papelão e artefatos, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2866-6/00",
+    "atividade_label": "Fabricação de máquinas e equipamentos para a indústria do plástico, peças",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2869-1/00",
+    "atividade_label": "Fabricação de máquinas e equipamentos para uso industrial específico não especificados anteriormente, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2910-7/01",
+    "atividade_label": "Fabricação de automóveis, camionetas e utilitários",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2910-7/02",
+    "atividade_label": "Fabricação de chassis com motor para automóveis, camionetas e utilitários",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2910-7/03",
+    "atividade_label": "Fabricação de motores para automóveis, camionetas e utilitários",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2920-4/01",
+    "atividade_label": "Fabricação de caminhões e ônibus",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2920-4/02",
+    "atividade_label": "Fabricação de motores para caminhões e ônibus",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2930-1/01",
+    "atividade_label": "Fabricação de cabines, carrocerias e reboques para caminhões",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2930-1/02",
+    "atividade_label": "Fabricação de carrocerias para ônibus",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2930-1/03",
+    "atividade_label": "Fabricação de cabines, carrocerias e reboques para outros veículos automotores, exceto caminhões e ônibus",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2941-7/00",
+    "atividade_label": "Fabricação de peças e acessórios para o sistema motor de veículos automotores",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2942-5/00",
+    "atividade_label": "Fabricação de peças e acessórios para os sistemas de marcha e transmissão de veículos automotores",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2943-3/00",
+    "atividade_label": "Fabricação de peças e acessórios para o sistema de freios de veículos automotores",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2944-1/00",
+    "atividade_label": "Fabricação de peças e acessórios para o sistema de direção e suspensão de veículos automotores",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2945-0/00",
+    "atividade_label": "Fabricação de material elétrico e eletrônico para veículos automotores, exceto baterias",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2949-2/01",
+    "atividade_label": "Fabricação de bancos e estofados para veículos automotores",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2949-2/99",
+    "atividade_label": "Fabricação de outras peças e acessórios para veículos automotores não especificadas anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "2950-6/00",
+    "atividade_label": "Recondiciona mento e recuperação de motores para veículos automotores",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3011-3/01",
+    "atividade_label": "Construção de embarcações de grande porte",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3011-3/02",
+    "atividade_label": "Construção de embarcações para uso comercial e para usos especiais, exceto de grande porte",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3012-1/00",
+    "atividade_label": "Construção de embarcações para esporte e lazer",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3031-8/00",
+    "atividade_label": "Fabricação de locomotivas, vagões e outros materiais rodantes",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3032-6/00",
+    "atividade_label": "Fabricação de peças e acessórios para veículos ferroviários",
+    "risco_base": "medio"
+  },
+  { "codigo": "3041-5/00", "atividade_label": "Fabricação de aeronaves", "risco_base": "medio" },
+  {
+    "codigo": "3042-3/00",
+    "atividade_label": "Fabricação de turbinas, motores e outros componentes e peças para aeronaves",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3050-4/00",
+    "atividade_label": "Fabricação de veículos militares de combate",
+    "risco_base": "medio"
+  },
+  { "codigo": "3091-1/01", "atividade_label": "Fabricação de motocicletas", "risco_base": "medio" },
+  {
+    "codigo": "3091-1/02",
+    "atividade_label": "Fabricação de peças e acessórios para motocicletas",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3092-0/00",
+    "atividade_label": "Fabricação de bicicletas e triciclos não-motorizados, peças e acessórios",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3099-7/00",
+    "atividade_label": "Fabricação de equipamentos de transporte não especificados anteriormente",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3101-2/00",
+    "atividade_label": "Fabricação de móveis com predominância de madeira",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3102-1/00",
+    "atividade_label": "Fabricação de móveis com predominância de metal",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3103-9/00",
+    "atividade_label": "Fabricação de móveis de outros materiais, exceto madeira e metal",
+    "risco_base": "medio"
+  },
+  { "codigo": "3104-7/00", "atividade_label": "Fabricação de colchões", "risco_base": "medio" },
+  { "codigo": "3211-6/01", "atividade_label": "Lapidação de gemas", "risco_base": "baixo" },
+  {
+    "codigo": "3211-6/02",
+    "atividade_label": "Fabricação de artefatos de joalheria e ourivesaria",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3211-6/03",
+    "atividade_label": "Cunhagem de moedas e medalhas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3212-4/00",
+    "atividade_label": "Fabricação de bijuterias e artefatos semelhantes",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3220-5/00",
+    "atividade_label": "Fabricação de instrumentos musicais, peças e acessórios",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3230-2/00",
+    "atividade_label": "Fabricação de artefatos para pesca e esporte",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3240-0/01",
+    "atividade_label": "Fabricação de jogos eletrônicos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3240-0/02",
+    "atividade_label": "Fabricação de mesas de bilhar, de sinuca e acessórios não associada à locação",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3240-0/03",
+    "atividade_label": "Fabricação de mesas de bilhar, de sinuca e acessórios associada à locação",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3240-0/99",
+    "atividade_label": "Fabricação de outros brinquedos e jogos recreativos não especificados anteriormente",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3250-7/01",
+    "atividade_label": "Fabricação de instrumentos não-eletrônicos e utensílios para uso médico, cirúrgico, odontológico e de laboratório",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3250-7/02",
+    "atividade_label": "Fabricação de mobiliário para uso médico, cirúrgico, odontológico e de laboratório",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3250-7/03",
+    "atividade_label": "Fabricação de aparelhos e utensílios para correção de defeitos físicos e aparelhos ortopédicos em geral sob encomenda",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3250-7/04",
+    "atividade_label": "Fabricação de aparelhos e utensílios para correção de defeitos físicos e aparelhos ortopédicos em geral, exceto sob encomenda",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3250-7/05",
+    "atividade_label": "Fabricação de materiais para medicina e odontologia",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3250-7/06",
+    "atividade_label": "Serviços de prótese dentária",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3250-7/07",
+    "atividade_label": "Fabricação de artigos ópticos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3250-7/09",
+    "atividade_label": "Serviço de laboratório óptico",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3291-4/00",
+    "atividade_label": "Fabricação de escovas, pincéis e vassouras",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3292-2/01",
+    "atividade_label": "Fabricação de roupas de proteção e segurança e resistentes a fogo",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3292-2/02",
+    "atividade_label": "Fabricação de equipamentos e acessórios para segurança pessoal e profissional",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3299-0/01",
+    "atividade_label": "Fabricação de guarda-chuvas e similares",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3299-0/02",
+    "atividade_label": "Fabricação de canetas, lápis e outros artigos para escritório",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3299-0/03",
+    "atividade_label": "Fabricação de letras, letreiros e placas de qualquer material, exceto luminosos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3299-0/04",
+    "atividade_label": "Fabricação de painéis e letreiros luminosos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3299-0/05",
+    "atividade_label": "Fabricação de aviamentos para costura",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3299-0/06",
+    "atividade_label": "Fabricação de velas, inclusive decorativas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3299-0/99",
+    "atividade_label": "Fabricação de produtos diversos não especificados anteriormente",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3311-2/00",
+    "atividade_label": "Manutenção e reparação de tanques, reservatórios metálicos e caldeiras, exceto para veículos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3312-1/02",
+    "atividade_label": "Manutenção e reparação de aparelhos e instrumentos de medida, teste e controle",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3312-1/03",
+    "atividade_label": "Manutenção e reparação de aparelhos eletromédicos e eletroterapêuti cos e equipamentos de irradiação",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3312-1/04",
+    "atividade_label": "Manutenção e reparação de equipamentos e instrumentos ópticos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3313-9/01",
+    "atividade_label": "Manutenção e reparação de geradores, transformador es e motores elétricos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3313-9/02",
+    "atividade_label": "Manutenção e reparação de baterias e acumuladores",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3313-9/99",
+    "atividade_label": "Manutenção e reparação de máquinas, aparelhos e materiais elétricos não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3314-7/01",
+    "atividade_label": "Manutenção e reparação de máquinas motrizes não-elétricas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3314-7/02",
+    "atividade_label": "Manutenção e reparação de equipamentos hidráulicos e pneumáticos, exceto válvulas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3314-7/03",
+    "atividade_label": "Manutenção e reparação de válvulas industriais",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3314-7/04",
+    "atividade_label": "Manutenção e reparação de compressores",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3314-7/05",
+    "atividade_label": "Manutenção e reparação de equipamentos de transmissão para fins industriais",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3314-7/06",
+    "atividade_label": "Manutenção e reparação de máquinas, aparelhos e equipamentos para instalações térmicas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3314-7/07",
+    "atividade_label": "Manutenção e reparação de máquinas e aparelhos de refrigeração e ventilação para uso industrial e comercial",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3314-7/08",
+    "atividade_label": "Manutenção e reparação de máquinas, equipamentos e aparelhos para transporte e elevação de cargas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3314-7/09",
+    "atividade_label": "Manutenção e reparação de máquinas de escrever, calcular e de outros equipamentos não-eletrônicos para escritório",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3314-7/10",
+    "atividade_label": "Manutenção e reparação de máquinas e equipamentos para uso geral não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3314-7/11",
+    "atividade_label": "Manutenção e reparação de máquinas e equipamentos para agricultura e pecuária",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3314-7/12",
+    "atividade_label": "Manutenção e reparação de tratores agrícolas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3314-7/13",
+    "atividade_label": "Manutenção e reparação de máquinas-ferramenta",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3314-7/14",
+    "atividade_label": "Manutenção e reparação de máquinas e equipamentos para a prospecção e extração de petróleo",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3314-7/15",
+    "atividade_label": "Manutenção e reparação de máquinas e equipamentos para uso na extração mineral, exceto na extração de petróleo",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3314-7/16",
+    "atividade_label": "Manutenção e reparação de tratores, exceto agrícolas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3314-7/17",
+    "atividade_label": "Manutenção e reparação de máquinas e equipamentos de terraplenagem , pavimentação e construção, exceto tratores",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3314-7/18",
+    "atividade_label": "Manutenção e reparação de máquinas para a indústria metalúrgica, exceto máquinas-ferramenta",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3314-7/19",
+    "atividade_label": "Manutenção e reparação de máquinas e equipamentos para as indústrias de alimentos, bebidas e fumo",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3314-7/20",
+    "atividade_label": "Manutenção e reparação de máquinas e equipamentos para a indústria têxtil, do vestuário, do couro e calçados",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3314-7/21",
+    "atividade_label": "Manutenção e reparação de máquinas e aparelhos para a indústria de celulose, papel e papelão e artefatos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3314-7/22",
+    "atividade_label": "Manutenção e reparação de máquinas e aparelhos para a indústria do plástico",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3314-7/99",
+    "atividade_label": "Manutenção e reparação de outras máquinas e equipamentos para usos industriais não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3315-5/00",
+    "atividade_label": "Manutenção e reparação de veículos ferroviários",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3316-3/01",
+    "atividade_label": "Manutenção e reparação de aeronaves, exceto a manutenção na pista",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3316-3/02",
+    "atividade_label": "Manutenção de aeronaves na pista *",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3317-1/01",
+    "atividade_label": "Manutenção e reparação de embarcações e estruturas flutuantes",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3317-1/02",
+    "atividade_label": "Manutenção e reparação de embarcações para esportes e lazer",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3319-8/00",
+    "atividade_label": "Manutenção e reparação de equipamentos e produtos não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3321-0/00",
+    "atividade_label": "Instalação de máquinas e equipamentos industriais",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3329-5/01",
+    "atividade_label": "Serviços de montagem de móveis de qualquer material",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3329-5/99",
+    "atividade_label": "Instalação de outros equipamentos não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  { "codigo": "3511-5/01", "atividade_label": "Geração de energia elétrica", "risco_base": "alto" },
+  {
+    "codigo": "3511-5/02",
+    "atividade_label": "Atividades de coordenação e controle da operação da geração e transmissão de energia elétrica",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3512-3/00",
+    "atividade_label": "Transmissão de energia elétrica",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "3513-1/00",
+    "atividade_label": "Comércio atacadista de energia elétrica",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3514-0/00",
+    "atividade_label": "Distribuição de energia elétrica",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "3520-4/01",
+    "atividade_label": "Produção de gás; processament o de gás natural",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "3520-4/02",
+    "atividade_label": "Distribuição de combustíveis gasosos por redes urbanas",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "3530-1/00",
+    "atividade_label": "Produção e distribuição de vapor, água quente e ar condicionado",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3600-6/01",
+    "atividade_label": "Captação, tratamento e distribuição de água",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3600-6/02",
+    "atividade_label": "Distribuição de água por caminhões",
+    "risco_base": "baixo"
+  },
+  { "codigo": "3701-1/00", "atividade_label": "Gestão de redes de esgoto", "risco_base": "baixo" },
+  {
+    "codigo": "3702-9/00",
+    "atividade_label": "Atividades relacionadas a esgoto, exceto a gestão de redes",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3811-4/00",
+    "atividade_label": "Coleta de resíduos não-perigosos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3812-2/00",
+    "atividade_label": "Coleta de resíduos perigosos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3821-1/00",
+    "atividade_label": "Tratamento e disposição de resíduos não-perigosos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3822-0/00",
+    "atividade_label": "Tratamento e disposição de resíduos perigosos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "3831-9/01",
+    "atividade_label": "Recuperação de sucatas de alumínio",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3831-9/99",
+    "atividade_label": "Recuperação de materiais metálicos, exceto alumínio",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3832-7/00",
+    "atividade_label": "Recuperação de materiais plásticos",
+    "risco_base": "baixo"
+  },
+  { "codigo": "3839-4/01", "atividade_label": "Usinas de compostagem", "risco_base": "medio" },
+  {
+    "codigo": "3839-4/99",
+    "atividade_label": "Recuperação de materiais não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "3900-5/00",
+    "atividade_label": "Descontamina ção e outros serviços de gestão de resíduos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4110-7/00",
+    "atividade_label": "Incorporação de empreendime ntos imobiliários",
+    "risco_base": "baixo"
+  },
+  { "codigo": "4120-4/00", "atividade_label": "Construção de edifícios", "risco_base": "baixo" },
+  {
+    "codigo": "4211-1/01",
+    "atividade_label": "Construção de rodovias e ferrovias",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4211-1/02",
+    "atividade_label": "Pintura para sinalização em pistas rodoviárias e aeroportos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4212-0/00",
+    "atividade_label": "Construção de obras de arte especiais",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4213-8/00",
+    "atividade_label": "Obras de urbanização -ruas, praças e calçadas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4221-9/01",
+    "atividade_label": "Construção de barragens e represas para geração de energia elétrica",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4221-9/02",
+    "atividade_label": "Construção de estações e redes de distribuição de energia elétrica",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4221-9/03",
+    "atividade_label": "Manutenção de redes de distribuição de energia elétrica",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4221-9/04",
+    "atividade_label": "Construção de estações e redes de telecomunicaç ões",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4221-9/05",
+    "atividade_label": "Manutenção de estações e redes de telecomunicaç ões",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4222-7/01",
+    "atividade_label": "Construção de redes de abastecimento de água, coleta de esgoto e construções correlatas, exceto obras de irrigação",
+    "risco_base": "baixo"
+  },
+  { "codigo": "4222-7/02", "atividade_label": "Obras de irrigação", "risco_base": "medio" },
+  {
+    "codigo": "4223-5/00",
+    "atividade_label": "Construção de redes de transportes por dutos, exceto para água e esgoto",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4291-0/00",
+    "atividade_label": "Obras portuárias, marítimas e fluviais",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4292-8/01",
+    "atividade_label": "Montagem de estruturas metálicas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4292-8/02",
+    "atividade_label": "Obras de montagem industrial",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4299-5/01",
+    "atividade_label": "Construção de instalações esportivas e recreativas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4299-5/99",
+    "atividade_label": "Outras obras de engenharia civil não especificadas anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4311-8/01",
+    "atividade_label": "Demolição de edifícios e outras estruturas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4311-8/02",
+    "atividade_label": "Preparação de canteiro e limpeza de terreno",
+    "risco_base": "baixo"
+  },
+  { "codigo": "4312-6/00", "atividade_label": "Perfurações e sondagens", "risco_base": "baixo" },
+  { "codigo": "4313-4/00", "atividade_label": "Obras de terraplenagem", "risco_base": "baixo" },
+  {
+    "codigo": "4319-3/00",
+    "atividade_label": "Serviços de preparação do terreno não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4321-5/00",
+    "atividade_label": "Instalação e manutenção elétrica",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4322-3/01",
+    "atividade_label": "Instalações hidráulicas, sanitárias e de gás",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4322-3/02",
+    "atividade_label": "Instalação e manutenção de sistemas centrais de ar condicionado, de ventilação e refrigeração",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4322-3/03",
+    "atividade_label": "Instalações de sistema de prevenção contra incêndio",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4329-1/01",
+    "atividade_label": "Instalação de painéis publicitários",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4329-1/02",
+    "atividade_label": "Instalação de equipamentos para orientação à navegação marítima, fluvial e lacustre",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4329-1/03",
+    "atividade_label": "Instalação, manutenção e reparação de elevadores, escadas e esteiras rolantes",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4329-1/04",
+    "atividade_label": "Montagem e instalação de sistemas e equipamentos de iluminação e sinalização em vias públicas, portos e aeroportos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4329-1/05",
+    "atividade_label": "Tratamentos térmicos, acústicos ou de vibração",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4329-1/99",
+    "atividade_label": "Outras obras de instalações em construções não especificadas anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4330-4/01",
+    "atividade_label": "Impermeabiliz ação em obras de engenharia civil",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4330-4/02",
+    "atividade_label": "Instalação de portas, janelas, tetos, divisórias e armários embutidos de qualquer material",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4330-4/03",
+    "atividade_label": "Obras de acabamento em gesso e estuque",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4330-4/04",
+    "atividade_label": "Serviços de pintura de edifícios em geral",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4330-4/05",
+    "atividade_label": "Aplicação de revestimentos e de resinas em interiores e exteriores",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4330-4/99",
+    "atividade_label": "Outras obras de acabamento da construção",
+    "risco_base": "baixo"
+  },
+  { "codigo": "4391-6/00", "atividade_label": "Obras de fundações", "risco_base": "baixo" },
+  { "codigo": "4399-1/01", "atividade_label": "Administração de obras", "risco_base": "baixo" },
+  {
+    "codigo": "4399-1/02",
+    "atividade_label": "Montagem e desmontagem de andaimes e outras estruturas temporárias",
+    "risco_base": "baixo"
+  },
+  { "codigo": "4399-1/03", "atividade_label": "Obras de alvenaria", "risco_base": "baixo" },
+  {
+    "codigo": "4399-1/04",
+    "atividade_label": "Serviços de operação e fornecimento de equipamentos para transporte e elevação de cargas e pessoas para uso em obras",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4399-1/05",
+    "atividade_label": "Perfuração e construção de poços de água",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4399-1/99",
+    "atividade_label": "Serviços especializados para construção não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4511-1/01",
+    "atividade_label": "Comércio a varejo de automóveis, camionetas e utilitários novos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4511-1/02",
+    "atividade_label": "Comércio a varejo de automóveis, camionetas e utilitários usados",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4511-1/03",
+    "atividade_label": "Comércio por atacado de automóveis, camionetas e utilitários novos e usados",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4511-1/04",
+    "atividade_label": "Comércio por atacado de caminhões novos e usados",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4511-1/05",
+    "atividade_label": "Comércio por atacado de reboques e semi-reboques novos e usados",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4511-1/06",
+    "atividade_label": "Comércio por atacado de ônibus e microônibus novos e usados",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4512-9/01",
+    "atividade_label": "Representante s comerciais e agentes do comércio de veículos automotores",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4512-9/02",
+    "atividade_label": "Comércio sob consignação de veículos automotores",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4520-0/01",
+    "atividade_label": "Serviços de manutenção e reparação mecânica de veículos automotores",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4520-0/02",
+    "atividade_label": "Serviços de lanternagem ou funilaria e pintura de veículos automotores",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4520-0/03",
+    "atividade_label": "Serviços de manutenção e reparação elétrica de veículos automotores",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4520-0/04",
+    "atividade_label": "Serviços de alinhamento e balanceament o de veículos automotores",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4520-0/05",
+    "atividade_label": "Serviços de lavagem, lubrificação e polimento de veículos automotores",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4520-0/06",
+    "atividade_label": "Serviços de borracharia para veículos automotores",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4520-0/07",
+    "atividade_label": "Serviços de instalação, manutenção e reparação de acessórios para veículos automotores",
+    "risco_base": "baixo"
+  },
+  { "codigo": "4520-0/08", "atividade_label": "Serviços de capotaria", "risco_base": "baixo" },
+  {
+    "codigo": "4530-7/01",
+    "atividade_label": "Comércio por atacado de peças e acessórios novos para veículos automotores",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4530-7/02",
+    "atividade_label": "Comércio por atacado de pneumáticos e câmaras-de-ar",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4530-7/03",
+    "atividade_label": "Comércio a varejo de peças e acessórios novos para veículos automotores",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4530-7/04",
+    "atividade_label": "Comércio a varejo de peças e acessórios usados para veículos automotores",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4530-7/05",
+    "atividade_label": "Comércio a varejo de pneumáticos e câmaras-de-ar",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4530-7/06",
+    "atividade_label": "Representante s comerciais e agentes do comércio de peças e acessórios novos e usados para veículos automotores",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4541-2/01",
+    "atividade_label": "Comércio por atacado de motocicletas e motonetas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4541-2/02",
+    "atividade_label": "Comércio por atacado de peças e acessórios para motocicletas e motonetas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4541-2/03",
+    "atividade_label": "Comércio a varejo de motocicletas e motonetas novas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4541-2/04",
+    "atividade_label": "Comércio a varejo de motocicletas e motonetas usadas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4541-2/05",
+    "atividade_label": "Comércio a varejo de peças e acessórios para motocicletas e motonetas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4541-2/06",
+    "atividade_label": "Comércio a varejo de peças e acessórios novos para motocicletas e motonetas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4541-2/07",
+    "atividade_label": "Comércio a varejo de peças e acessórios usados para",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4542-1/01",
+    "atividade_label": "Representante s comerciais e agentes do comércio de motocicletas e motonetas, peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4542-1/02",
+    "atividade_label": "Comércio sob consignação de motocicletas e motonetas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4543-9/00",
+    "atividade_label": "Manutenção e reparação de motocicletas e motonetas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4611-7/00",
+    "atividade_label": "Representante s comerciais e agentes do comércio de matérias-primas agrícolas e animais vivos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4612-5/00",
+    "atividade_label": "Representante s comerciais e agentes do comércio de combustíveis, minerais, produtos siderúrgicos e químicos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4613-3/00",
+    "atividade_label": "Representante s comerciais e agentes do comércio de madeira, material de construção e ferragens",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4614-1/00",
+    "atividade_label": "Representante s comerciais e agentes do comércio de máquinas, equipamentos, embarcações e aeronaves",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4615-0/00",
+    "atividade_label": "Representante s comerciais e agentes do comércio de eletrodoméstic os, móveis e artigos de uso doméstico",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4616-8/00",
+    "atividade_label": "Representante s comerciais e agentes do comércio de têxteis, vestuário, calçados e artigos de viagem",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4617-6/00",
+    "atividade_label": "Representante s comerciais e agentes do comércio de produtos alimentícios, bebidas e fumo",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4618-4/01",
+    "atividade_label": "Representante s comerciais e agentes do comércio de medicamentos , cosméticos e produtos de perfumaria",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4618-4/02",
+    "atividade_label": "Representante s comerciais e agentes do comércio de instrumentos e materiais odonto-médico-hospitalares",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4618-4/03",
+    "atividade_label": "Representante s comerciais e agentes do comércio de jornais, revistas e outras publicações",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4618-4/99",
+    "atividade_label": "Outros representante s comerciais e agentes do comércio especializado em produtos não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4619-2/00",
+    "atividade_label": "Representante s comerciais e agentes do comércio de",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4621-4/00",
+    "atividade_label": "Comércio atacadista de café em grão",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4622-2/00",
+    "atividade_label": "Comércio atacadista de soja",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4623-1/01",
+    "atividade_label": "Comércio atacadista de animais vivos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4623-1/02",
+    "atividade_label": "Comércio atacadista de couros, lãs, peles e outros subprodutos não-comestíveis de origem animal",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4623-1/03",
+    "atividade_label": "Comércio atacadista de algodão",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4623-1/04",
+    "atividade_label": "Comércio atacadista de fumo em folha não beneficiado",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4623-1/05",
+    "atividade_label": "Comércio atacadista de cacau *",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4623-1/06",
+    "atividade_label": "Comércio atacadista de sementes, flores, plantas e gramas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4623-1/07",
+    "atividade_label": "Comércio atacadista de sisal",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4623-1/08",
+    "atividade_label": "Comércio atacadista de matérias-primas agrícolas com atividade de fracionamento e acondicionam ento associada",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4623-1/09",
+    "atividade_label": "Comércio atacadista de alimentos para animais",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4623-1/99",
+    "atividade_label": "Comércio atacadista de matérias-primas agrícolas não especificadas anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4631-1/00",
+    "atividade_label": "Comércio atacadista de leite e laticínios",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4632-0/01",
+    "atividade_label": "Comércio atacadista de cereais e leguminosas beneficiados",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4632-0/02",
+    "atividade_label": "Comércio atacadista de farinhas, amidos e féculas",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4632-0/03",
+    "atividade_label": "Comércio atacadista de cereais e leguminosas beneficiados, farinhas, amidos e féculas, com atividade de fracionamento e acondicionam ento associada",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4633-8/01",
+    "atividade_label": "Comércio atacadista de frutas, verduras, raízes, tubérculos, hortaliças e legumes frescos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4633-8/02",
+    "atividade_label": "Comércio atacadista de aves vivas e ovos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4633-8/03",
+    "atividade_label": "Comércio atacadista de coelhos e outros pequenos animais vivos para alimentação",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4634-6/01",
+    "atividade_label": "Comércio atacadista de carnes bovinas e suínas e derivados",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4634-6/02",
+    "atividade_label": "Comércio atacadista de aves abatidas e derivados",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4634-6/03",
+    "atividade_label": "Comércio atacadista de pescados e frutos do mar",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4634-6/99",
+    "atividade_label": "Comércio atacadista de carnes e derivados de outros animais",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4635-4/01",
+    "atividade_label": "Comércio atacadista de água mineral",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4635-4/02",
+    "atividade_label": "Comércio atacadista de cerveja, chope e refrigerante",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4635-4/03",
+    "atividade_label": "Comércio atacadista de bebidas com atividade de fracionamento",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4635-4/99",
+    "atividade_label": "Comércio atacadista de bebidas não especificadas anteriormente",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4636-2/01",
+    "atividade_label": "Comércio atacadista de fumo beneficiado",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4636-2/02",
+    "atividade_label": "Comércio atacadista de cigarros, cigarrilhas e charutos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4637-1/01",
+    "atividade_label": "Comércio atacadista de café torrado, moído e solúvel",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4637-1/02",
+    "atividade_label": "Comércio atacadista de açúcar",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4637-1/03",
+    "atividade_label": "Comércio atacadista de óleos e gorduras",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4637-1/04",
+    "atividade_label": "Comércio atacadista de pães, bolos, biscoitos e similares",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4637-1/05",
+    "atividade_label": "Comércio atacadista de massas alimentícias",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4637-1/06",
+    "atividade_label": "Comércio atacadista de sorvetes",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4637-1/07",
+    "atividade_label": "Comércio atacadista de chocolates, confeitos, balas, bombons e semelhantes",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4637-1/99",
+    "atividade_label": "Comércio atacadista especializado em outros produtos alimentícios não especificados anteriormente",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4639-7/01",
+    "atividade_label": "Comércio atacadista de produtos alimentícios em geral",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4639-7/02",
+    "atividade_label": "Comércio atacadista de produtos alimentícios em geral, com atividade de fracionamento e acondicionam ento associada",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4641-9/01",
+    "atividade_label": "Comércio atacadista de tecidos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4641-9/02",
+    "atividade_label": "Comércio atacadista de artigos de cama, mesa e banho",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4641-9/03",
+    "atividade_label": "Comércio atacadista de artigos de armarinho",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4642-7/01",
+    "atividade_label": "Comércio atacadista de artigos do vestuário e acessórios, exceto profissionais e de segurança",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4642-7/02",
+    "atividade_label": "Comércio atacadista de roupas e acessórios para uso profissional e de segurança do trabalho",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4643-5/01",
+    "atividade_label": "Comércio atacadista de calçados",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4643-5/02",
+    "atividade_label": "Comércio atacadista de bolsas, malas e artigos de",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4644-3/01",
+    "atividade_label": "Comércio atacadista de medicamentos e drogas de uso humano",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4644-3/02",
+    "atividade_label": "Comércio atacadista de medicamentos e drogas de uso veterinário",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4645-1/01",
+    "atividade_label": "Comércio atacadista de instrumentos e materiais para uso médico, cirúrgico, hospitalar e de laboratórios",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4645-1/02",
+    "atividade_label": "Comércio atacadista de próteses e artigos de ortopedia",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4645-1/03",
+    "atividade_label": "Comércio atacadista de produtos odontológicos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4646-0/01",
+    "atividade_label": "Comércio atacadista de cosméticos e produtos de perfumaria",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4646-0/02",
+    "atividade_label": "Comércio atacadista de produtos de higiene pessoal",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4647-8/01",
+    "atividade_label": "Comércio atacadista de artigos de escritório e de papelaria",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4647-8/02",
+    "atividade_label": "Comércio atacadista de livros, jornais e outras publicações",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4649-4/01",
+    "atividade_label": "Comércio atacadista de equipamentos elétricos de uso pessoal e doméstico",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4649-4/02",
+    "atividade_label": "Comércio atacadista de aparelhos eletrônicos de uso pessoal e doméstico",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4649-4/03",
+    "atividade_label": "Comércio atacadista de bicicletas, triciclos e outros veículos recreativos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4649-4/04",
+    "atividade_label": "Comércio atacadista de móveis e artigos de colchoaria",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4649-4/05",
+    "atividade_label": "Comércio atacadista de artigos de tapeçaria; persianas e cortinas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4649-4/06",
+    "atividade_label": "Comércio atacadista de lustres, luminárias e abajures",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4649-4/07",
+    "atividade_label": "Comércio atacadista de filmes, CDs, DVDs, fitas e discos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4649-4/08",
+    "atividade_label": "Comércio atacadista de produtos de higiene, limpeza e conservação domiciliar",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4649-4/09",
+    "atividade_label": "Comércio atacadista de produtos de higiene, limpeza e conservação domiciliar, com atividade de fracionamento e acondicionam ento associada",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4649-4/10",
+    "atividade_label": "Comércio atacadista de jóias, relógios e bijuterias, inclusive pedras preciosas e semipreciosas lapidadas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4649-4/99",
+    "atividade_label": "Comércio atacadista de outros equipamentos e artigos de uso pessoal e doméstico não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4651-6/01",
+    "atividade_label": "Comércio atacadista de equipamentos de informática",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4651-6/02",
+    "atividade_label": "Comércio atacadista de suprimentos para informática",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4652-4/00",
+    "atividade_label": "Comércio atacadista de componentes eletrônicos e equipamentos de telefonia e comunicação",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4661-3/00",
+    "atividade_label": "Comércio atacadista de máquinas, aparelhos e equipamentos para uso agropecuário; partes e peças",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4662-1/00",
+    "atividade_label": "Comércio atacadista de máquinas, equipamentos para terraplenagem , mineração e",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4663-0/00",
+    "atividade_label": "Comércio atacadista de máquinas e equipamentos para uso industrial; partes e peças",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4664-8/00",
+    "atividade_label": "Comércio atacadista de máquinas, aparelhos e equipamentos para uso odonto-médico-hospitalar; partes e peças",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4665-6/00",
+    "atividade_label": "Comércio atacadista de máquinas e equipamentos para uso comercial; partes e peças",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4669-9/01",
+    "atividade_label": "Comércio atacadista de bombas e compressores; partes e peças",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4669-9/99",
+    "atividade_label": "Comércio atacadista de outras máquinas e equipamentos não especificados anteriormente; partes e peças",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4671-1/00",
+    "atividade_label": "Comércio atacadista de madeira e produtos derivados",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4672-9/00",
+    "atividade_label": "Comércio atacadista de ferragens e ferramentas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4673-7/00",
+    "atividade_label": "Comércio atacadista de material elétrico",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4674-5/00",
+    "atividade_label": "Comércio atacadista de cimento",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4679-6/01",
+    "atividade_label": "Comércio atacadista de tintas, vernizes e similares",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4679-6/02",
+    "atividade_label": "Comércio atacadista de mármores e granitos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4679-6/03",
+    "atividade_label": "Comércio atacadista de vidros, espelhos e vitrais",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4679-6/04",
+    "atividade_label": "Comércio atacadista especializado de materiais de construção não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4679-6/99",
+    "atividade_label": "Comércio atacadista de materiais de construção em geral",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4681-8/01",
+    "atividade_label": "Comércio atacadista de álcool carburante, biodiesel, gasolina e demais derivados de petróleo, exceto lubrificantes, não realizado por transportador retalhista (TRR)",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "4681-8/02",
+    "atividade_label": "Comércio atacadista de combustíveis realizado por transportador retalhista (TRR)",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "4681-8/03",
+    "atividade_label": "Comércio atacadista de combustíveis de origem vegetal, exceto álcool carburante",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4681-8/04",
+    "atividade_label": "Comércio atacadista de combustíveis de origem mineral em bruto",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "4681-8/05",
+    "atividade_label": "Comércio atacadista de lubrificantes",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4682-6/00",
+    "atividade_label": "Comércio atacadista de gás liqüefeito de petróleo (GLP)",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "4683-4/00",
+    "atividade_label": "Comércio atacadista de defensivos agrícolas, adubos, fertilizantes e corretivos do solo",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4684-2/01",
+    "atividade_label": "Comércio atacadista de resinas e elastômeros",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4684-2/02",
+    "atividade_label": "Comércio atacadista de solventes",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4684-2/99",
+    "atividade_label": "Comércio atacadista de outros produtos químicos e petroquímicos não especificados anteriormente",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4685-1/00",
+    "atividade_label": "Comércio atacadista de produtos siderúrgicos e metalúrgicos, exceto para construção",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4686-9/01",
+    "atividade_label": "Comércio atacadista de papel e papelão em bruto",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4686-9/02",
+    "atividade_label": "Comércio atacadista de embalagens",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4687-7/01",
+    "atividade_label": "Comércio atacadista de resíduos de papel e papelão",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4687-7/02",
+    "atividade_label": "Comércio atacadista de resíduos e sucatas não-metálicos, exceto de papel e papelão",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4687-7/03",
+    "atividade_label": "Comércio atacadista de resíduos e sucatas metálicos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4689-3/01",
+    "atividade_label": "Comércio atacadista de produtos da extração mineral, exceto combustíveis",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4689-3/02",
+    "atividade_label": "Comércio atacadista de fios e fibras têxteis beneficiados *",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4689-3/99",
+    "atividade_label": "Comércio atacadista especializado em outros produtos intermediários não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4691-5/00",
+    "atividade_label": "Comércio atacadista de mercadorias em geral, com predominância de produtos alimentícios",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4692-3/00",
+    "atividade_label": "Comércio atacadista de mercadorias em geral, com predominância de insumos agropecuários",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4693-1/00",
+    "atividade_label": "Comércio atacadista de mercadorias em geral, sem predominância de alimentos ou de insumos agropecuários",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4711-3/01",
+    "atividade_label": "Comércio varejista de mercadorias em geral, com predominância de produtos alimentícios -hipermercados",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4711-3/02",
+    "atividade_label": "Comércio varejista de mercadorias em geral, com predominância de produtos alimentícios -supermercado s",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4712-1/00",
+    "atividade_label": "Comércio varejista de mercadorias em geral, com predominância de produtos alimentícios -minimercados, mercearias e armazéns",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4713-0/01",
+    "atividade_label": "Lojas de departamento s ou magazines",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4713-0/02",
+    "atividade_label": "Lojas de variedades, exceto lojas de departamento s ou magazines",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4713-0/03",
+    "atividade_label": "Lojas duty free de aeroportos internacionais",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4713-0/04",
+    "atividade_label": "Lojas de departamento s ou magazines, exceto lojas francas (Duty free)",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4713-0/05",
+    "atividade_label": "Lojas francas (Duty Free) de aeroportos, portos e em fronteiras terrestres",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4721-1/02",
+    "atividade_label": "Padaria e confeitaria com predominância de revenda",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4721-1/03",
+    "atividade_label": "Comércio varejista de laticínios e frios",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4721-1/04",
+    "atividade_label": "Comércio varejista de doces, balas, bombons e semelhantes",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4722-9/01",
+    "atividade_label": "Comércio varejista de carnes -açougues",
+    "risco_base": "medio"
+  },
+  { "codigo": "4722-9/02", "atividade_label": "Peixaria", "risco_base": "medio" },
+  {
+    "codigo": "4723-7/00",
+    "atividade_label": "Comércio varejista de bebidas",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4724-5/00",
+    "atividade_label": "Comércio varejista de hortifrutigranjei ros",
+    "risco_base": "medio"
+  },
+  { "codigo": "4729-6/01", "atividade_label": "Tabacaria", "risco_base": "baixo" },
+  {
+    "codigo": "4729-6/02",
+    "atividade_label": "Comércio varejista de mercadorias em lojas de conveniência",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4729-6/99",
+    "atividade_label": "Comércio varejista de produtos alimentícios em geral ou especializado em produtos alimentícios não especificados anteriormente",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4731-8/00",
+    "atividade_label": "Comércio varejista de combustíveis para veículos automotores",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "4732-6/00",
+    "atividade_label": "Comércio varejista de lubrificantes",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4741-5/00",
+    "atividade_label": "Comércio varejista de tintas e materiais para pintura",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4742-3/00",
+    "atividade_label": "Comércio varejista de material elétrico",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4743-1/00",
+    "atividade_label": "Comércio varejista de vidros",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4744-0/01",
+    "atividade_label": "Comércio varejista de ferragens e ferramentas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4744-0/02",
+    "atividade_label": "Comércio varejista de madeira e artefatos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4744-0/03",
+    "atividade_label": "Comércio varejista de materiais hidráulicos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4744-0/04",
+    "atividade_label": "Comércio varejista de cal, areia, pedra britada, tijolos e telhas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4744-0/05",
+    "atividade_label": "Comércio varejista de materiais de construção não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4744-0/06",
+    "atividade_label": "Comércio varejista de pedras para revestimento",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4744-0/99",
+    "atividade_label": "Comércio varejista de materiais de construção em geral",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4751-2/01",
+    "atividade_label": "Comércio varejista especializado de equipamentos e suprimentos de informática",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4751-2/02",
+    "atividade_label": "Recarga de cartuchos para equipamentos de informática",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4752-1/00",
+    "atividade_label": "Comércio varejista especializado de equipamentos de telefonia e comunicação",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4753-9/00",
+    "atividade_label": "Comércio varejista especializado de eletrodoméstic os e equipamentos de áudio e vídeo",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4754-7/01",
+    "atividade_label": "Comércio varejista de móveis",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4754-7/02",
+    "atividade_label": "Comércio varejista de artigos de colchoaria",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4754-7/03",
+    "atividade_label": "Comércio varejista de artigos de iluminação",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4755-5/01",
+    "atividade_label": "Comércio varejista de tecidos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4755-5/02",
+    "atividade_label": "Comercio varejista de artigos de armarinho",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4755-5/03",
+    "atividade_label": "Comercio varejista de artigos de cama, mesa e banho",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4756-3/00",
+    "atividade_label": "Comércio varejista especializado de instrumentos musicais e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4757-1/00",
+    "atividade_label": "Comércio varejista especializado de peças e acessórios para aparelhos eletroeletrônic os para uso doméstico, exceto informática e comunicação",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4759-8/01",
+    "atividade_label": "Comércio varejista de artigos de tapeçaria, cortinas e persianas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4759-8/99",
+    "atividade_label": "Comércio varejista de outros artigos de uso doméstico não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4761-0/01",
+    "atividade_label": "Comércio varejista de livros",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4761-0/02",
+    "atividade_label": "Comércio varejista de jornais e revistas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4761-0/03",
+    "atividade_label": "Comércio varejista de artigos de papelaria",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4762-8/00",
+    "atividade_label": "Comércio varejista de discos, CDs, DVDs e fitas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4763-6/01",
+    "atividade_label": "Comércio varejista de brinquedos e artigos recreativos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4763-6/02",
+    "atividade_label": "Comércio varejista de artigos esportivos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4763-6/03",
+    "atividade_label": "Comércio varejista de bicicletas e triciclos; peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4763-6/04",
+    "atividade_label": "Comércio varejista de artigos de caça, pesca e camping",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4763-6/05",
+    "atividade_label": "Comércio varejista de embarcações e outros veículos recreativos; peças e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4771-7/01",
+    "atividade_label": "Comércio varejista de produtos farmacêuticos, sem manipulação de fórmulas",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4771-7/02",
+    "atividade_label": "Comércio varejista de produtos farmacêuticos, com manipulação de fórmulas",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4771-7/03",
+    "atividade_label": "Comércio varejista de produtos farmacêuticos homeopáticos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4771-7/04",
+    "atividade_label": "Comércio varejista de medicamentos veterinários",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4772-5/00",
+    "atividade_label": "Comércio varejista de cosméticos, produtos de perfumaria e de higiene pessoal",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4773-3/00",
+    "atividade_label": "Comércio varejista de artigos médicos e ortopédicos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4774-1/00",
+    "atividade_label": "Comércio varejista de artigos de óptica",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4781-4/00",
+    "atividade_label": "Comércio varejista de artigos do vestuário e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4782-2/01",
+    "atividade_label": "Comércio varejista de calçados",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4782-2/02",
+    "atividade_label": "Comércio varejista de artigos de viagem",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4783-1/01",
+    "atividade_label": "Comércio varejista de artigos de joalheria",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4783-1/02",
+    "atividade_label": "Comércio varejista de artigos de relojoaria",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4784-9/00",
+    "atividade_label": "Comércio varejista de gás liqüefeito de petróleo (GLP)",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "4785-7/01",
+    "atividade_label": "Comércio varejista de antigüidades",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4785-7/99",
+    "atividade_label": "Comércio varejista de outros artigos usados",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4789-0/01",
+    "atividade_label": "Comércio varejista de suvenires, bijuterias e artesanatos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4789-0/02",
+    "atividade_label": "Comércio varejista de plantas e flores naturais",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4789-0/03",
+    "atividade_label": "Comércio varejista de objetos de arte",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4789-0/04",
+    "atividade_label": "Comércio varejista de animais vivos e de artigos e alimentos para animais de estimação",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4789-0/05",
+    "atividade_label": "Comércio varejista de produtos saneantes domissanitário s",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4789-0/06",
+    "atividade_label": "Comércio varejista de fogos de artifício e artigos pirotécnicos",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "4789-0/07",
+    "atividade_label": "Comércio varejista de equipamentos para escritório",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4789-0/08",
+    "atividade_label": "Comércio varejista de artigos fotográficos e para filmagem",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4789-0/09",
+    "atividade_label": "Comércio varejista de armas e munições",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4789-0/99",
+    "atividade_label": "Comércio varejista de outros produtos não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4911-6/00",
+    "atividade_label": "Transporte ferroviário de carga",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4912-4/01",
+    "atividade_label": "Transporte ferroviário de passageiros intermunicipal e interestadual",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4912-4/02",
+    "atividade_label": "Transporte ferroviário de passageiros municipal e em região metropolitana",
+    "risco_base": "medio"
+  },
+  { "codigo": "4912-4/03", "atividade_label": "Transporte metroviário", "risco_base": "medio" },
+  {
+    "codigo": "4921-3/01",
+    "atividade_label": "Transporte rodoviário coletivo de passageiros, com itinerário fixo, municipal",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4921-3/02",
+    "atividade_label": "Transporte rodoviário coletivo de passageiros, com itinerário fixo, intermunicipal em região metropolitana",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4922-1/01",
+    "atividade_label": "Transporte rodoviário coletivo de passageiros, com itinerário fixo, intermunicipal, exceto em região metropolitana",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4922-1/02",
+    "atividade_label": "Transporte rodoviário coletivo de passageiros, com itinerário fixo, interestadual",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4922-1/03",
+    "atividade_label": "Transporte rodoviário coletivo de passageiros, com itinerário fixo, internacional",
+    "risco_base": "medio"
+  },
+  { "codigo": "4923-0/01", "atividade_label": "Serviço de táxi", "risco_base": "baixo" },
+  {
+    "codigo": "4923-0/02",
+    "atividade_label": "Serviço de transporte de passageiros -locação de automóveis",
+    "risco_base": "baixo"
+  },
+  { "codigo": "4924-8/00", "atividade_label": "Transporte escolar", "risco_base": "baixo" },
+  {
+    "codigo": "4929-9/01",
+    "atividade_label": "Transporte rodoviário coletivo de passageiros, sob regime de fretamento, municipal",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4929-9/02",
+    "atividade_label": "Transporte rodoviário coletivo de passageiros, sob regime de fretamento, intermunicipal, interestadual e internacional",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4929-9/03",
+    "atividade_label": "Organização de excursões em veículos rodoviários próprios, municipal",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4929-9/04",
+    "atividade_label": "Organização de excursões em veículos rodoviários próprios, intermunicipal, interestadual e internacional",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4929-9/99",
+    "atividade_label": "Outros transportes rodoviários de passageiros não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "4930-2/01",
+    "atividade_label": "Transporte rodoviário de carga, exceto produtos perigosos e mudanças, municipal",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4930-2/02",
+    "atividade_label": "Transporte rodoviário de carga, exceto produtos perigosos e mudanças, intermunicipal, interestadual e internacional",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4930-2/03",
+    "atividade_label": "Transporte rodoviário de produtos perigosos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "4930-2/04",
+    "atividade_label": "Transporte rodoviário de mudanças",
+    "risco_base": "medio"
+  },
+  { "codigo": "4940-0/00", "atividade_label": "Transporte dutoviário", "risco_base": "medio" },
+  {
+    "codigo": "4950-7/00",
+    "atividade_label": "Trens turísticos, teleféricos e similares",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "5011-4/01",
+    "atividade_label": "Transporte marítimo de cabotagem - Carga",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "5011-4/02",
+    "atividade_label": "Transporte marítimo de cabotagem -passageiros",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "5012-2/01",
+    "atividade_label": "Transporte marítimo de longo curso - Carga",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "5012-2/02",
+    "atividade_label": "Transporte marítimo de longo curso - Passageiros",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "5021-1/01",
+    "atividade_label": "Transporte por navegação interior de carga, municipal, exceto travessia",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "5021-1/02",
+    "atividade_label": "Transporte por navegação interior de carga, intermunicipal, interestadual e internacional, exceto travessia",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "5022-0/01",
+    "atividade_label": "Transporte por navegação interior de passageiros em linhas regulares, municipal, exceto travessia",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "5022-0/02",
+    "atividade_label": "Transporte por navegação interior de passageiros em linhas regulares, intermunicipal, interestadual e internacional, exceto travessia",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "5030-1/01",
+    "atividade_label": "Navegação de apoio marítimo",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "5030-1/02",
+    "atividade_label": "Navegação de apoio portuário",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "5030-1/03",
+    "atividade_label": "Serviços de rebocadores e empurradores",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "5091-2/01",
+    "atividade_label": "Transporte por navegação de travessia, municipal",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "5091-2/02",
+    "atividade_label": "Transporte por navegação de travessia intermunicipal, interestadual e internacional",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "5099-8/01",
+    "atividade_label": "Transporte aquaviário para passeios turísticos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "5099-8/99",
+    "atividade_label": "Outros transportes aquaviários não especificados anteriormente",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "5111-1/00",
+    "atividade_label": "Transporte aéreo de passageiros regular",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "5112-9/01",
+    "atividade_label": "Serviço de táxi aéreo e locação de aeronaves com tripulação",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "5112-9/99",
+    "atividade_label": "Outros serviços de transporte aéreo de passageiros não-regular",
+    "risco_base": "medio"
+  },
+  { "codigo": "5120-0/00", "atividade_label": "Transporte aéreo de carga", "risco_base": "medio" },
+  { "codigo": "5130-7/00", "atividade_label": "Transporte espacial", "risco_base": "medio" },
+  {
+    "codigo": "5211-7/01",
+    "atividade_label": "Armazéns gerais -emissão de warrant",
+    "risco_base": "medio"
+  },
+  { "codigo": "5211-7/02", "atividade_label": "Guarda-móveis", "risco_base": "baixo" },
+  {
+    "codigo": "5211-7/99",
+    "atividade_label": "Depósitos de mercadorias para terceiros, exceto armazéns gerais e guarda-móveis",
+    "risco_base": "medio"
+  },
+  { "codigo": "5212-5/00", "atividade_label": "Carga e descarga", "risco_base": "medio" },
+  {
+    "codigo": "5221-4/00",
+    "atividade_label": "Concessionári as de rodovias, pontes, túneis e serviços relacionados",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "5222-2/00",
+    "atividade_label": "Terminais rodoviários e ferroviários",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "5223-1/00",
+    "atividade_label": "Estacionament o de veículos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "5229-0/01",
+    "atividade_label": "Serviços de apoio ao transporte por táxi, inclusive centrais de chamada",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "5229-0/02",
+    "atividade_label": "Serviços de reboque de veículos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "5229-0/99",
+    "atividade_label": "Outras atividades auxiliares dos transportes terrestres não especificadas anteriormente",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "5231-1/01",
+    "atividade_label": "Administração da infra-estrutura portuária",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "5231-1/02",
+    "atividade_label": "Atividades do Operador portuário",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "5231-1/03",
+    "atividade_label": "Gestão de terminais aquaviários",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "5232-0/00",
+    "atividade_label": "Atividades de agenciamento marítimo",
+    "risco_base": "baixo"
+  },
+  { "codigo": "5239-7/01", "atividade_label": "Serviços de praticagem", "risco_base": "baixo" },
+  {
+    "codigo": "5239-7/99",
+    "atividade_label": "Atividades auxiliares dos transportes aquaviários não especificadas anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "5240-1/01",
+    "atividade_label": "Operação dos aeroportos e campos de aterrissagem",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "5240-1/99",
+    "atividade_label": "Atividades auxiliares dos transportes aéreos, exceto operação dos aeroportos e campos de aterrissagem",
+    "risco_base": "baixo"
+  },
+  { "codigo": "5250-8/01", "atividade_label": "Comissaria de despachos", "risco_base": "baixo" },
+  {
+    "codigo": "5250-8/02",
+    "atividade_label": "Atividades de despachantes aduaneiros",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "5250-8/03",
+    "atividade_label": "Agenciamento de cargas, exceto para o transporte marítimo",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "5250-8/04",
+    "atividade_label": "Organização logística do transporte de carga",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "5250-8/05",
+    "atividade_label": "Operador de transporte multimodal - OTM",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "5310-5/01",
+    "atividade_label": "Atividades do Correio Nacional",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "5310-5/02",
+    "atividade_label": "Atividades de franqueadas e permissionária s do Correio Nacional",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "5320-2/01",
+    "atividade_label": "Serviços de malote não realizados pelo Correio Nacional",
+    "risco_base": "baixo"
+  },
+  { "codigo": "5320-2/02", "atividade_label": "Serviços de entrega rápida", "risco_base": "baixo" },
+  { "codigo": "5510-8/01", "atividade_label": "Hotéis", "risco_base": "medio" },
+  { "codigo": "5510-8/02", "atividade_label": "Apart-hotéis", "risco_base": "medio" },
+  { "codigo": "5510-8/03", "atividade_label": "Motéis", "risco_base": "medio" },
+  {
+    "codigo": "5590-6/01",
+    "atividade_label": "Albergues, exceto assistenciais",
+    "risco_base": "medio"
+  },
+  { "codigo": "5590-6/02", "atividade_label": "Campings", "risco_base": "medio" },
+  { "codigo": "5590-6/03", "atividade_label": "Pensões", "risco_base": "medio" },
+  {
+    "codigo": "5590-6/99",
+    "atividade_label": "Outros alojamentos não especificados anteriormente",
+    "risco_base": "medio"
+  },
+  { "codigo": "5611-2/01", "atividade_label": "Restaurantes e similares", "risco_base": "medio" },
+  {
+    "codigo": "5611-2/02",
+    "atividade_label": "Bares e outros estabelecimen tos especializados em servir bebidas",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "5611-2/03",
+    "atividade_label": "Lanchonetes, casas de chá, de sucos e similares",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "5611-2/04",
+    "atividade_label": "Bares e outros estabelecimen tos especializados em servir bebidas, sem entreteniment o",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "5611-2/05",
+    "atividade_label": "Bares e outros estabelecimen tos especializados em servir bebidas, com entreteniment o",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "5612-1/00",
+    "atividade_label": "Serviços ambulantes de alimentação",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "5620-1/01",
+    "atividade_label": "Fornecimento de alimentos preparados preponderante mente para empresas",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "5620-1/02",
+    "atividade_label": "Serviços de alimentação para eventos e recepções -bufê",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "5620-1/03",
+    "atividade_label": "Cantinas -serviços de alimentação privativos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "5620-1/04",
+    "atividade_label": "Fornecimento de alimentos preparados preponderante mente para consumo domiciliar",
+    "risco_base": "medio"
+  },
+  { "codigo": "5811-5/00", "atividade_label": "Edição de livros", "risco_base": "baixo" },
+  { "codigo": "5812-3/01", "atividade_label": "Edição de jornais diários", "risco_base": "baixo" },
+  {
+    "codigo": "5812-3/02",
+    "atividade_label": "Edição de jornais não diários",
+    "risco_base": "baixo"
+  },
+  { "codigo": "5813-1/00", "atividade_label": "Edição de revistas", "risco_base": "baixo" },
+  {
+    "codigo": "5819-1/00",
+    "atividade_label": "Edição de cadastros, listas e de outros produtos gráficos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "5821-2/00",
+    "atividade_label": "Edição integrada à impressão de livros",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "5822-1/01",
+    "atividade_label": "Edição integrada a impressão de jornais diários",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "5822-1/02",
+    "atividade_label": "Edição integrada a impressão de jornais não diários",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "5823-9/00",
+    "atividade_label": "Edição integrada à impressão de revistas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "5829-8/00",
+    "atividade_label": "Edição integrada à impressão de cadastros, listas e de outros produtos",
+    "risco_base": "baixo"
+  },
+  { "codigo": "5911-1/01", "atividade_label": "Estúdios cinematográfic os", "risco_base": "baixo" },
+  {
+    "codigo": "5911-1/02",
+    "atividade_label": "Produção de filmes para publicidade",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "5911-1/99",
+    "atividade_label": "Atividades de produção cinematográfic a, de vídeos e de programas de televisão não especificadas anteriormente",
+    "risco_base": "baixo"
+  },
+  { "codigo": "5912-0/01", "atividade_label": "Serviços de dublagem", "risco_base": "baixo" },
+  { "codigo": "5912-0/02", "atividade_label": "Serviços de mixagem sonora", "risco_base": "baixo" },
+  {
+    "codigo": "5912-0/99",
+    "atividade_label": "Atividades de pós-produção cinematográfic a, de vídeos e de programas de televisão não especificadas anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "5913-8/00",
+    "atividade_label": "Distribuição cinematográfic a, de vídeo e de programas de televisão",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "5914-6/00",
+    "atividade_label": "Atividades de exibição cinematográfic a",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "5920-1/00",
+    "atividade_label": "Atividades de gravação de som e de edição de música",
+    "risco_base": "baixo"
+  },
+  { "codigo": "6010-1/00", "atividade_label": "Atividades de rádio", "risco_base": "baixo" },
+  {
+    "codigo": "6021-7/00",
+    "atividade_label": "Atividades de televisão aberta",
+    "risco_base": "baixo"
+  },
+  { "codigo": "6022-5/01", "atividade_label": "Programadora s", "risco_base": "baixo" },
+  {
+    "codigo": "6022-5/02",
+    "atividade_label": "Atividades relacionadas à televisão por assinatura, exceto programadora s",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6110-8/01",
+    "atividade_label": "Serviços de telefonia fixa comutada - STFC",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6110-8/02",
+    "atividade_label": "Serviços de redes de transportes de telecomunicaç ões - SRTT",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6110-8/03",
+    "atividade_label": "Serviços de comunicação multimídia - SMC",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6110-8/99",
+    "atividade_label": "Serviços de telecomunicaç ões por fio não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  { "codigo": "6120-5/01", "atividade_label": "Telefonia móvel celular", "risco_base": "baixo" },
+  {
+    "codigo": "6120-5/02",
+    "atividade_label": "Serviço móvel especializado - SME",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6120-5/99",
+    "atividade_label": "Serviços de telecomunicaç ões sem fio não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6130-2/00",
+    "atividade_label": "Telecomunica ções por satélite",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6141-8/00",
+    "atividade_label": "Operadoras de televisão por assinatura por cabo",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6142-6/00",
+    "atividade_label": "Operadoras de televisão por assinatura por microondas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6143-4/00",
+    "atividade_label": "Operadoras de televisão por assinatura por satélite",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6190-6/01",
+    "atividade_label": "Provedores de acesso às redes de comunicações",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6190-6/02",
+    "atividade_label": "Provedores de voz sobre protocolo internet - VOIP",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6190-6/99",
+    "atividade_label": "Outras atividades de telecomunicaç ões não especificadas anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6201-5/01",
+    "atividade_label": "Desenvolvime nto de programas de computador sob encomenda",
+    "risco_base": "baixo"
+  },
+  { "codigo": "6201-5/02", "atividade_label": "Web design", "risco_base": "baixo" },
+  {
+    "codigo": "6202-3/00",
+    "atividade_label": "Desenvolvime nto e licenciamento de programas de computador customizáveis",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6203-1/00",
+    "atividade_label": "Desenvolvime nto e licenciamento de programas de computador não-customizáveis",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6204-0/00",
+    "atividade_label": "Consultoria em tecnologia da informação",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6209-1/00",
+    "atividade_label": "Suporte técnico, manutenção e outros serviços em tecnologia da informação",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6311-9/00",
+    "atividade_label": "Tratamento de dados, provedores de serviços de aplicação e serviços de hospedagem na internet",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6319-4/00",
+    "atividade_label": "Portais, provedores de conteúdo e outros serviços de informação na internet",
+    "risco_base": "baixo"
+  },
+  { "codigo": "6391-7/00", "atividade_label": "Agências de notícias", "risco_base": "baixo" },
+  {
+    "codigo": "6399-2/00",
+    "atividade_label": "Outras atividades de prestação de serviços de informação não especificadas anteriormente",
+    "risco_base": "baixo"
+  },
+  { "codigo": "6410-7/00", "atividade_label": "Banco Central", "risco_base": "baixo" },
+  { "codigo": "6421-2/00", "atividade_label": "Bancos comerciais", "risco_base": "baixo" },
+  {
+    "codigo": "6422-1/00",
+    "atividade_label": "Bancos múltiplos, com carteira comercial",
+    "risco_base": "baixo"
+  },
+  { "codigo": "6423-9/00", "atividade_label": "Caixas econômicas", "risco_base": "baixo" },
+  { "codigo": "6424-7/01", "atividade_label": "Bancos cooperativos", "risco_base": "baixo" },
+  {
+    "codigo": "6424-7/02",
+    "atividade_label": "Cooperativas centrais de crédito",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6424-7/03",
+    "atividade_label": "Cooperativas de crédito mútuo",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6424-7/04",
+    "atividade_label": "Cooperativas de crédito rural",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6431-0/00",
+    "atividade_label": "Bancos múltiplos, sem carteira comercial",
+    "risco_base": "baixo"
+  },
+  { "codigo": "6432-8/00", "atividade_label": "Bancos de investimento", "risco_base": "baixo" },
+  { "codigo": "6433-6/00", "atividade_label": "Bancos de desenvolvime nto", "risco_base": "baixo" },
+  { "codigo": "6434-4/00", "atividade_label": "Agências de fomento", "risco_base": "baixo" },
+  {
+    "codigo": "6435-2/01",
+    "atividade_label": "Sociedades de crédito imobiliário",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6435-2/02",
+    "atividade_label": "Associações de poupança e empréstimo",
+    "risco_base": "baixo"
+  },
+  { "codigo": "6435-2/03", "atividade_label": "Companhias hipotecárias", "risco_base": "baixo" },
+  {
+    "codigo": "6436-1/00",
+    "atividade_label": "Sociedades de crédito, financiamento e investimento - financeiras",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6437-9/00",
+    "atividade_label": "Sociedades de crédito ao microempreen dedor",
+    "risco_base": "baixo"
+  },
+  { "codigo": "6438-7/01", "atividade_label": "Bancos de câmbio", "risco_base": "baixo" },
+  {
+    "codigo": "6438-7/99",
+    "atividade_label": "Outras instituições de intermediação não monetária não especificadas anteriormente",
+    "risco_base": "baixo"
+  },
+  { "codigo": "6440-9/00", "atividade_label": "Arrendamento mercantil", "risco_base": "baixo" },
+  {
+    "codigo": "6450-6/00",
+    "atividade_label": "Sociedades de capitalização",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6461-1/00",
+    "atividade_label": "Holdings de instituições financeiras",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6462-0/00",
+    "atividade_label": "Holdings de instituições não-financeiras",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6463-8/00",
+    "atividade_label": "Outras sociedades de participação, exceto holdings",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6470-1/01",
+    "atividade_label": "Fundos de investimento, exceto previdenciário s e imobiliários",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6810-2/03",
+    "atividade_label": "Loteamento de imóveis próprios",
+    "risco_base": "medio"
+  },
+  { "codigo": "6911-7/01", "atividade_label": "Serviços advocatícios", "risco_base": "baixo" },
+  {
+    "codigo": "6911-7/02",
+    "atividade_label": "Atividades auxiliares da justiça",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6911-7/03",
+    "atividade_label": "Agente de propriedade industrial",
+    "risco_base": "baixo"
+  },
+  { "codigo": "6912-5/00", "atividade_label": "Cartórios", "risco_base": "baixo" },
+  {
+    "codigo": "6920-6/01",
+    "atividade_label": "Atividades de contabilidade",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "6920-6/02",
+    "atividade_label": "Atividades de consultoria e auditoria contábil e tributária",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7020-4/00",
+    "atividade_label": "Atividades de consultoria em gestão empresarial, exceto consultoria técnica específica",
+    "risco_base": "baixo"
+  },
+  { "codigo": "7111-1/00", "atividade_label": "Serviços de arquitetura", "risco_base": "baixo" },
+  { "codigo": "7112-0/00", "atividade_label": "Serviços de engenharia", "risco_base": "baixo" },
+  {
+    "codigo": "7119-7/01",
+    "atividade_label": "Serviços de cartografia, topografia e geodésia",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7119-7/02",
+    "atividade_label": "Atividades de estudos geológicos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7119-7/03",
+    "atividade_label": "Serviços de desenho técnico relacionados à arquitetura e engenharia",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7119-7/04",
+    "atividade_label": "Serviços de perícia técnica relacionados à segurança do trabalho",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7119-7/99",
+    "atividade_label": "Atividades técnicas relacionadas à engenharia e arquitetura não especificadas anteriormente",
+    "risco_base": "baixo"
+  },
+  { "codigo": "7120-1/00", "atividade_label": "Testes e análises técnicas", "risco_base": "baixo" },
+  {
+    "codigo": "7210-0/00",
+    "atividade_label": "Pesquisa e desenvolvime nto experimental em ciências físicas e naturais",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7220-7/00",
+    "atividade_label": "Pesquisa e desenvolvime nto experimental em ciências sociais e humanas",
+    "risco_base": "baixo"
+  },
+  { "codigo": "7311-4/00", "atividade_label": "Agências de publicidade", "risco_base": "baixo" },
+  {
+    "codigo": "7312-2/00",
+    "atividade_label": "Agenciamento de espaços para publicidade, exceto em veículos de comunicação",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7319-0/01",
+    "atividade_label": "Criação e montagem de estandes para feiras e exposições",
+    "risco_base": "baixo"
+  },
+  { "codigo": "7319-0/02", "atividade_label": "Promoção de vendas", "risco_base": "baixo" },
+  { "codigo": "7319-0/03", "atividade_label": "Marketing direto", "risco_base": "baixo" },
+  { "codigo": "7319-0/04", "atividade_label": "Consultoria em publicidade", "risco_base": "baixo" },
+  {
+    "codigo": "7319-0/99",
+    "atividade_label": "Outras atividades de publicidade não especificadas anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7320-3/00",
+    "atividade_label": "Pesquisas de mercado e de opinião pública",
+    "risco_base": "baixo"
+  },
+  { "codigo": "7410-2/02", "atividade_label": "Design de interiores", "risco_base": "baixo" },
+  { "codigo": "7410-2/03", "atividade_label": "Design de produto", "risco_base": "baixo" },
+  {
+    "codigo": "7410-2/99",
+    "atividade_label": "Atividades de design não especificadas anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7420-0/01",
+    "atividade_label": "Atividades de produção de fotografias, exceto aérea e submarina",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7420-0/02",
+    "atividade_label": "Atividades de produção de fotografias aéreas e submarinas",
+    "risco_base": "baixo"
+  },
+  { "codigo": "7420-0/03", "atividade_label": "Laboratórios fotográficos", "risco_base": "medio" },
+  {
+    "codigo": "7420-0/04",
+    "atividade_label": "Filmagem de festas e eventos",
+    "risco_base": "baixo"
+  },
+  { "codigo": "7420-0/05", "atividade_label": "Serviços de microfilmagem", "risco_base": "baixo" },
+  {
+    "codigo": "7490-1/01",
+    "atividade_label": "Serviços de tradução, interpretação e similares",
+    "risco_base": "baixo"
+  },
+  { "codigo": "7490-1/02", "atividade_label": "Escafandria e mergulho", "risco_base": "baixo" },
+  {
+    "codigo": "7490-1/03",
+    "atividade_label": "Serviços de agronomia e de consultoria às atividades agrícolas e pecuárias",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7490-1/04",
+    "atividade_label": "Atividades de intermediação e agenciamento de serviços e negócios em geral, exceto imobiliários",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7490-1/05",
+    "atividade_label": "Agenciamento de profissionais para atividades esportivas, culturais e artísticas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7490-1/99",
+    "atividade_label": "Outras atividades profissionais, científicas e técnicas não especificadas anteriormente",
+    "risco_base": "baixo"
+  },
+  { "codigo": "7500-1/00", "atividade_label": "Atividades veterinárias", "risco_base": "medio" },
+  {
+    "codigo": "7711-0/00",
+    "atividade_label": "Locação de automóveis sem condutor",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7719-5/01",
+    "atividade_label": "Locação de embarcações sem tripulação, exceto para fins recreativos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7719-5/02",
+    "atividade_label": "Locação de aeronaves sem tripulação",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7719-5/99",
+    "atividade_label": "Locação de outros meios de transporte não especificados anteriormente, sem condutor",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7721-7/00",
+    "atividade_label": "Aluguel de equipamentos recreativos e esportivos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7722-5/00",
+    "atividade_label": "Aluguel de fitas de vídeo, DVDs e similares",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7723-3/00",
+    "atividade_label": "Aluguel de objetos do vestuário, jóias e acessórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7729-2/01",
+    "atividade_label": "Aluguel de aparelhos de jogos eletrônicos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7729-2/02",
+    "atividade_label": "Aluguel de móveis, utensílios e aparelhos de uso doméstico e pessoal; instrumentos musicais",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7729-2/03",
+    "atividade_label": "Aluguel de material médico*",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7729-2/99",
+    "atividade_label": "Aluguel de outros objetos pessoais e domésticos não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7731-4/00",
+    "atividade_label": "Aluguel de máquinas e equipamentos agrícolas sem operador",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7732-2/01",
+    "atividade_label": "Aluguel de máquinas e equipamentos para construção sem operador, exceto andaimes",
+    "risco_base": "baixo"
+  },
+  { "codigo": "7732-2/02", "atividade_label": "Aluguel de andaimes", "risco_base": "baixo" },
+  {
+    "codigo": "7733-1/00",
+    "atividade_label": "Aluguel de máquinas e equipamentos para escritórios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7739-0/01",
+    "atividade_label": "Aluguel de máquinas e equipamentos para extração de minérios e petróleo, sem operador",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7739-0/02",
+    "atividade_label": "Aluguel de equipamentos científicos, médicos e hospitalares, sem operador",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7739-0/03",
+    "atividade_label": "Aluguel de palcos, coberturas e outras estruturas de uso temporário, exceto andaimes",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7739-0/99",
+    "atividade_label": "Aluguel de outras máquinas e equipamentos comerciais e industriais não especificados anteriormente, sem operador",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7740-3/00",
+    "atividade_label": "Gestão de ativos intangíveis não-financeiros",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7810-8/00",
+    "atividade_label": "Seleção e agenciamento de mão-de-obra",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7820-5/00",
+    "atividade_label": "Locação de mão-de-obra temporária",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "7830-2/00",
+    "atividade_label": "Fornecimento e gestão de recursos humanos para terceiros",
+    "risco_base": "baixo"
+  },
+  { "codigo": "7911-2/00", "atividade_label": "Agências de viagens", "risco_base": "baixo" },
+  { "codigo": "7912-1/00", "atividade_label": "Operadores turísticos", "risco_base": "baixo" },
+  {
+    "codigo": "7990-2/00",
+    "atividade_label": "Serviços de reservas e outros serviços de turismo não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "8011-1/01",
+    "atividade_label": "Atividades de vigilância e segurança privada",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "8011-1/02",
+    "atividade_label": "Serviços de adestramento de cães de guarda",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "8012-9/00",
+    "atividade_label": "Atividades de transporte de valores",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "8020-0/01",
+    "atividade_label": "Atividades de monitorament o de sistemas de segurança eletrônico",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "8020-0/02",
+    "atividade_label": "Outras atividades de serviços de segurança",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "8030-7/00",
+    "atividade_label": "Atividades de investigação particular",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "8111-7/00",
+    "atividade_label": "Serviços combinados para apoio a edifícios, exceto condomínios prediais",
+    "risco_base": "baixo"
+  },
+  { "codigo": "8112-5/00", "atividade_label": "Condomínios prediais", "risco_base": "baixo" },
+  {
+    "codigo": "8121-4/00",
+    "atividade_label": "Limpeza em prédios e em domicílios",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "8122-2/00",
+    "atividade_label": "Imunização e controle de pragas urbanas",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8129-0/00",
+    "atividade_label": "Atividades de limpeza não especificadas anteriormente",
+    "risco_base": "medio"
+  },
+  { "codigo": "8130-3/00", "atividade_label": "Atividades paisagísticas", "risco_base": "baixo" },
+  {
+    "codigo": "8211-3/00",
+    "atividade_label": "Serviços combinados de escritório e apoio administrativo",
+    "risco_base": "baixo"
+  },
+  { "codigo": "8219-9/01", "atividade_label": "Fotocópias", "risco_base": "baixo" },
+  {
+    "codigo": "8219-9/99",
+    "atividade_label": "Preparação de documentos e serviços especializados de apoio administrativo não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "8220-2/00",
+    "atividade_label": "Atividades de teleatendiment o",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "8230-0/01",
+    "atividade_label": "Serviços de organização de feiras, congressos, exposições e festas",
+    "risco_base": "baixo"
+  },
+  { "codigo": "8230-0/02", "atividade_label": "Casas de festas e eventos", "risco_base": "alto" },
+  {
+    "codigo": "8291-1/00",
+    "atividade_label": "Atividades de cobranças e informações cadastrais",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "8292-0/00",
+    "atividade_label": "Envasamento e empacotament o sob contrato",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "8299-7/01",
+    "atividade_label": "Medição de consumo de energia elétrica, gás e água",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "8299-7/02",
+    "atividade_label": "Emissão de vales-alimentação, vales-transporte e similares",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "8299-7/03",
+    "atividade_label": "Serviços de gravação de carimbos, exceto confecção",
+    "risco_base": "baixo"
+  },
+  { "codigo": "8299-7/04", "atividade_label": "Leiloeiros independentes", "risco_base": "baixo" },
+  {
+    "codigo": "8299-7/05",
+    "atividade_label": "Serviços de levantamento de fundos sob contrato",
+    "risco_base": "baixo"
+  },
+  { "codigo": "8299-7/06", "atividade_label": "Casas lotéricas", "risco_base": "baixo" },
+  { "codigo": "8299-7/07", "atividade_label": "Salas de acesso à internet", "risco_base": "baixo" },
+  {
+    "codigo": "8299-7/99",
+    "atividade_label": "Outras atividades de serviços prestados principalmente às empresas não especificadas anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "8411-6/00",
+    "atividade_label": "Administração pública em geral",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "8412-4/00",
+    "atividade_label": "Regulação das atividades de saúde, educação, serviços culturais e outros serviços sociais",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "8413-2/00",
+    "atividade_label": "Regulação das atividades econômicas",
+    "risco_base": "baixo"
+  },
+  { "codigo": "8421-3/00", "atividade_label": "Relações exteriores", "risco_base": "baixo" },
+  { "codigo": "8422-1/00", "atividade_label": "Defesa", "risco_base": "baixo" },
+  { "codigo": "8423-0/00", "atividade_label": "Justiça", "risco_base": "baixo" },
+  { "codigo": "8424-8/00", "atividade_label": "Segurança e ordem pública", "risco_base": "baixo" },
+  { "codigo": "8425-6/00", "atividade_label": "Defesa Civil", "risco_base": "baixo" },
+  {
+    "codigo": "8430-2/00",
+    "atividade_label": "Seguridade social obrigatória",
+    "risco_base": "baixo"
+  },
+  { "codigo": "8511-2/00", "atividade_label": "Educação infantil -creche", "risco_base": "medio" },
+  {
+    "codigo": "8512-1/00",
+    "atividade_label": "Educação infantil - pré-escola",
+    "risco_base": "medio"
+  },
+  { "codigo": "8513-9/00", "atividade_label": "Ensino fundamental", "risco_base": "medio" },
+  { "codigo": "8520-1/00", "atividade_label": "Ensino médio", "risco_base": "medio" },
+  {
+    "codigo": "8531-7/00",
+    "atividade_label": "Educação superior -graduação",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8532-5/00",
+    "atividade_label": "Educação superior -graduação e pós-graduação",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8533-3/00",
+    "atividade_label": "Educação superior - pós-graduação e extensão",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8541-4/00",
+    "atividade_label": "Educação profissional de nível técnico",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8542-2/00",
+    "atividade_label": "Educação profissional de nível tecnológico",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8550-3/01",
+    "atividade_label": "Administração de caixas escolares",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "8550-3/02",
+    "atividade_label": "Serviços auxiliares à educação",
+    "risco_base": "baixo"
+  },
+  { "codigo": "8591-1/00", "atividade_label": "Ensino de esportes", "risco_base": "baixo" },
+  { "codigo": "8592-9/01", "atividade_label": "Ensino de dança", "risco_base": "baixo" },
+  {
+    "codigo": "8592-9/02",
+    "atividade_label": "Ensino de artes cênicas, exceto dança",
+    "risco_base": "baixo"
+  },
+  { "codigo": "8592-9/03", "atividade_label": "Ensino de música", "risco_base": "baixo" },
+  {
+    "codigo": "8592-9/99",
+    "atividade_label": "Ensino de arte e cultura não especificado anteriormente",
+    "risco_base": "baixo"
+  },
+  { "codigo": "8593-7/00", "atividade_label": "Ensino de idiomas", "risco_base": "baixo" },
+  { "codigo": "8599-6/01", "atividade_label": "Formação de condutores", "risco_base": "baixo" },
+  { "codigo": "8599-6/02", "atividade_label": "Cursos de pilotagem", "risco_base": "baixo" },
+  { "codigo": "8599-6/03", "atividade_label": "Treinamento em informática", "risco_base": "baixo" },
+  {
+    "codigo": "8599-6/04",
+    "atividade_label": "Treinamento em desenvolvime nto profissional e gerencial",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "8599-6/05",
+    "atividade_label": "Cursos preparatórios para concursos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "8599-6/99",
+    "atividade_label": "Outras atividades de ensino não especificadas anteriormente",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8610-1/01",
+    "atividade_label": "Atividades de atendimento hospitalar, exceto pronto-socorro e unidades para atendimento a urgências",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "8610-1/02",
+    "atividade_label": "Atividades de atendimento em pronto-socorro e unidades hospitalares para atendimento a urgências",
+    "risco_base": "medio"
+  },
+  { "codigo": "8621-6/01", "atividade_label": "UTI móvel", "risco_base": "medio" },
+  {
+    "codigo": "8621-6/02",
+    "atividade_label": "Serviços móveis de atendimento a urgências, exceto por UTI móvel",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8622-4/00",
+    "atividade_label": "Serviços de remoção de pacientes, exceto os serviços",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8630-5/01",
+    "atividade_label": "Atividade médica ambulatorial com recursos para realização de procedimentos cirúrgicos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8630-5/02",
+    "atividade_label": "Atividade médica ambulatorial com recursos para realização de exames complementar es",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8630-5/03",
+    "atividade_label": "Atividade médica ambulatorial restrita a consultas",
+    "risco_base": "medio"
+  },
+  { "codigo": "8630-5/04", "atividade_label": "Atividade odontológica", "risco_base": "medio" },
+  {
+    "codigo": "8630-5/06",
+    "atividade_label": "Serviços de vacinação e imunização humana",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8630-5/07",
+    "atividade_label": "Atividades de reprodução humana assistida",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8630-5/99",
+    "atividade_label": "Atividades de atenção ambulatorial não especificadas anteriormente",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8640-2/01",
+    "atividade_label": "Laboratórios de anatomia patológica e citológica",
+    "risco_base": "medio"
+  },
+  { "codigo": "8640-2/02", "atividade_label": "Laboratórios clínicos", "risco_base": "medio" },
+  {
+    "codigo": "8640-2/03",
+    "atividade_label": "Serviços de diálise e nefrologia",
+    "risco_base": "medio"
+  },
+  { "codigo": "8640-2/04", "atividade_label": "Serviços de tomografia", "risco_base": "medio" },
+  {
+    "codigo": "8640-2/05",
+    "atividade_label": "Serviços de diagnóstico por imagem com uso de radiação ionizante, exceto tomografia",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8640-2/06",
+    "atividade_label": "Serviços de ressonância magnética",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8640-2/07",
+    "atividade_label": "Serviços de diagnóstico por imagem sem uso de radiação ionizante, exceto ressonância magnética",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8640-2/08",
+    "atividade_label": "Serviços de diagnóstico por registro gráfico - ECG, EEG e outros exames análogos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8640-2/09",
+    "atividade_label": "Serviços de diagnóstico por métodos ópticos -endoscopia e outros exames análogos",
+    "risco_base": "medio"
+  },
+  { "codigo": "8640-2/10", "atividade_label": "Serviços de quimioterapia", "risco_base": "medio" },
+  { "codigo": "8640-2/11", "atividade_label": "Serviços de radioterapia", "risco_base": "medio" },
+  { "codigo": "8640-2/12", "atividade_label": "Serviços de hemoterapia", "risco_base": "medio" },
+  { "codigo": "8640-2/13", "atividade_label": "Serviços de litotripsia", "risco_base": "medio" },
+  {
+    "codigo": "8640-2/14",
+    "atividade_label": "Serviços de bancos de células e tecidos humanos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8640-2/99",
+    "atividade_label": "Atividades de serviços de complementaç ão diagnóstica e terapêutica não especificadas anteriormente",
+    "risco_base": "medio"
+  },
+  { "codigo": "8650-0/01", "atividade_label": "Atividades de enfermagem", "risco_base": "medio" },
+  {
+    "codigo": "8650-0/02",
+    "atividade_label": "Atividades de profissionais da nutrição",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8650-0/03",
+    "atividade_label": "Atividades de psicologia e psicanálise",
+    "risco_base": "baixo"
+  },
+  { "codigo": "8650-0/04", "atividade_label": "Atividades de fisioterapia", "risco_base": "medio" },
+  {
+    "codigo": "8650-0/05",
+    "atividade_label": "Atividades de terapia ocupacional",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "8650-0/06",
+    "atividade_label": "Atividades de fonoaudiologia",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "8650-0/07",
+    "atividade_label": "Atividades de terapia de nutrição enteral e parenteral",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8650-0/99",
+    "atividade_label": "Atividades de profissionais da área de saúde não especificadas anteriormente",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8660-7/00",
+    "atividade_label": "Atividades de apoio à gestão de saúde",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "8690-9/01",
+    "atividade_label": "Atividades de práticas integrativas e complementar es em saúde humana",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8690-9/02",
+    "atividade_label": "Atividades de banco de leite humano",
+    "risco_base": "medio"
+  },
+  { "codigo": "8690-9/03", "atividade_label": "Atividades de acupuntura", "risco_base": "medio" },
+  { "codigo": "8690-9/04", "atividade_label": "Atividades de podologia", "risco_base": "medio" },
+  {
+    "codigo": "8690-9/99",
+    "atividade_label": "Outras atividades de atenção à saúde humana não especificadas anteriormente",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8711-5/01",
+    "atividade_label": "Clínicas e residências geriátricas",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8711-5/02",
+    "atividade_label": "Instituições de longa permanência para idosos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8711-5/03",
+    "atividade_label": "Atividades de assistência a deficientes físicos, imunodeprimid os e convalescente s",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8711-5/04",
+    "atividade_label": "Centros de apoio a pacientes com câncer e com AIDS",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8711-5/05",
+    "atividade_label": "Condomínios residenciais para idosos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8712-3/00",
+    "atividade_label": "Atividades de fornecimento de infra-estrutura de apoio e assistência a paciente no domicílio",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8720-4/01",
+    "atividade_label": "Atividades de centros de assistência psicossocial",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8720-4/99",
+    "atividade_label": "Atividades de assistência psicossocial e à saúde a portadores de distúrbios psíquicos, deficiência",
+    "risco_base": "medio"
+  },
+  { "codigo": "8730-1/01", "atividade_label": "Orfanatos", "risco_base": "medio" },
+  { "codigo": "8730-1/02", "atividade_label": "Albergues assistenciais", "risco_base": "medio" },
+  {
+    "codigo": "8730-1/99",
+    "atividade_label": "Atividades de assistência social prestadas em residências coletivas e particulares não especificadas anteriormente",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "8800-6/00",
+    "atividade_label": "Serviços de assistência social sem alojamento",
+    "risco_base": "medio"
+  },
+  { "codigo": "9001-9/01", "atividade_label": "Produção teatral", "risco_base": "baixo" },
+  { "codigo": "9001-9/02", "atividade_label": "Produção musical", "risco_base": "baixo" },
+  {
+    "codigo": "9001-9/03",
+    "atividade_label": "Produção de espetáculos de dança",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9001-9/04",
+    "atividade_label": "Produção de espetáculos circenses, de marionetes e similares",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9001-9/05",
+    "atividade_label": "Produção de espetáculos de rodeios, vaquejadas e similares",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9001-9/06",
+    "atividade_label": "Atividades de sonorização e de iluminação",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9001-9/99",
+    "atividade_label": "Artes cênicas, espetáculos e atividades complementar es não especificadas anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9002-7/01",
+    "atividade_label": "Atividades de artistas plásticos, jornalistas independentes e escritores",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9002-7/02",
+    "atividade_label": "Restauração de obras-de-arte",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9003-5/00",
+    "atividade_label": "Gestão de espaços para artes cênicas, espetáculos e outras atividades artísticas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9101-5/00",
+    "atividade_label": "Atividades de bibliotecas e arquivos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9102-3/01",
+    "atividade_label": "Atividades de museus e de exploração de lugares e prédios históricos e atrações similares",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9102-3/02",
+    "atividade_label": "Restauração e conservação de lugares e prédios históricos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9103-1/00",
+    "atividade_label": "Atividades de jardins botânicos, zoológicos, parques nacionais, reservas ecológicas e áreas de proteção ambiental",
+    "risco_base": "medio"
+  },
+  { "codigo": "9200-3/01", "atividade_label": "Casas de bingo", "risco_base": "baixo" },
+  {
+    "codigo": "9200-3/02",
+    "atividade_label": "Exploração de apostas em corridas de cavalos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9200-3/99",
+    "atividade_label": "Exploração de jogos de azar e apostas não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9311-5/00",
+    "atividade_label": "Gestão de instalações de esportes",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9312-3/00",
+    "atividade_label": "Clubes sociais, esportivos e similares",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "9313-1/00",
+    "atividade_label": "Atividades de condicioname nto físico",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "9319-1/01",
+    "atividade_label": "Produção e promoção de eventos esportivos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9319-1/99",
+    "atividade_label": "Outras atividades esportivas não especificadas anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9321-2/00",
+    "atividade_label": "Parques de diversão e parques temáticos",
+    "risco_base": "alto"
+  },
+  {
+    "codigo": "9329-8/01",
+    "atividade_label": "Discotecas, danceterias, salões de dança e similares",
+    "risco_base": "alto"
+  },
+  { "codigo": "9329-8/02", "atividade_label": "Exploração de boliches", "risco_base": "baixo" },
+  {
+    "codigo": "9329-8/03",
+    "atividade_label": "Exploração de jogos de sinuca, bilhar e similares",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9329-8/04",
+    "atividade_label": "Exploração de jogos eletrônicos recreativos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9329-8/99",
+    "atividade_label": "Outras atividades de recreação e lazer não especificadas anteriormente",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "9411-1/00",
+    "atividade_label": "Atividades de organizações associativas patronais e empresariais",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9412-0/01",
+    "atividade_label": "Atividades de fiscalização profissional",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9412-0/99",
+    "atividade_label": "Outras Atividades associativas profissionais",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9420-1/00",
+    "atividade_label": "Atividades de organizações sindicais",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9430-8/00",
+    "atividade_label": "Atividades de associações de defesa de direitos sociais",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9491-0/00",
+    "atividade_label": "Atividades de organizações religiosas ou filosóficas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9492-8/00",
+    "atividade_label": "Atividades de organizações políticas",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9493-6/00",
+    "atividade_label": "Atividades de organizações associativas ligadas à cultura e à arte",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9499-5/00",
+    "atividade_label": "Atividades associativas não especificadas anteriormente",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9511-8/00",
+    "atividade_label": "Reparação e manutenção de computadores e de equipamentos periféricos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9512-6/00",
+    "atividade_label": "Reparação e manutenção de equipamentos de comunicação",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9521-5/00",
+    "atividade_label": "Reparação e manutenção de equipamentos eletroeletrônic os de uso pessoal e doméstico",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9529-1/01",
+    "atividade_label": "Reparação de calçados, de bolsas e artigos de viagem*",
+    "risco_base": "baixo"
+  },
+  { "codigo": "9529-1/02", "atividade_label": "Chaveiros", "risco_base": "baixo" },
+  { "codigo": "9529-1/03", "atividade_label": "Reparação de relógios", "risco_base": "baixo" },
+  {
+    "codigo": "9529-1/04",
+    "atividade_label": "Reparação de bicicletas, triciclos e outros veículos não-motorizados",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9529-1/05",
+    "atividade_label": "Reparação de artigos do mobiliário",
+    "risco_base": "baixo"
+  },
+  { "codigo": "9529-1/06", "atividade_label": "Reparação de jóias", "risco_base": "baixo" },
+  {
+    "codigo": "9529-1/99",
+    "atividade_label": "Reparação e manutenção de outros objetos e equipamentos pessoais e domésticos não especificados anteriormente",
+    "risco_base": "baixo"
+  },
+  { "codigo": "9601-7/01", "atividade_label": "Lavanderias", "risco_base": "medio" },
+  { "codigo": "9601-7/02", "atividade_label": "Tinturarias", "risco_base": "medio" },
+  { "codigo": "9601-7/03", "atividade_label": "Toalheiros", "risco_base": "medio" },
+  {
+    "codigo": "9602-5/01",
+    "atividade_label": "Cabeleireiros, manicure e pedicure",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9602-5/02",
+    "atividade_label": "Atividades de estética e outros serviços de cuidados com a beleza",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "9603-3/01",
+    "atividade_label": "Gestão e manutenção de cemitérios",
+    "risco_base": "baixo"
+  },
+  { "codigo": "9603-3/02", "atividade_label": "Serviços de cremação", "risco_base": "medio" },
+  { "codigo": "9603-3/03", "atividade_label": "Serviços de sepultamento", "risco_base": "medio" },
+  { "codigo": "9603-3/04", "atividade_label": "Serviços de funerárias", "risco_base": "medio" },
+  {
+    "codigo": "9603-3/05",
+    "atividade_label": "Serviços de somatoconser vação",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "9603-3/99",
+    "atividade_label": "Atividades funerárias e serviços relacionados não especificados anteriormente",
+    "risco_base": "medio"
+  },
+  { "codigo": "9609-2/02", "atividade_label": "Agências matrimoniais", "risco_base": "baixo" },
+  {
+    "codigo": "9609-2/04",
+    "atividade_label": "Exploração de máquinas de serviços pessoais acionadas por moeda",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9609-2/05",
+    "atividade_label": "Atividades de sauna e banhos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "9609-2/06",
+    "atividade_label": "Serviços de tatuagem e colocação de",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "9609-2/07",
+    "atividade_label": "Alojamento de animais domésticos",
+    "risco_base": "medio"
+  },
+  {
+    "codigo": "9609-2/08",
+    "atividade_label": "Higiene e embelezament o de animais domésticos",
+    "risco_base": "baixo"
+  },
+  {
+    "codigo": "9609-2/99",
+    "atividade_label": "Outras atividades de serviços pessoais não especificadas anteriormente",
+    "risco_base": "baixo"
+  },
+  { "codigo": "9700-5/00", "atividade_label": "Serviços domésticos", "risco_base": "medio" },
+  {
+    "codigo": "9900-8/00",
+    "atividade_label": "Organismos internacionais e outras instituições extraterritoriais",
+    "risco_base": "medio"
+  }
+]

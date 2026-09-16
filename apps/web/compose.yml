@@ -1,0 +1,11 @@
+services:
+  web:
+    image: ${WEB_IMAGE:?WEB_IMAGE is required}
+    pull_policy: always
+    restart: unless-stopped
+    environment:
+      WEB_API_URL: ${WEB_API_URL:-/api}
+      WEB_AUTH_URL: ${WEB_AUTH_URL:-/api/auth}
+      WEB_APP_NAME: ${WEB_APP_NAME:-SAC Nexus}
+      WEB_APP_ENV: ${WEB_APP_ENV:-production}
+      WEB_ENABLE_MSW: ${WEB_ENABLE_MSW:-false}

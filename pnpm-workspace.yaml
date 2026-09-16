@@ -1,0 +1,11 @@
+packages:
+  - apps/*
+  - packages/*
+allowBuilds:
+  core-js: true
+  esbuild: true
+  lefthook: true
+  msw: true
+auditConfig:
+  ignoreGhsas:
+    - GHSA-rmmr-r34h-pfm5

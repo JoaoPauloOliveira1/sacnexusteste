@@ -1,0 +1,10 @@
+[
+  {
+    "chave": "risco_inicial",
+    "valor": "baixo"
+  },
+  {
+    "chave": "mensagem_elevacao_isolamento",
+    "valor": "Como sua atividade não está isolada de uma área de risco maior no mesmo imóvel por parede ou porta corta-fogo, a classificação foi elevada em relação ao resultado calculado para o seu estabelecimento, conforme Art. 5º, §§4º e 5º do Decreto Estadual nº 52.005/2021 e Art. 5º, §3º c/c Art. 253 e 254 do Código de Segurança Contra Incêndio e Pânico do Estado de Pernambuco (COSCIP-PE). Recomenda-se vistoria técnica para confirmar o isolamento e a classificação final."
+  }
+]

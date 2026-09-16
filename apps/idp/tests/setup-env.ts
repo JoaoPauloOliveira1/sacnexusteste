@@ -1,0 +1,6 @@
+process.env.DATABASE_URL ??= 'postgresql://user:password@example.test:5432/idp'
+process.env.BETTER_AUTH_SECRET ??= 'test-secret-that-is-long-enough-for-better-auth'
+process.env.RESEND_API_KEY ??= 're_test_key'
+process.env.AUTH_EMAIL_FROM ??= 'SAC Nexus <auth@example.test>'
+process.env.AUTH_EMAIL_VERIFICATION_CALLBACK_URL ??= 'https://app.example.test/auth/email-verified'
+process.env.AUTH_PASSWORD_RESET_REDIRECT_URL ??= 'https://app.example.test/auth/reset-password'

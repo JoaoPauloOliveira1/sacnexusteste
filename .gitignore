@@ -1,0 +1,17 @@
+node_modules/
+.turbo/
+.tanstack/
+dist/
+coverage/
+test-results/
+playwright-report/
+.env
+.env.*
+!.env.example
+.DS_Store
+# macOS AppleDouble metadata (appears on external volumes)
+._*
+# local pnpm content-addressable store
+.pnpm-store/
+# local editor/backup files
+*.orig
