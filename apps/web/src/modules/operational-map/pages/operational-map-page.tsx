@@ -10,6 +10,7 @@ import {
   ShieldAlertIcon,
 } from 'lucide-react'
 import maplibregl, {
+  type CircleLayerSpecification,
   type GeoJSONSource,
   type Map as MapLibreMap,
   type StyleSpecification,
@@ -46,6 +47,14 @@ type MapPoint = {
   situacao: MapStatus
   fase: string
   risco: string
+}
+type ProcessPointCollection = {
+  type: 'FeatureCollection'
+  features: Array<{
+    type: 'Feature'
+    properties: { id: string; situacao: MapStatus }
+    geometry: { type: 'Point'; coordinates: [number, number] }
+  }>
 }
 
 const pernambucoBounds: [[number, number], [number, number]] = [
@@ -541,9 +550,7 @@ async function locateProcess(process: TriagemProcessoItem, signal: AbortSignal) 
   sessionStorage.setItem(key, JSON.stringify(coordinate))
   return coordinate
 }
-function collection(
-  points: MapPoint[],
-): GeoJSON.FeatureCollection<GeoJSON.Point, { id: string; situacao: MapStatus }> {
+function collection(points: MapPoint[]): ProcessPointCollection {
   return {
     type: 'FeatureCollection',
     features: points.map((point) => ({
@@ -553,7 +560,7 @@ function collection(
     })),
   }
 }
-function pointPaint() {
+function pointPaint(): NonNullable<CircleLayerSpecification['paint']> {
   return {
     'circle-color': [
       'match',
