@@ -106,6 +106,8 @@ export function TriagemAnaliseReview({
 
   const assumido = dossie.processo.triadorResponsavel
   const enviada = dossie.processo.analiseStatus === 'enviada'
+  const finalizado = ['aprovado', 'reprovado', 'em_vistoria'].includes(dossie.processo.fase)
+  const podeModificar = canEdit && !finalizado
 
   function current(item: ReviewItem): LocalState | null {
     const k = `${item.itemTipo}:${item.itemChave}`
@@ -182,10 +184,11 @@ export function TriagemAnaliseReview({
             {enviada ? ' · enviada ao contribuinte' : assumido ? ' · rascunho' : ''}
           </span>
         </div>
-        {canEdit ? (
+        {podeModificar ? (
           <p className="text-muted-foreground text-sm">
-            Como triador, marque cada informação e documento como Aprovado, Reprovado (com justificativa) ou Em
-            exigência (com a pendência). Salve para continuar depois; envie para o contribuinte ver.
+            Como triador, marque cada informação e documento como Aprovado, Reprovado (com
+            justificativa) ou Em exigência (com a pendência). Salve para continuar depois; envie
+            para o contribuinte ver.
           </p>
         ) : enviada ? (
           <p className="text-muted-foreground text-sm">Resultado da análise do CBMPE por item.</p>
@@ -194,7 +197,7 @@ export function TriagemAnaliseReview({
         )}
       </CardHeader>
 
-      {canEdit && !assumido ? (
+      {podeModificar && !assumido ? (
         <CardContent className="px-5">
           <Button
             type="button"
@@ -206,7 +209,7 @@ export function TriagemAnaliseReview({
         </CardContent>
       ) : null}
 
-      {(canEdit && assumido) || (!canEdit && enviada) ? (
+      {(podeModificar && assumido) || (!podeModificar && enviada) ? (
         <CardContent className="flex flex-col gap-2 px-5">
           {items.map((item) => {
             const cur = current(item)
@@ -220,7 +223,7 @@ export function TriagemAnaliseReview({
                     <p className="font-medium text-sm">{item.label}</p>
                     <p className="text-muted-foreground text-xs">{item.valor}</p>
                   </div>
-                  {canEdit ? (
+                  {podeModificar ? (
                     <div className="flex flex-wrap gap-1">
                       {(['aprovado', 'reprovado', 'em_exigencia'] as const).map((estado) => (
                         <button
@@ -248,7 +251,7 @@ export function TriagemAnaliseReview({
                     <span className="text-muted-foreground text-xs">—</span>
                   )}
                 </div>
-                {canEdit && cur && cur.estado !== 'aprovado' ? (
+                {podeModificar && cur && cur.estado !== 'aprovado' ? (
                   <textarea
                     className="mt-2 min-h-16 w-full rounded-md border bg-input-background p-2 text-sm"
                     placeholder={
@@ -268,7 +271,7 @@ export function TriagemAnaliseReview({
 
           {error ? <p className="text-destructive text-sm">{error}</p> : null}
 
-          {canEdit ? (
+          {podeModificar ? (
             <div className="flex flex-wrap items-center gap-2 pt-1">
               <Button
                 type="button"
@@ -279,11 +282,7 @@ export function TriagemAnaliseReview({
                 Salvar
               </Button>
               {!enviada ? (
-                <Button
-                  type="button"
-                  onClick={handleEnviar}
-                  isLoading={busy === 'enviar'}
-                >
+                <Button type="button" onClick={handleEnviar} isLoading={busy === 'enviar'}>
                   Enviar ao contribuinte
                 </Button>
               ) : (
@@ -308,7 +307,7 @@ export function TriagemAnaliseReview({
             </div>
           ) : null}
 
-          {canEdit && concluir && allApproved ? (
+          {podeModificar && concluir && allApproved ? (
             <div className="flex flex-col gap-2 rounded-md border border-primary/30 bg-primary/5 p-3">
               <p className="text-sm">
                 Revisei todos os dados e documentos. Registro a decisão final:

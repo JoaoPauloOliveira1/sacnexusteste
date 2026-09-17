@@ -213,7 +213,14 @@ export function DashboardPage() {
                       </TableCell>
                       <TableCell>{tipoDocumento(p)}</TableCell>
                       <TableCell className="tabular-nums">{p.protocoloNumero ?? '—'}</TableCell>
-                      <TableCell>{statusBadge(p.fase)}</TableCell>
+                      <TableCell>
+                        <div className="flex flex-wrap items-center gap-1.5">
+                          {statusBadge(p.fase)}
+                          {p.exigenciaSanadaEm ? (
+                            <span className="text-emerald-700 text-xs">Exigência sanada</span>
+                          ) : null}
+                        </div>
+                      </TableCell>
                       <TableCell>
                         <div className="flex min-w-max justify-end">
                           <Link

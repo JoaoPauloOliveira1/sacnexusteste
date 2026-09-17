@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 
 import { type ProcessoFull } from '@/database/processo-repository.js'
 import {
+  concluirTriagem,
   enviarAnalise,
   enviarMensagemProcesso,
   listarMensagensProcesso,
@@ -118,5 +119,38 @@ describe('triagem analysis visibility', () => {
     ).resolves.toEqual({ ok: true })
     await expect(listarMensagensProcesso(processo.id, 'triador', deps)).resolves.toHaveLength(2)
     expect(leituras).toEqual(['triador'])
+  })
+
+  it('concludes a resumed review after every item is approved', async () => {
+    const statuses: string[] = []
+    const decisoes: Array<{ fase: string; descricao: string }> = []
+    const deps = {
+      processos: {
+        getProcessoFull: async () => ({ ...processo, analiseStatus: 'rascunho' }),
+        listTriagemItens: async () => [
+          {
+            itemTipo: 'documento',
+            itemChave: 'N1-01',
+            estado: 'aprovado',
+            observacao: null,
+            autor: 'Triador',
+            createdAt: new Date(),
+          },
+        ],
+        registrarDecisao: async ({ fase, descricao }: { fase: string; descricao: string }) => {
+          decisoes.push({ fase, descricao })
+        },
+        setAnaliseStatus: async ({ status }: { status: string }) => {
+          statuses.push(status)
+        },
+      },
+    } as unknown as TriagemDeps
+
+    await expect(concluirTriagem(processo.id, { decisao: 'liberar_avcb' }, deps)).resolves.toEqual({
+      ok: true,
+      fase: 'aprovado',
+    })
+    expect(decisoes).toEqual([{ fase: 'aprovado', descricao: 'Triagem concluída — AVCB liberado' }])
+    expect(statuses).toEqual(['enviada'])
   })
 })

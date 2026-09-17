@@ -156,6 +156,7 @@ export const triagemRoutes: FastifyPluginAsync<AppDependencies> = async (app, de
                     unidadeNome: { type: 'string', nullable: true },
                     createdAt: { type: 'string' },
                     exigenciaRespondidaEm: { type: 'string', nullable: true },
+                    exigenciaSanadaEm: { type: 'string', nullable: true },
                     mensagensNaoLidasTriador: { type: 'number' },
                     mensagensNaoLidasContribuinte: { type: 'number' },
                     ultimaMensagemEm: { type: 'string', nullable: true },

@@ -18,6 +18,7 @@ export type TriagemDeps = {
 
 export type TriagemProcessoResumo = TriagemProcessoItem & {
   exigenciaRespondidaEm: string | null
+  exigenciaSanadaEm: string | null
   mensagensNaoLidasTriador: number
   mensagensNaoLidasContribuinte: number
   ultimaMensagemEm: string | null
@@ -36,6 +37,7 @@ export async function listTriagem(
         return {
           ...processo,
           exigenciaRespondidaEm: sinalizadores.exigenciaRespondidaEm?.toISOString() ?? null,
+          exigenciaSanadaEm: sinalizadores.exigenciaSanadaEm?.toISOString() ?? null,
           mensagensNaoLidasTriador: sinalizadores.mensagensNaoLidasTriador,
           mensagensNaoLidasContribuinte: sinalizadores.mensagensNaoLidasContribuinte,
           ultimaMensagemEm: sinalizadores.ultimaMensagemEm?.toISOString() ?? null,
@@ -371,5 +373,6 @@ export async function concluirTriagem(
     fase,
     descricao: observacao ? `${label} — ${observacao}` : label,
   })
+  await deps.processos.setAnaliseStatus({ processoId, status: 'enviada' })
   return { ok: true, fase }
 }

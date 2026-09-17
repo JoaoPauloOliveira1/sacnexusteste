@@ -36,10 +36,19 @@ function NotificationsRoute() {
       description: `${processo.mensagensNaoLidasContribuinte} mensagem${processo.mensagensNaoLidasContribuinte > 1 ? 'ens' : ''} em ${processo.protocoloNumero ?? 'Processo sem protocolo'} — ${processo.unidadeNome ?? processo.empresaRazaoSocial}`,
       occurredAt: processo.ultimaMensagemEm ?? processo.createdAt,
     }))
+  const exigenciasSanadas = processos
+    .filter((processo) => processo.exigenciaSanadaEm)
+    .map((processo) => ({
+      id: `exigencia-sanada-${processo.processoId}`,
+      processId: processo.processoId,
+      title: 'Exigência sanada pelo CBMPE',
+      description: `${processo.protocoloNumero ?? 'Processo sem protocolo'} — a análise foi concluída e o AVCB está disponível.`,
+      occurredAt: processo.exigenciaSanadaEm as string,
+    }))
 
   return (
     <ContributorShell title="Notificações">
-      <NotificationListPage notifications={[...mensagens, ...exigencias]} />
+      <NotificationListPage notifications={[...mensagens, ...exigencias, ...exigenciasSanadas]} />
     </ContributorShell>
   )
 }

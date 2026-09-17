@@ -12,6 +12,7 @@ export interface TriagemProcessoItem {
   unidadeNome: string | null
   createdAt: string
   exigenciaRespondidaEm: string | null
+  exigenciaSanadaEm: string | null
   mensagensNaoLidasTriador: number
   mensagensNaoLidasContribuinte: number
   ultimaMensagemEm: string | null

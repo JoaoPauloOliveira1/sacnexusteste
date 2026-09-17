@@ -84,6 +84,7 @@ function createTestDependencies(overrides: TestDependencyOverrides = {}): AppDep
       setAnaliseStatus: async () => {},
       getProcessoSinalizadores: async () => ({
         exigenciaRespondidaEm: null,
+        exigenciaSanadaEm: null,
         mensagensNaoLidasTriador: 0,
         mensagensNaoLidasContribuinte: 0,
         ultimaMensagemEm: null,

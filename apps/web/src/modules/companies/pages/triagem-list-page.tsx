@@ -181,6 +181,12 @@ export function TriagemListPage() {
                       Exigência respondida
                     </span>
                   ) : null}
+                  {isTriador && p.exigenciaSanadaEm ? (
+                    <span className="inline-flex items-center gap-1 text-emerald-700 text-xs">
+                      <CheckCircle2Icon className="size-3.5" />
+                      Exigência sanada
+                    </span>
+                  ) : null}
                   {isTriador && p.mensagensNaoLidasTriador > 0 ? (
                     <span className="inline-flex items-center gap-1 rounded bg-primary/8 px-1.5 py-0.5 font-medium text-primary text-xs">
                       <MessageCircleIcon className="size-3.5" />

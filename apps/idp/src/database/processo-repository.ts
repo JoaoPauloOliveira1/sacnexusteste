@@ -129,6 +129,7 @@ export type ProcessoMensagemRecord = {
 
 export type ProcessoSinalizadores = {
   exigenciaRespondidaEm: Date | null
+  exigenciaSanadaEm: Date | null
   mensagensNaoLidasTriador: number
   mensagensNaoLidasContribuinte: number
   ultimaMensagemEm: Date | null
@@ -568,13 +569,13 @@ export function createDrizzleProcessoRepository(db: Database): ProcessoRepositor
     },
 
     getProcessoSinalizadores: async (processoId) => {
-      const [[ultimoHistorico], mensagens] = await Promise.all([
+      const [historicos, mensagens, [processoAtual]] = await Promise.all([
         db
           .select({ acao: historico.acao, createdAt: historico.createdAt })
           .from(historico)
           .where(and(eq(historico.entidade, 'processo'), eq(historico.entidadeId, processoId)))
           .orderBy(desc(historico.createdAt))
-          .limit(1),
+          .limit(20),
         db
           .select({
             autorPapel: processoMensagem.autorPapel,
@@ -584,10 +585,24 @@ export function createDrizzleProcessoRepository(db: Database): ProcessoRepositor
           .from(processoMensagem)
           .where(eq(processoMensagem.processoId, processoId))
           .orderBy(desc(processoMensagem.createdAt)),
+        db
+          .select({ fase: processo.fase })
+          .from(processo)
+          .where(eq(processo.id, processoId))
+          .limit(1),
       ])
+      const ultimoHistorico = historicos[0]
+      const respostaExigencia = historicos.find(
+        (registro) => registro.acao === 'resposta_exigencia',
+      )
+      const decisao = historicos.find((registro) => registro.acao === 'decisao')
       return {
         exigenciaRespondidaEm:
           ultimoHistorico?.acao === 'resposta_exigencia' ? ultimoHistorico.createdAt : null,
+        exigenciaSanadaEm:
+          processoAtual?.fase === 'aprovado' && respostaExigencia
+            ? (decisao?.createdAt ?? null)
+            : null,
         mensagensNaoLidasTriador: mensagens.filter(
           (mensagem) => mensagem.autorPapel === 'contribuinte' && !mensagem.lidaEm,
         ).length,
