@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import { Link } from '@tanstack/react-router'
-import { ArrowLeftIcon, CheckCircle2Icon, MessageCircleIcon } from 'lucide-react'
+import { ArrowLeftIcon, CheckCircle2Icon, MapIcon, MessageCircleIcon } from 'lucide-react'
 
 import { useDemoSession } from '@/modules/auth'
 import { listTriagem } from '@/modules/shared/api/triagem'
@@ -105,13 +105,22 @@ export function TriagemListPage() {
     <main className="min-h-svh bg-muted/20 px-4 py-8 sm:px-6 lg:py-12">
       <div className="mx-auto flex w-full max-w-4xl flex-col gap-6">
         <div className="flex items-center justify-between gap-3">
-          <Link
-            to="/dashboard"
-            className={cn(buttonVariants({ variant: 'ghost', size: 'sm' }), 'w-fit')}
-          >
-            <ArrowLeftIcon data-icon="inline-start" />
-            Início
-          </Link>
+          <nav className="flex items-center gap-1" aria-label="Navegação da triagem">
+            <Link
+              to="/dashboard"
+              className={cn(buttonVariants({ variant: 'ghost', size: 'sm' }), 'w-fit')}
+            >
+              <ArrowLeftIcon data-icon="inline-start" />
+              Início
+            </Link>
+            <Link
+              to="/map"
+              className={cn(buttonVariants({ variant: 'ghost', size: 'sm' }), 'w-fit')}
+            >
+              <MapIcon data-icon="inline-start" />
+              Mapa
+            </Link>
+          </nav>
           <PersonaMenu />
         </div>
 

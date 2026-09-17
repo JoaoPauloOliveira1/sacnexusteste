@@ -10,6 +10,15 @@ export interface TriagemProcessoItem {
   empresaRazaoSocial: string
   empresaCnpj: string
   unidadeNome: string | null
+  endereco: {
+    cep: string | null
+    logradouro: string | null
+    numero: string | null
+    complemento: string | null
+    bairro: string | null
+    municipio: string | null
+    uf: string | null
+  }
   createdAt: string
   exigenciaRespondidaEm: string | null
   exigenciaSanadaEm: string | null

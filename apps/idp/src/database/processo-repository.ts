@@ -88,6 +88,15 @@ export type TriagemProcessoItem = {
   empresaRazaoSocial: string
   empresaCnpj: string
   unidadeNome: string | null
+  endereco: {
+    cep: string | null
+    logradouro: string | null
+    numero: string | null
+    complemento: string | null
+    bairro: string | null
+    municipio: string | null
+    uf: string | null
+  }
   createdAt: Date
 }
 
@@ -460,6 +469,20 @@ export function createDrizzleProcessoRepository(db: Database): ProcessoRepositor
           empresaCnpj: pessoaJuridica.cnpj,
           unidadeNome: unidade.nome,
           eventoNome: eventoTemporario.nome,
+          unidadeCep: unidade.cep,
+          unidadeLogradouro: unidade.logradouro,
+          unidadeNumero: unidade.numero,
+          unidadeComplemento: unidade.complemento,
+          unidadeBairro: unidade.bairro,
+          unidadeMunicipio: unidade.municipio,
+          unidadeUf: unidade.uf,
+          eventoCep: eventoTemporario.cep,
+          eventoLogradouro: eventoTemporario.logradouro,
+          eventoNumero: eventoTemporario.numero,
+          eventoComplemento: eventoTemporario.complemento,
+          eventoBairro: eventoTemporario.bairro,
+          eventoMunicipio: eventoTemporario.municipio,
+          eventoUf: eventoTemporario.uf,
           createdAt: processo.createdAt,
         })
         .from(processo)
@@ -469,12 +492,31 @@ export function createDrizzleProcessoRepository(db: Database): ProcessoRepositor
         .where(eq(processo.organizationId, organizationId))
         .orderBy(desc(processo.createdAt))
         .then((rows) =>
-          rows.map(({ eventoNome, ...row }) => ({
-            ...row,
-            empresaRazaoSocial: row.empresaRazaoSocial ?? (eventoNome ? 'Evento temporário' : '—'),
-            empresaCnpj: row.empresaCnpj ?? '',
-            unidadeNome: row.unidadeNome ?? eventoNome,
-          })),
+          rows.map(({ eventoNome, ...row }) => {
+            const isEvento = !row.unidadeNome && Boolean(eventoNome)
+            return {
+              processoId: row.processoId,
+              protocoloNumero: row.protocoloNumero,
+              risco: row.risco,
+              fase: row.fase,
+              tipoSolicitacao: row.tipoSolicitacao,
+              modalidade: row.modalidade,
+              empresaRazaoSocial:
+                row.empresaRazaoSocial ?? (eventoNome ? 'Evento temporário' : '—'),
+              empresaCnpj: row.empresaCnpj ?? '',
+              unidadeNome: row.unidadeNome ?? eventoNome,
+              endereco: {
+                cep: isEvento ? row.eventoCep : row.unidadeCep,
+                logradouro: isEvento ? row.eventoLogradouro : row.unidadeLogradouro,
+                numero: isEvento ? row.eventoNumero : row.unidadeNumero,
+                complemento: isEvento ? row.eventoComplemento : row.unidadeComplemento,
+                bairro: isEvento ? row.eventoBairro : row.unidadeBairro,
+                municipio: isEvento ? row.eventoMunicipio : row.unidadeMunicipio,
+                uf: isEvento ? row.eventoUf : row.unidadeUf,
+              },
+              createdAt: row.createdAt,
+            }
+          }),
         ),
 
     getProcessoFull: async (processoId) => {

@@ -2,6 +2,10 @@ export { ContributorShell } from './components/contributor-shell'
 export { getContributorPresentationEntryRoute } from './lib/contributor-entry'
 export { downloadIssuedDocument } from './lib/document-actions'
 export {
+  geocodeEstablishmentAddress,
+  isAddressReadyForGeocoding,
+} from './lib/geocode-establishment'
+export {
   breGroups,
   createIssuedDocuments,
   demoContributorActor,
