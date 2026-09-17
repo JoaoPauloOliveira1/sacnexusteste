@@ -98,9 +98,10 @@ export async function registrarExigencia(
 async function postTriagem<T>(path: string, body?: unknown): Promise<T> {
   const response = await fetch(`${apiBase()}/triagem/processos/${path}`, {
     method: 'POST',
-    headers: { 'content-type': 'application/json' },
     credentials: 'include',
-    ...(body !== undefined ? { body: JSON.stringify(body) } : {}),
+    ...(body !== undefined
+      ? { headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) }
+      : {}),
   })
   if (!response.ok) return readError(response)
   return response.json() as Promise<T>
