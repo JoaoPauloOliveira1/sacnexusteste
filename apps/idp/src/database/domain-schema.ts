@@ -528,7 +528,8 @@ export const processo = pgTable(
     risco: text('risco').$type<RiscoBand>().notNull(),
     fase: text('fase').notNull(),
     /** Triager who took the process ("assumir atividade"). */
-    triadorResponsavel: text('triador_responsavel'),
+    // Keep the physical column name while existing production databases still use it.
+    triadorResponsavel: text('analista_responsavel'),
     /** Review lifecycle: null/`rascunho` (only the triager sees) | `enviada` (contribuinte sees). */
     analiseStatus: text('analise_status'),
     /** N1-01 complementary info (TPEI, ponto de referência, horário do vistoriador, memorial, veracidade). */
