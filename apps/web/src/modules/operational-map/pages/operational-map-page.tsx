@@ -20,6 +20,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 import { geocodeEstablishmentAddress, isAddressReadyForGeocoding } from '@/modules/processes'
 import { listTriagem, type TriagemProcessoItem } from '@/modules/shared/api/triagem'
+import { lookupCep } from '@/modules/shared/api/unidade'
 import { Button } from '@/modules/shared/components/ui/button'
 import { Input } from '@/modules/shared/components/ui/input'
 import {
@@ -50,6 +51,7 @@ type MapPoint = {
   municipio: string
   latitude: number
   longitude: number
+  localizacaoAproximada: boolean
   situacao: MapStatus
   etapa: string
   fase: string
@@ -126,7 +128,7 @@ export function OperationalMapPage() {
       let unavailable = 0
       for (const process of processes.data?.processos ?? []) {
         const coordinate = await locateProcess(process, controller.signal).catch(() => null)
-        if (coordinate) next.push(toPoint(process, coordinate.latitude, coordinate.longitude))
+        if (coordinate) next.push(toPoint(process, coordinate))
         else unavailable += 1
       }
       if (mounted) {
@@ -457,6 +459,12 @@ function Details({ point }: { point: MapPoint }) {
           <br />
           Risco {point.risco} · {point.situacao}
         </p>
+        {point.localizacaoAproximada ? (
+          <p className="flex gap-1.5 text-amber-800 text-xs">
+            <AlertCircleIcon className="mt-0.5 size-3.5 shrink-0" />
+            Localização aproximada pelo município informado no cadastro.
+          </p>
+        ) : null}
       </div>
       <Button
         nativeButton={false}
@@ -518,7 +526,10 @@ function Summary({ label, value, tone }: { label: string; value: number; tone: s
   )
 }
 
-function toPoint(process: TriagemProcessoItem, latitude: number, longitude: number): MapPoint {
+function toPoint(
+  process: TriagemProcessoItem,
+  coordinate: { latitude: number; longitude: number; approximate: boolean },
+): MapPoint {
   const address = process.endereco
   return {
     id: process.processoId,
@@ -535,8 +546,9 @@ function toPoint(process: TriagemProcessoItem, latitude: number, longitude: numb
       .filter(Boolean)
       .join(' · '),
     municipio: address.municipio ?? 'Pernambuco',
-    latitude,
-    longitude,
+    latitude: coordinate.latitude,
+    longitude: coordinate.longitude,
+    localizacaoAproximada: coordinate.approximate,
     situacao: mapStatus(process.fase),
     etapa: phaseLabel(process.fase),
     fase: process.fase,
@@ -557,18 +569,57 @@ async function locateProcess(process: TriagemProcessoItem, signal: AbortSignal) 
     neighborhood: address.bairro ?? '',
     city: address.municipio ?? '',
   }
-  if ((address.uf ?? 'PE').toUpperCase() !== 'PE' || !isAddressReadyForGeocoding(input)) return null
+  if ((address.uf ?? 'PE').toUpperCase() !== 'PE') return null
   const key = `sac-nexus:map-coordinate:${process.processoId}:${input.cep}:${street}:${input.neighborhood}:${input.city}`
   const cached = sessionStorage.getItem(key)
   if (cached) {
     try {
-      const value = JSON.parse(cached) as { latitude: number; longitude: number }
-      if (Number.isFinite(value.latitude) && Number.isFinite(value.longitude)) return value
+      const value = JSON.parse(cached) as {
+        latitude: number
+        longitude: number
+        approximate?: boolean
+      }
+      if (Number.isFinite(value.latitude) && Number.isFinite(value.longitude)) {
+        return { ...value, approximate: value.approximate ?? false }
+      }
     } catch {}
   }
-  const result = await geocodeEstablishmentAddress(input, signal)
-  if (!result) return null
-  const coordinate = { latitude: result.latitude, longitude: result.longitude }
+
+  const exact = isAddressReadyForGeocoding(input)
+    ? await geocodeEstablishmentAddress(input, signal)
+    : null
+  if (exact) {
+    const coordinate = { latitude: exact.latitude, longitude: exact.longitude, approximate: false }
+    sessionStorage.setItem(key, JSON.stringify(coordinate))
+    return coordinate
+  }
+
+  const cep = input.cep.replace(/\D/g, '')
+  if (cep.length === 8) {
+    const cepLocation = await lookupCep(cep).catch(() => null)
+    if (cepLocation?.lat != null && cepLocation.lng != null) {
+      const coordinate = {
+        latitude: cepLocation.lat,
+        longitude: cepLocation.lng,
+        approximate: true,
+      }
+      sessionStorage.setItem(key, JSON.stringify(coordinate))
+      return coordinate
+    }
+  }
+
+  const city = address.municipio?.trim()
+  if (!city) return null
+  const municipality = await geocodeEstablishmentAddress(
+    { cep: '', address: city, neighborhood: '', city },
+    signal,
+  )
+  if (!municipality) return null
+  const coordinate = {
+    latitude: municipality.latitude,
+    longitude: municipality.longitude,
+    approximate: true,
+  }
   sessionStorage.setItem(key, JSON.stringify(coordinate))
   return coordinate
 }
