@@ -32,7 +32,13 @@ import {
 import { cn } from '@/modules/shared/lib/utils'
 import pernambucoBoundary from '../data/pernambuco.geo.json'
 
-type MapStatus = 'AVCB válido' | 'Em análise' | 'Em exigência' | 'Em vistoria' | 'Indeferido'
+type MapStatus =
+  | 'Processo iniciado'
+  | 'Em triagem'
+  | 'Em exigência'
+  | 'Em vistoria'
+  | 'Regularizado'
+  | 'Indeferido'
 type BaseMapMode = 'street' | 'satellite'
 type MapPoint = {
   id: string
@@ -45,6 +51,7 @@ type MapPoint = {
   latitude: number
   longitude: number
   situacao: MapStatus
+  etapa: string
   fase: string
   risco: string
 }
@@ -63,10 +70,11 @@ const pernambucoBounds: [[number, number], [number, number]] = [
 ]
 const statuses: Array<'Todos' | MapStatus> = [
   'Todos',
-  'AVCB válido',
-  'Em análise',
+  'Processo iniciado',
+  'Em triagem',
   'Em exigência',
   'Em vistoria',
+  'Regularizado',
   'Indeferido',
 ]
 const style: StyleSpecification = {
@@ -186,11 +194,12 @@ export function OperationalMapPage() {
               Fila
             </Button>
           </div>
-          <div className="mt-3 grid grid-cols-2 gap-1.5 sm:grid-cols-5">
-            <Summary label="Válidos" value={totals['AVCB válido']} tone="text-emerald-700" />
-            <Summary label="Análise" value={totals['Em análise']} tone="text-sky-700" />
+          <div className="mt-3 grid grid-cols-2 gap-1.5 sm:grid-cols-3">
+            <Summary label="Iniciados" value={totals['Processo iniciado']} tone="text-sky-700" />
+            <Summary label="Triagem" value={totals['Em triagem']} tone="text-indigo-700" />
             <Summary label="Exigência" value={totals['Em exigência']} tone="text-amber-700" />
             <Summary label="Vistoria" value={totals['Em vistoria']} tone="text-violet-700" />
+            <Summary label="Regularizados" value={totals.Regularizado} tone="text-emerald-700" />
             <Summary label="Indeferidos" value={totals.Indeferido} tone="text-red-700" />
           </div>
         </header>
@@ -439,9 +448,14 @@ function Details({ point }: { point: MapPoint }) {
           {point.protocolo}
         </p>
         <p>
+          <span className="text-muted-foreground">Etapa atual</span>
+          <br />
+          {point.etapa}
+        </p>
+        <p>
           <span className="text-muted-foreground">Classificação</span>
           <br />
-          Risco {point.risco} · {phaseLabel(point.fase)}
+          Risco {point.risco} · {point.situacao}
         </p>
       </div>
       <Button
@@ -472,7 +486,14 @@ function Legend({ points, notLocated }: { points: number; notLocated: number }) 
       </p>
       <div className="mt-4 grid grid-cols-2 gap-2 text-xs">
         {(
-          ['AVCB válido', 'Em análise', 'Em exigência', 'Em vistoria', 'Indeferido'] as MapStatus[]
+          [
+            'Processo iniciado',
+            'Em triagem',
+            'Em exigência',
+            'Em vistoria',
+            'Regularizado',
+            'Indeferido',
+          ] as MapStatus[]
         ).map((status) => (
           <span className="flex items-center gap-2" key={status}>
             <span className={cn('size-2 rounded-full', dotClass(status))} />
@@ -517,6 +538,7 @@ function toPoint(process: TriagemProcessoItem, latitude: number, longitude: numb
     latitude,
     longitude,
     situacao: mapStatus(process.fase),
+    etapa: phaseLabel(process.fase),
     fase: process.fase,
     risco: process.risco,
   }
@@ -565,14 +587,16 @@ function pointPaint(): NonNullable<CircleLayerSpecification['paint']> {
     'circle-color': [
       'match',
       ['get', 'situacao'],
-      'AVCB válido',
-      '#16a34a',
-      'Em análise',
+      'Processo iniciado',
       '#0284c7',
+      'Em triagem',
+      '#4f46e5',
       'Em exigência',
       '#d97706',
       'Em vistoria',
       '#7c3aed',
+      'Regularizado',
+      '#16a34a',
       'Indeferido',
       '#dc2626',
       '#64748b',
@@ -583,33 +607,37 @@ function pointPaint(): NonNullable<CircleLayerSpecification['paint']> {
   }
 }
 function mapStatus(fase: string): MapStatus {
-  if (fase === 'aprovado' || fase === 'concluido') return 'AVCB válido'
+  if (fase === 'aguardando_pagamento' || fase === 'documentos') return 'Processo iniciado'
+  if (fase === 'protocolado') return 'Em triagem'
+  if (fase === 'aprovado' || fase === 'concluido') return 'Regularizado'
   if (fase === 'em_exigencia') return 'Em exigência'
   if (fase === 'em_vistoria') return 'Em vistoria'
   if (fase === 'reprovado') return 'Indeferido'
-  return 'Em análise'
+  return 'Em triagem'
 }
 function phaseLabel(fase: string) {
   return (
     (
       {
         aguardando_pagamento: 'Aguardando pagamento',
-        protocolado: 'Protocolado',
-        em_exigencia: 'Em exigência',
-        em_vistoria: 'Em vistoria',
-        aprovado: 'Deferido',
-        reprovado: 'Indeferido',
-        concluido: 'Concluído',
+        documentos: 'Documentação em preparação',
+        protocolado: 'Em análise de triagem',
+        em_exigencia: 'Aguardando resposta do contribuinte',
+        em_vistoria: 'Aguardando vistoria',
+        aprovado: 'AVCB emitido',
+        reprovado: 'Pedido indeferido',
+        concluido: 'DDLCB emitida',
       } as Record<string, string>
     )[fase] ?? fase
   )
 }
 function countStatuses(points: MapPoint[]) {
   const totals: Record<MapStatus, number> = {
-    'AVCB válido': 0,
-    'Em análise': 0,
+    'Processo iniciado': 0,
+    'Em triagem': 0,
     'Em exigência': 0,
     'Em vistoria': 0,
+    Regularizado: 0,
     Indeferido: 0,
   }
   for (const point of points) totals[point.situacao] += 1
@@ -625,26 +653,28 @@ function normalize(value: string) {
 function statusClass(status: MapStatus) {
   return cn(
     'inline-flex rounded-full border px-2 py-0.5 font-medium text-xs',
-    status === 'AVCB válido' && 'border-emerald-300 bg-emerald-50 text-emerald-800',
-    status === 'Em análise' && 'border-sky-300 bg-sky-50 text-sky-800',
+    status === 'Processo iniciado' && 'border-sky-300 bg-sky-50 text-sky-800',
+    status === 'Em triagem' && 'border-indigo-300 bg-indigo-50 text-indigo-800',
     status === 'Em exigência' && 'border-amber-300 bg-amber-50 text-amber-800',
     status === 'Em vistoria' && 'border-violet-300 bg-violet-50 text-violet-800',
+    status === 'Regularizado' && 'border-emerald-300 bg-emerald-50 text-emerald-800',
     status === 'Indeferido' && 'border-red-300 bg-red-50 text-red-800',
   )
 }
 function dotClass(status: MapStatus) {
   return (
     {
-      'AVCB válido': 'bg-emerald-600',
-      'Em análise': 'bg-sky-600',
+      'Processo iniciado': 'bg-sky-600',
+      'Em triagem': 'bg-indigo-600',
       'Em exigência': 'bg-amber-600',
       'Em vistoria': 'bg-violet-600',
+      Regularizado: 'bg-emerald-600',
       Indeferido: 'bg-red-600',
     } as Record<MapStatus, string>
   )[status]
 }
 function StatusIcon({ status }: { status: MapStatus }) {
-  return status === 'AVCB válido' ? (
+  return status === 'Regularizado' ? (
     <CheckCircle2Icon className="size-5 text-emerald-700" />
   ) : (
     <ShieldAlertIcon
