@@ -44,8 +44,8 @@ export async function startAvcb(
     )
   }
 
-  const existing = await deps.processos.findOpenProcessoByClassificacao(latest.id)
-  if (existing) {
+  const existing = await deps.processos.getLatestProcessoByUnidade(unidadeId)
+  if (existing && existing.fase !== 'concluido') {
     return {
       processoId: existing.id,
       risco: existing.risco,

@@ -240,6 +240,9 @@ export async function enviarAnalise(
   if (!proc) throw new HttpError(404, 'Processo não encontrado.')
 
   const itens = await deps.processos.listTriagemItens(processoId)
+  if (itens.length === 0) {
+    throw new HttpError(409, 'Marque e salve ao menos um item antes de enviar ao contribuinte.')
+  }
   const pendencias = itens.filter((item) => item.estado === 'em_exigencia')
   if (pendencias.length > 0) {
     const descricao = pendencias

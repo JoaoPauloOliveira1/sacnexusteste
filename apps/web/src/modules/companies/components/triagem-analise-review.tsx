@@ -160,6 +160,10 @@ export function TriagemAnaliseReview({
 
   function handleEnviar() {
     const itens = itensPendentesDeSalvar()
+    if (itens.length === 0 && dossie.triagemItens.length === 0) {
+      setError('Marque ao menos um item antes de enviar ao contribuinte.')
+      return
+    }
     void run('enviar', async () => {
       if (itens.length > 0) {
         await salvarAnaliseTriagem(processoId, autor, itens)
