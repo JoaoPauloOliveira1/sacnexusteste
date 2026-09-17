@@ -527,9 +527,9 @@ export const processo = pgTable(
       .notNull(),
     risco: text('risco').$type<RiscoBand>().notNull(),
     fase: text('fase').notNull(),
-    /** Analyst who took the process ("assumir atividade"). */
-    analistaResponsavel: text('analista_responsavel'),
-    /** Analysis lifecycle: null/`rascunho` (only the analyst sees) | `enviada` (contribuinte sees). */
+    /** Triager who took the process ("assumir atividade"). */
+    triadorResponsavel: text('triador_responsavel'),
+    /** Review lifecycle: null/`rascunho` (only the triager sees) | `enviada` (contribuinte sees). */
     analiseStatus: text('analise_status'),
     /** N1-01 complementary info (TPEI, ponto de referência, horário do vistoriador, memorial, veracidade). */
     dadosComplementares: jsonb('dados_complementares'),
@@ -610,7 +610,7 @@ export const historico = pgTable(
 )
 
 /**
- * Triagem item review — append-only. Each analyst decision on one information
+ * Triagem item review — append-only. Each triager decision on one information
  * field or one document is a NEW row (nothing is overwritten/deleted). The
  * current state of an item is its most recent row.
  */

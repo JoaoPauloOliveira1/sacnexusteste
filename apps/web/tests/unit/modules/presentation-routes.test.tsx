@@ -145,14 +145,14 @@ describe('presentation routes', () => {
     expect(screen.getAllByRole('link', { name: 'Abrir processo' })).toHaveLength(5)
   })
 
-  it('renders the technical analysis queue for the analyst profile', async () => {
+  it('renders the technical review queue for the triager profile', async () => {
     saveDemoSession({
-      user: demoIdentities.analyst.user,
-      profile: demoIdentities.analyst.profile,
+      user: demoIdentities.triager.user,
+      profile: demoIdentities.triager.profile,
     })
     renderRoute('/analysis')
 
-    expect(await screen.findByRole('heading', { name: 'Fila de análise técnica' })).toBeVisible()
+    expect(await screen.findByRole('heading', { name: 'Revisão técnica da triagem' })).toBeVisible()
     expect(screen.getByRole('link', { name: 'Abrir análise' })).toBeVisible()
   })
 

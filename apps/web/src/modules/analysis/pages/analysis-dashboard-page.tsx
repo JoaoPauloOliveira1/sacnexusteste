@@ -25,23 +25,23 @@ export function AnalysisDashboardPage() {
   return (
     <AnalysisComposer.Root>
       <AnalysisComposer.PageHeader
-        title="Fila de análise técnica"
-        description="Avalie os documentos e as condições do estabelecimento para decidir o prosseguimento do processo."
+        title="Revisão técnica da triagem"
+        description="Como triador, avalie os documentos e as condições do estabelecimento para decidir o prosseguimento do processo."
       >
         <Badge variant="outline">Risco 2</Badge>
         <span className="text-muted-foreground text-sm">Atualizado em 28/07/2026 às 15:18</span>
       </AnalysisComposer.PageHeader>
 
-      <section aria-label="Indicadores da análise" className="grid gap-4 sm:grid-cols-3">
+      <section aria-label="Indicadores da revisão técnica" className="grid gap-4 sm:grid-cols-3">
         {[
           {
-            label: 'Aguardando análise',
+            label: 'Aguardando revisão',
             value: pending,
             description: 'Processos distribuídos e ainda não assumidos',
             icon: Clock3Icon,
           },
           {
-            label: 'Em análise',
+            label: 'Em revisão',
             value: active,
             description: 'Avaliações técnicas em andamento',
             icon: FileSearchIcon,
@@ -70,8 +70,8 @@ export function AnalysisDashboardPage() {
 
       <div className="mt-8">
         <AnalysisComposer.Section
-          title="Processos distribuídos"
-          description="A triagem administrativa já foi concluída. A decisão de vistoria pertence à análise técnica."
+          title="Processos para revisão técnica"
+          description="A mesma pessoa responsável pela triagem administrativa decide a necessidade de vistoria."
         >
           <Table>
             <TableHeader>

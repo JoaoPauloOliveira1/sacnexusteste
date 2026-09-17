@@ -19,10 +19,71 @@ const FASE_LABEL: Record<string, string> = {
   aguardando_pagamento: 'Aguardando pagamento',
   protocolado: 'Protocolado',
   em_exigencia: 'Em exigência',
+  em_vistoria: 'Em vistoria',
   aprovado: 'Deferido',
   reprovado: 'Indeferido',
   concluido: 'Concluído (DDLCB)',
   documentos: 'Documentos',
+}
+
+type TriagemProc = { fase: string; createdAt: string }
+
+function computeIndicadores(processos: TriagemProc[]) {
+  const now = Date.now()
+  const startOfToday = new Date()
+  startOfToday.setHours(0, 0, 0, 0)
+  const dia = startOfToday.getTime()
+  const semana = now - 7 * 24 * 60 * 60 * 1000
+  const mes = now - 30 * 24 * 60 * 60 * 1000
+
+  let fila = 0
+  let emVistoria = 0
+  let deferidos = 0
+  let indeferidos = 0
+  let hoje = 0
+  let ultimaSemana = 0
+  let ultimoMes = 0
+  for (const p of processos) {
+    if (p.fase === 'protocolado' || p.fase === 'em_exigencia') fila += 1
+    if (p.fase === 'em_vistoria') emVistoria += 1
+    if (p.fase === 'aprovado') deferidos += 1
+    if (p.fase === 'reprovado') indeferidos += 1
+    const t = new Date(p.createdAt).getTime()
+    if (!Number.isNaN(t)) {
+      if (t >= dia) hoje += 1
+      if (t >= semana) ultimaSemana += 1
+      if (t >= mes) ultimoMes += 1
+    }
+  }
+  return { fila, emVistoria, deferidos, indeferidos, hoje, ultimaSemana, ultimoMes }
+}
+
+function Indicador({ label, value, tone }: { label: string; value: number; tone?: string }) {
+  return (
+    <div className="flex flex-col rounded-md border bg-background p-3">
+      <span className={cn('font-semibold text-2xl tabular-nums', tone)}>{value}</span>
+      <span className="text-muted-foreground text-xs">{label}</span>
+    </div>
+  )
+}
+
+function IndicadoresPanel({ processos }: { processos: TriagemProc[] }) {
+  const ind = computeIndicadores(processos)
+  return (
+    <div className="flex flex-col gap-3">
+      <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
+        <Indicador label="Na fila (a decidir)" value={ind.fila} tone="text-primary" />
+        <Indicador label="Em vistoria" value={ind.emVistoria} />
+        <Indicador label="Deferidos" value={ind.deferidos} tone="text-green-700" />
+        <Indicador label="Indeferidos" value={ind.indeferidos} tone="text-red-700" />
+      </div>
+      <div className="grid grid-cols-3 gap-2">
+        <Indicador label="Novos hoje" value={ind.hoje} />
+        <Indicador label="Últimos 7 dias" value={ind.ultimaSemana} />
+        <Indicador label="Últimos 30 dias" value={ind.ultimoMes} />
+      </div>
+    </div>
+  )
 }
 
 function formatDate(iso: string): string {
@@ -33,7 +94,7 @@ function formatDate(iso: string): string {
 export function TriagemListPage() {
   const { session } = useDemoSession()
   const perfil = session?.profile.type
-  const isAnalista = perfil === 'triager' || perfil === 'analyst' || perfil === 'admin'
+  const isTriador = perfil === 'triager' || perfil === 'admin'
   const query = useQuery({ queryKey: ['triagem'], queryFn: listTriagem })
 
   return (
@@ -58,10 +119,10 @@ export function TriagemListPage() {
           </p>
         </header>
 
-        {!isAnalista ? (
+        {!isTriador ? (
           <div className="rounded-md border border-amber-200 bg-amber-50 p-3 text-amber-900 text-sm">
-            Esta é a área de análise do CBMPE. Para <strong>registrar exigências</strong> e agir
-            como analista, entre com o perfil <strong>Triador</strong> (ou Analista). Como
+            Esta é a área de triagem do CBMPE. Para <strong>registrar exigências</strong> e revisar
+            dados e documentos, entre com o perfil <strong>Triador</strong>. Como
             contribuinte, você acompanha e responde aos seus processos pelo <strong>Início</strong>.
           </div>
         ) : null}

@@ -23,7 +23,7 @@ export interface ProcessoDossie {
     protocoloNumero: string | null
     protocoladoEm: string | null
     dadosComplementares: Record<string, unknown> | null
-    analistaResponsavel: string | null
+    triadorResponsavel: string | null
     analiseStatus: string | null
     createdAt: string
   }
@@ -106,8 +106,8 @@ async function postTriagem<T>(path: string, body?: unknown): Promise<T> {
   return response.json() as Promise<T>
 }
 
-export function assumirTriagem(processoId: string, analista: string) {
-  return postTriagem<{ ok: boolean; analista: string }>(`${processoId}/assumir`, { analista })
+export function assumirTriagem(processoId: string, triador: string) {
+  return postTriagem<{ ok: boolean; triador: string }>(`${processoId}/assumir`, { triador })
 }
 
 export function salvarAnaliseTriagem(

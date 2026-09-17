@@ -10,8 +10,7 @@ capabilities; it is not a source-code module.
 
 | Role | Demo credential | Route | Responsibility |
 | --- | --- | --- | --- |
-| Triager | `triador@email.com` | `/triage` | Administrative completeness, requirements, and distribution |
-| Technical analyst | `analista@email.com` | `/analysis` | Document content, technical checklist, requirements, and inspection decision |
+| Triager | `triador@email.com` | `/triagem` | Administrative and technical review, requirements, and inspection decision |
 | Inspector | `vistoriador@email.com` | `/inspections` | Scheduling, field verification, requirements, and inspection outcome |
 
 The internal demo password is `demonstracao`.
@@ -19,23 +18,20 @@ The internal demo password is `demonstracao`.
 ## Capability Sequence
 
 1. The triager receives the protocol after contributor submission.
-2. Administrative triage verifies registration data, required files, legibility,
-   and readiness for distribution.
-3. The technical analyst reviews document content and the declared fire-safety
-   conditions.
-4. The analyst records one explicit, reasoned decision:
+2. The same triager verifies registration data, required files, legibility,
+   document content, and declared fire-safety conditions in one dossier.
+3. The triager records one explicit, reasoned decision:
    - waive prior inspection and continue the issuance path; or
    - require an inspection and project the process to the inspection queue.
-5. When required, the inspector schedules and performs the visit.
-6. Technical or field requirements return to the responsible internal stage
+4. When required, the inspector schedules and performs the visit.
+5. Triager or field requirements return to the responsible internal stage
    after the contributor correction is received.
-7. An approved inspection projects the process to issuance of both the AVCB
+6. An approved inspection projects the process to issuance of both the AVCB
    and the Atestado de Vistoria.
 
 ## Ownership Boundaries
 
-- `modules/triage` owns administrative triage only.
-- `modules/analysis` owns mandatory technical analysis.
+- The triage workspace owns the unified administrative and technical review.
 - `modules/inspections` owns the optional field-inspection branch.
 - `modules/processes` owns the contributor-facing process journey.
 - Shared visual chrome belongs to `modules/shared`.
@@ -47,7 +43,7 @@ process state that coordinates the capability modules.
 
 The current implementation uses one versioned canonical browser aggregate for
 the process identity, protocol, classification, lifecycle stage, public
-history, and issued documents. Triage, analysis, and inspection derive
+history, and issued documents. Triage and inspection derive
 role-specific queue projections from that aggregate and record lifecycle
 transitions back into it. Capability-owned checklist and composer data remain
 local presentation projections.

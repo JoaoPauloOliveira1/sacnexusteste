@@ -57,7 +57,7 @@ updates are bounded presentation fixtures, not contributor authority.
 ## Production Boundaries
 
 The presentation does not upload file bytes or integrate digital signatures,
-payments, notifications, analyst decisions, inspection operations, or legal
+payments, notifications, triager decisions, inspection operations, or legal
 document issuance. Production versions require authenticated and idempotent
 commands, tenant authorization, secure uploads, malware scanning, provider
 contracts, durable audit history, retention policy, real-time status, and

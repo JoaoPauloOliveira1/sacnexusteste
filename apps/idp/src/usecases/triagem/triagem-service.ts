@@ -33,7 +33,7 @@ export type ProcessoDossie = {
     protocoloNumero: string | null
     protocoladoEm: string | null
     dadosComplementares: unknown
-    analistaResponsavel: string | null
+    triadorResponsavel: string | null
     analiseStatus: string | null
     createdAt: string
   }
@@ -101,7 +101,7 @@ export async function getProcessoDossie(
       protocoloNumero: proc.protocoloNumero,
       protocoladoEm: proc.protocoladoEm ? proc.protocoladoEm.toISOString() : null,
       dadosComplementares: proc.dadosComplementares,
-      analistaResponsavel: proc.analistaResponsavel,
+      triadorResponsavel: proc.triadorResponsavel,
       analiseStatus: proc.analiseStatus,
       createdAt: proc.createdAt.toISOString(),
     },
@@ -187,14 +187,14 @@ const ITEM_ESTADOS = new Set(['aprovado', 'reprovado', 'em_exigencia'])
 
 export async function assumirTriagem(
   processoId: string,
-  input: { analista: string },
+  input: { triador: string },
   deps: TriagemDeps,
-): Promise<{ ok: true; analista: string }> {
+): Promise<{ ok: true; triador: string }> {
   const proc = await deps.processos.getProcessoFull(processoId)
   if (!proc) throw new HttpError(404, 'Processo não encontrado.')
-  const analista = input.analista.trim() || 'Analista'
-  await deps.processos.assumirProcesso({ processoId, analista })
-  return { ok: true, analista }
+  const triador = input.triador.trim() || 'Triador'
+  await deps.processos.assumirProcesso({ processoId, triador })
+  return { ok: true, triador }
 }
 
 export async function salvarAnaliseItens(
@@ -225,7 +225,7 @@ export async function salvarAnaliseItens(
     })
     salvos += 1
   }
-  // Keep the analysis a draft while the analyst is still working on it.
+  // Keep the review a draft while the triager is still working on it.
   if (proc.analiseStatus == null) {
     await deps.processos.setAnaliseStatus({ processoId, status: 'rascunho' })
   }

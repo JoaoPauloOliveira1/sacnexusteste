@@ -511,7 +511,7 @@ export const initialTriageProcesses: readonly TriageProcess[] = [
       },
       {
         title: 'Encaminhado para distribuição',
-        description: 'Processo disponibilizado para distribuição a um Analista Técnico.',
+        description: 'Processo disponibilizado para revisão técnica pelo Triador.',
         date: '18/07/2026 às 16:03',
         user: 'SAC-NEXUS',
       },

@@ -23,7 +23,7 @@ import { TriagemAnaliseReview } from '../components/triagem-analise-review'
 const ACAO_LABEL: Record<string, string> = {
   exigencia: 'Exigência registrada',
   resposta_exigencia: 'Resposta do contribuinte',
-  decisao: 'Decisão do analista',
+  decisao: 'Decisão do triador',
 }
 
 const RISK_STYLE: Record<string, string> = {
@@ -50,7 +50,7 @@ export function TriagemDetailPage({ processoId }: { processoId: string }) {
   const { session } = useDemoSession()
   const perfil = session?.profile.type
   const isAdmin = perfil === 'admin'
-  const isAnalista = perfil === 'triager' || perfil === 'analyst' || isAdmin
+  const isTriador = perfil === 'triager' || isAdmin
   const isContribuinte = perfil === 'contributor' || isAdmin
 
   const query = useQuery({
@@ -150,7 +150,7 @@ export function TriagemDetailPage({ processoId }: { processoId: string }) {
     <main className="min-h-svh bg-muted/20 px-4 py-8 sm:px-6 lg:py-12">
       <div className="mx-auto flex w-full max-w-3xl flex-col gap-6">
         <div className="flex items-center justify-between gap-3">
-          {isAnalista ? (
+          {isTriador ? (
             <Link
               to="/triagem"
               className={cn(buttonVariants({ variant: 'ghost', size: 'sm' }), 'w-fit')}
@@ -182,9 +182,9 @@ export function TriagemDetailPage({ processoId }: { processoId: string }) {
             <Dossie
               dossie={query.data}
               onOpenDoc={openDoc}
-              isAnalista={isAnalista}
+              isTriador={isTriador}
               isContribuinte={isContribuinte}
-              hideAnalistaAcoes={query.data.processo.risco !== 'I'}
+              hideTriadorAcoes={query.data.processo.risco !== 'I'}
               decisao={{
                 observacao: decObs,
                 setObservacao: setDecObs,
@@ -214,8 +214,8 @@ export function TriagemDetailPage({ processoId }: { processoId: string }) {
               <TriagemAnaliseReview
                 dossie={query.data}
                 processoId={processoId}
-                autor={session?.user.name ?? 'Analista'}
-                canEdit={isAnalista}
+                autor={session?.user.name ?? 'Triador'}
+                canEdit={isTriador}
                 onChanged={() => void query.refetch()}
               />
             ) : null}
@@ -256,33 +256,33 @@ type DecisaoProps = {
 function Dossie({
   dossie,
   onOpenDoc,
-  isAnalista,
+  isTriador,
   isContribuinte,
-  hideAnalistaAcoes = false,
+  hideTriadorAcoes = false,
   decisao,
   exigencia,
   resposta,
 }: {
   dossie: ProcessoDossie
   onOpenDoc: (key: string) => void
-  isAnalista: boolean
+  isTriador: boolean
   isContribuinte: boolean
-  hideAnalistaAcoes?: boolean
+  hideTriadorAcoes?: boolean
   decisao: DecisaoProps
   exigencia: ExigenciaProps
   resposta: RespostaProps
 }) {
   const { processo, empresa, unidade, respostas, documentos, pagamento, historico } = dossie
   const dados = processo.dadosComplementares ?? {}
-  // For Risco II/III the analyst uses the item-by-item review (assumir → itens →
+  // For Risco II/III the triager uses the item-by-item review (assumir → itens →
   // enviar → concluir) instead of these quick decisão/exigência cards.
   const podeDecidir =
-    isAnalista &&
-    !hideAnalistaAcoes &&
+    isTriador &&
+    !hideTriadorAcoes &&
     (processo.fase === 'protocolado' || processo.fase === 'em_exigencia')
   const podeExigir =
-    isAnalista &&
-    !hideAnalistaAcoes &&
+    isTriador &&
+    !hideTriadorAcoes &&
     (processo.fase === 'protocolado' || processo.fase === 'em_exigencia')
   const emExigencia = isContribuinte && processo.fase === 'em_exigencia'
   const decidido = processo.fase === 'aprovado' || processo.fase === 'reprovado'
@@ -448,7 +448,7 @@ function Dossie({
         >
           <span>
             Processo <strong>{processo.fase === 'aprovado' ? 'deferido' : 'indeferido'}</strong>{' '}
-            pelo analista.
+            pelo triador.
           </span>
           {processo.fase === 'aprovado' ? (
             <Link
@@ -465,7 +465,7 @@ function Dossie({
       {podeDecidir ? (
         <Card className="gap-3 rounded-md py-4 shadow-none">
           <CardHeader className="px-5">
-            <CardTitle className="text-base">Decisão (analista)</CardTitle>
+            <CardTitle className="text-base">Decisão do triador</CardTitle>
           </CardHeader>
           <CardContent className="flex flex-col gap-3 px-5 text-sm">
             <p className="text-muted-foreground">
@@ -527,7 +527,7 @@ function Dossie({
           {podeExigir ? (
             <div className="flex flex-col gap-2 border-t pt-3">
               <label htmlFor="exigencia" className="font-medium">
-                Registrar exigência (analista)
+                Registrar exigência (triador)
               </label>
               <textarea
                 id="exigencia"
@@ -566,7 +566,7 @@ function Dossie({
             </p>
             <textarea
               className="min-h-20 rounded-md border bg-input-background p-2 text-sm"
-              placeholder="Mensagem para o analista (opcional)…"
+              placeholder="Mensagem para o triador (opcional)…"
               value={resposta.mensagem}
               onChange={(e) => resposta.setMensagem(e.target.value)}
             />

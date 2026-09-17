@@ -32,9 +32,9 @@ test('completes the optional inspection branch and emits the document', async ({
   ).toBeVisible()
 })
 
-test('protects the inspection route from an analyst session', async ({ page }) => {
+test('protects the inspection route from a triager session', async ({ page }) => {
   await page.goto('/signin')
-  await page.getByLabel('E-mail').fill('analista@email.com')
+  await page.getByLabel('E-mail').fill('triador@email.com')
   await page.getByPlaceholder('Digite sua senha').fill('demonstracao')
   await page.getByRole('button', { exact: true, name: 'Entrar' }).click()
   await page.goto('/inspections')

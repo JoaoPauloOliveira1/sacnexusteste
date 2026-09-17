@@ -102,7 +102,7 @@ export type ProcessoFull = {
   protocoloNumero: string | null
   protocoladoEm: Date | null
   dadosComplementares: unknown
-  analistaResponsavel: string | null
+  triadorResponsavel: string | null
   analiseStatus: string | null
   createdAt: Date
 }
@@ -149,7 +149,7 @@ export type ProcessoRepository = {
   listProcessos: (organizationId: string) => Promise<TriagemProcessoItem[]>
   getProcessoFull: (processoId: string) => Promise<ProcessoFull | null>
   getProcessoPagamento: (processoId: string) => Promise<PagamentoRecord>
-  /** Analyst registers an exigência: writes history + moves the processo to `em_exigencia`. */
+  /** Triager registers an exigência: writes history + moves the processo to `em_exigencia`. */
   addExigencia: (input: {
     organizationId: string
     processoId: string
@@ -162,7 +162,7 @@ export type ProcessoRepository = {
     mensagem: string | null
     documentos: ProcessoDocumentoInput[]
   }) => Promise<void>
-  /** Analyst decides the process (deferido/indeferido): writes history + sets the final fase. */
+  /** Triager decides the process (deferido/indeferido): writes history + sets the final fase. */
   registrarDecisao: (input: {
     organizationId: string
     processoId: string
@@ -170,9 +170,9 @@ export type ProcessoRepository = {
     descricao: string
   }) => Promise<void>
   listHistorico: (processoId: string) => Promise<HistoricoRecord[]>
-  /** Analyst takes the process ("assumir atividade"); sets analise_status to rascunho when new. */
-  assumirProcesso: (input: { processoId: string; analista: string }) => Promise<void>
-  /** Appends one analyst decision on a field/document (append-only trail). */
+  /** Triager takes the process ("assumir atividade"); sets analise_status to rascunho when new. */
+  assumirProcesso: (input: { processoId: string; triador: string }) => Promise<void>
+  /** Appends one triager decision on a field/document (append-only trail). */
   addTriagemItem: (input: {
     processoId: string
     itemTipo: string
@@ -351,7 +351,7 @@ export function createDrizzleProcessoRepository(db: Database): ProcessoRepositor
           protocoloNumero: processo.protocoloNumero,
           protocoladoEm: processo.protocoladoEm,
           dadosComplementares: processo.dadosComplementares,
-          analistaResponsavel: processo.analistaResponsavel,
+          triadorResponsavel: processo.triadorResponsavel,
           analiseStatus: processo.analiseStatus,
           createdAt: processo.createdAt,
         })
@@ -377,7 +377,7 @@ export function createDrizzleProcessoRepository(db: Database): ProcessoRepositor
           protocoloNumero: processo.protocoloNumero,
           protocoladoEm: processo.protocoladoEm,
           dadosComplementares: processo.dadosComplementares,
-          analistaResponsavel: processo.analistaResponsavel,
+          triadorResponsavel: processo.triadorResponsavel,
           analiseStatus: processo.analiseStatus,
           createdAt: processo.createdAt,
         })
@@ -459,7 +459,7 @@ export function createDrizzleProcessoRepository(db: Database): ProcessoRepositor
           protocoloNumero: processo.protocoloNumero,
           protocoladoEm: processo.protocoladoEm,
           dadosComplementares: processo.dadosComplementares,
-          analistaResponsavel: processo.analistaResponsavel,
+          triadorResponsavel: processo.triadorResponsavel,
           analiseStatus: processo.analiseStatus,
           createdAt: processo.createdAt,
         })
@@ -469,7 +469,7 @@ export function createDrizzleProcessoRepository(db: Database): ProcessoRepositor
       return row ?? null
     },
 
-    assumirProcesso: async ({ processoId, analista }) => {
+    assumirProcesso: async ({ processoId, triador }) => {
       const [row] = await db
         .select({ analiseStatus: processo.analiseStatus })
         .from(processo)
@@ -478,7 +478,7 @@ export function createDrizzleProcessoRepository(db: Database): ProcessoRepositor
       await db
         .update(processo)
         .set({
-          analistaResponsavel: analista,
+          triadorResponsavel: triador,
           // Start the analysis as a draft the first time it is taken.
           analiseStatus: row?.analiseStatus ?? 'rascunho',
         })

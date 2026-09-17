@@ -79,9 +79,9 @@ The accepted scenario set is:
 | Scenario | Personas | Decision and outcome |
 | --- | --- | --- |
 | Risco 1 — automatic issuance | Contributor | Low-risk classification and automatic DDLCB issuance |
-| Risco 2 — no inspection | Contributor, triager, technical analyst | Administrative and technical approval, prior inspection waived, AVCB and inspection attestation issued |
-| Risco 2 — with inspection | Contributor, triager, technical analyst, inspector | Inspection required, scheduled, performed, and approved before both documents are issued |
-| Risco 2 — document requirement | Contributor, triager, technical analyst | Administrative requirement, contributor correction with attachment, new triage, inspection waived, and both documents issued |
+| Risco 2 — no inspection | Contributor, triager | Unified administrative and technical approval, prior inspection waived, AVCB and inspection attestation issued |
+| Risco 2 — with inspection | Contributor, triager, inspector | Inspection required, scheduled, performed, and approved before both documents are issued |
+| Risco 2 — document requirement | Contributor, triager | Requirement, contributor correction with attachment, new review, inspection waived, and both documents issued |
 
 Recordings use the real canonical browser process aggregate. Profile changes
 must preserve the same protocol instead of reseeding a persona-specific

@@ -2,7 +2,6 @@ import { useNavigate } from '@tanstack/react-router'
 import {
   ClipboardCheckIcon,
   ClipboardListIcon,
-  FileSearchIcon,
   LayoutDashboardIcon,
   ShieldCheckIcon,
 } from 'lucide-react'
@@ -30,13 +29,6 @@ const demoProfileSwitchOptions = [
     description: 'Triagem',
     route: '/triagem',
     icon: ClipboardCheckIcon,
-  },
-  {
-    type: 'analyst',
-    label: 'Analista',
-    description: 'Análise',
-    route: '/analysis',
-    icon: FileSearchIcon,
   },
   {
     type: 'inspector',

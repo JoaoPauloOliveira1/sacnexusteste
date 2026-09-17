@@ -104,7 +104,7 @@ export function TriagemAnaliseReview({
   const [error, setError] = useState<string | null>(null)
   const [concluir, setConcluir] = useState(false)
 
-  const assumido = dossie.processo.analistaResponsavel
+  const assumido = dossie.processo.triadorResponsavel
   const enviada = dossie.processo.analiseStatus === 'enviada'
 
   function current(item: ReviewItem): LocalState | null {
@@ -158,7 +158,7 @@ export function TriagemAnaliseReview({
     <Card className="gap-4 rounded-md border-primary/30 py-5 shadow-none">
       <CardHeader className="px-5">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <CardTitle className="text-base">Análise da triagem</CardTitle>
+          <CardTitle className="text-base">Revisão administrativa e técnica</CardTitle>
           <span className="text-muted-foreground text-xs">
             {assumido ? `Responsável: ${assumido}` : 'Sem responsável'}
             {enviada ? ' · enviada ao contribuinte' : assumido ? ' · rascunho' : ''}
@@ -166,7 +166,7 @@ export function TriagemAnaliseReview({
         </div>
         {canEdit ? (
           <p className="text-muted-foreground text-sm">
-            Marque cada informação e documento como Aprovado, Reprovado (com justificativa) ou Em
+            Como triador, marque cada informação e documento como Aprovado, Reprovado (com justificativa) ou Em
             exigência (com a pendência). Salve para continuar depois; envie para o contribuinte ver.
           </p>
         ) : enviada ? (

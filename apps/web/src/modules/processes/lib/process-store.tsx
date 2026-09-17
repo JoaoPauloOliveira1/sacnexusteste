@@ -836,13 +836,13 @@ function applyInternalTransition(
       stage: 'technical-analysis',
       statusLabel: 'Em análise técnica',
       title: 'Análise técnica iniciada',
-      actor: 'Analista técnico',
+      actor: 'Triador',
     },
     'analysis-requirement-issued': {
       stage: 'technical-analysis',
       statusLabel: 'Aguardando correção técnica',
       title: 'Exigência técnica emitida',
-      actor: 'Analista técnico',
+      actor: 'Triador',
     },
     'analysis-correction-received': {
       stage: 'technical-analysis',
@@ -854,13 +854,13 @@ function applyInternalTransition(
       stage: 'completed',
       statusLabel: 'Aprovado sem vistoria prévia',
       title: 'Vistoria prévia dispensada',
-      actor: 'Analista técnico',
+      actor: 'Triador',
     },
     'analysis-inspection-required': {
       stage: 'inspection',
       statusLabel: 'Aguardando agendamento de vistoria',
       title: 'Vistoria determinada',
-      actor: 'Analista técnico',
+      actor: 'Triador',
     },
     'inspection-scheduled': {
       stage: 'inspection',

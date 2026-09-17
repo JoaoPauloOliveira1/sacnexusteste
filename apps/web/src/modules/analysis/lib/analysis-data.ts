@@ -1,9 +1,9 @@
 import { type TechnicalAnalysisProcess } from '../types'
 
-export const analystIdentity = {
-  name: 'Sgt. Júlio Prates',
-  email: 'analista@email.com',
-  role: 'Analista técnico',
+export const triagerIdentity = {
+  name: 'Cap. Marina Albuquerque',
+  email: 'triador@email.com',
+  role: 'Triador',
 } as const
 
 export const technicalChecklistItems = [

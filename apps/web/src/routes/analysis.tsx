@@ -4,7 +4,7 @@ import { hasDemoProfile } from '@/modules/auth'
 
 export const Route = createFileRoute('/analysis')({
   beforeLoad: () => {
-    if (!hasDemoProfile('analyst')) {
+    if (!hasDemoProfile('triager')) {
       throw redirect({ to: '/signin' })
     }
   },

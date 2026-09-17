@@ -20,14 +20,13 @@ export interface ContributorDemoProfile extends DemoProfileBase {
 
 export interface TriagerDemoProfile extends DemoProfileBase {
   type: 'triager'
-  role: 'risk-analyst'
-  capabilities: readonly ['triage:read', 'triage:review', 'triage:update']
-}
-
-export interface TechnicalAnalystDemoProfile extends DemoProfileBase {
-  type: 'analyst'
-  role: 'technical-analyst'
-  capabilities: readonly ['analysis:read', 'analysis:review', 'analysis:update']
+  role: 'fire-safety-reviewer'
+  capabilities: readonly [
+    'triage:read',
+    'triage:review',
+    'triage:technical-review',
+    'triage:update',
+  ]
 }
 
 export interface InspectorDemoProfile extends DemoProfileBase {
@@ -51,7 +50,6 @@ export interface AdminDemoProfile extends DemoProfileBase {
 export type DemoProfile =
   | ContributorDemoProfile
   | TriagerDemoProfile
-  | TechnicalAnalystDemoProfile
   | InspectorDemoProfile
   | AdminDemoProfile
 

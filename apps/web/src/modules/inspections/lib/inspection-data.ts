@@ -34,7 +34,7 @@ export const initialInspectionProcesses: readonly InspectionProcess[] = [
       {
         id: 'inspection-history-1',
         title: 'Análise técnica concluída',
-        description: 'A necessidade de vistoria prévia foi fundamentada pelo Analista Técnico.',
+        description: 'A necessidade de vistoria prévia foi fundamentada pelo Triador.',
         date: '28/07/2026 às 15:28',
         user: 'Sgt. Júlio Prates',
       },

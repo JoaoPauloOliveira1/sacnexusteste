@@ -1,24 +1,26 @@
 import { expect, test } from '@playwright/test'
 
-async function signInAsAnalyst(page: import('@playwright/test').Page) {
+async function openTechnicalReviewAsTriager(page: import('@playwright/test').Page) {
   await page.goto('/signin')
-  await page.getByLabel('E-mail').fill('analista@email.com')
+  await page.getByLabel('E-mail').fill('triador@email.com')
   await page.getByPlaceholder('Digite sua senha').fill('demonstracao')
   await page.getByRole('button', { exact: true, name: 'Entrar' }).click()
+  await expect(page).toHaveURL('/triagem', { timeout: 5000 })
+  await page.goto('/analysis')
   await expect(page).toHaveURL('/analysis', { timeout: 5000 })
 }
 
-test('routes the technical analyst to the coherent Risco 2 analysis queue', async ({ page }) => {
-  await signInAsAnalyst(page)
+test('lets the triager access the technical Risco 2 review queue', async ({ page }) => {
+  await openTechnicalReviewAsTriager(page)
 
-  await expect(page.getByRole('heading', { name: 'Fila de análise técnica' })).toBeVisible()
-  await expect(page.getByText('Sgt. Júlio Prates · Analista técnico')).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Revisão técnica da triagem' })).toBeVisible()
+  await expect(page.getByText('Cap. Marina Albuquerque · Triador')).toBeVisible()
   await expect(page.getByText('SAC-2026-00001234')).toBeVisible()
   await expect(page.getByText('ABC Logística LTDA')).toBeVisible()
 })
 
 test('completes document analysis and requires an inspection', async ({ page }) => {
-  await signInAsAnalyst(page)
+  await openTechnicalReviewAsTriager(page)
   await page.getByRole('link', { name: 'Abrir análise' }).click()
 
   await page.getByRole('button', { name: 'Iniciar análise' }).click()
@@ -50,7 +52,7 @@ test('protects the analysis route from a contributor session', async ({ page }) 
 })
 
 test('returns a corrected technical requirement to reanalysis', async ({ page }) => {
-  await signInAsAnalyst(page)
+  await openTechnicalReviewAsTriager(page)
   await page.getByRole('link', { name: 'Abrir análise' }).click()
   await page.getByRole('button', { name: 'Iniciar análise' }).click()
   await page.getByRole('tab', { name: 'Decisão de vistoria' }).click()
@@ -67,9 +69,9 @@ test('returns a corrected technical requirement to reanalysis', async ({ page })
 
 test('keeps the analysis queue usable without page overflow on mobile', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 })
-  await signInAsAnalyst(page)
+  await openTechnicalReviewAsTriager(page)
 
-  await expect(page.getByRole('heading', { name: 'Fila de análise técnica' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Revisão técnica da triagem' })).toBeVisible()
   const hasPageOverflow = await page.evaluate(
     () => document.documentElement.scrollWidth > window.innerWidth,
   )

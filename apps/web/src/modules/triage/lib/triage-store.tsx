@@ -198,7 +198,7 @@ export function TriageProvider({ children }: { children: React.ReactNode }) {
                       id: `${candidate.id}-history-${candidate.history.length + 2}`,
                       title: 'Encaminhado para distribuição',
                       description:
-                        'Processo disponibilizado para distribuição a um Analista Técnico.',
+                        'Processo disponibilizado para revisão técnica pelo Triador.',
                       date: presentationTimestamp,
                       user: 'SAC-NEXUS',
                     },

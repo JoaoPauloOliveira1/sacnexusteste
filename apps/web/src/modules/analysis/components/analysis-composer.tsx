@@ -14,7 +14,7 @@ import {
 } from '@/modules/shared/components/ui/card'
 import { SidebarMenuButton, SidebarMenuItem } from '@/modules/shared/components/ui/sidebar'
 import { cn } from '@/modules/shared/lib/utils'
-import { analystIdentity } from '../lib/analysis-data'
+import { triagerIdentity } from '../lib/analysis-data'
 import { type TechnicalAnalysisStatus } from '../types'
 
 function Root({ children }: { children: React.ReactNode }) {
@@ -25,9 +25,9 @@ function Root({ children }: { children: React.ReactNode }) {
     <InternalApplicationShell
       title="Análise técnica"
       identity={{
-        name: session?.user.name ?? analystIdentity.name,
-        email: session?.user.email ?? analystIdentity.email,
-        profileLabel: session?.profile.label ?? analystIdentity.role,
+        name: session?.user.name ?? triagerIdentity.name,
+        email: session?.user.email ?? triagerIdentity.email,
+        profileLabel: session?.profile.label ?? triagerIdentity.role,
       }}
       onSignOut={signOut}
       profileSwitcher={<DemoProfileSwitcher />}

@@ -232,7 +232,7 @@ export const triagemRoutes: FastifyPluginAsync<AppDependencies> = async (app, de
       schema: {
         operationId: 'registrarDecisao',
         tags: [triagemOpenApiTagName],
-        summary: 'Defere ou indefere o processo (decisão do analista)',
+        summary: 'Defere ou indefere o processo (decisão do triador)',
         params: {
           type: 'object',
           required: ['processoId'],
@@ -285,21 +285,21 @@ export const triagemRoutes: FastifyPluginAsync<AppDependencies> = async (app, de
       schema: {
         operationId: 'assumirTriagem',
         tags: [triagemOpenApiTagName],
-        summary: 'Analista assume o processo (assumir atividade)',
+        summary: 'Triador assume o processo (assumir atividade)',
         params: procParams,
         body: {
           type: 'object',
           additionalProperties: false,
-          properties: { analista: { type: 'string' } },
+          properties: { triador: { type: 'string' } },
         },
         response: { 200: okFaseResponse, 404: errorResponse },
       },
     },
     async (request, reply) => {
       const { processoId } = request.params as { processoId: string }
-      const body = (request.body ?? {}) as { analista?: string }
+      const body = (request.body ?? {}) as { triador?: string }
       try {
-        return await assumirTriagem(processoId, { analista: body.analista ?? 'Analista' }, deps)
+        return await assumirTriagem(processoId, { triador: body.triador ?? 'Triador' }, deps)
       } catch (error) {
         if (error instanceof HttpError) {
           return reply.status(error.statusCode as 404).send({ message: error.message })
@@ -315,7 +315,7 @@ export const triagemRoutes: FastifyPluginAsync<AppDependencies> = async (app, de
       schema: {
         operationId: 'salvarAnaliseTriagem',
         tags: [triagemOpenApiTagName],
-        summary: 'Salva (rascunho) as decisões do analista por item/documento',
+        summary: 'Salva (rascunho) as decisões do triador por item/documento',
         params: procParams,
         body: {
           type: 'object',
@@ -351,7 +351,7 @@ export const triagemRoutes: FastifyPluginAsync<AppDependencies> = async (app, de
       try {
         return await salvarAnaliseItens(
           processoId,
-          { autor: body.autor ?? 'Analista', itens: body.itens },
+          { autor: body.autor ?? 'Triador', itens: body.itens },
           deps,
         )
       } catch (error) {

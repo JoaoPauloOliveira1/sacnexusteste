@@ -35,6 +35,5 @@ export type {
   DemoSession,
   DemoUser,
   InspectorDemoProfile,
-  TechnicalAnalystDemoProfile,
   TriagerDemoProfile,
 } from './types'

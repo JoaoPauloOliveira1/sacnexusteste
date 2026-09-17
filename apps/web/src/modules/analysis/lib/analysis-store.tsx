@@ -4,7 +4,7 @@ import { upsertProjection } from '@/modules/shared/lib/upsert-projection'
 
 import { type InspectionDecision, type TechnicalAnalysisProcess } from '../types'
 import {
-  analystIdentity,
+  triagerIdentity,
   initialAnalysisProcesses,
   isTechnicalChecklistComplete,
   technicalChecklistItems,
@@ -120,15 +120,15 @@ export function AnalysisProvider({ children }: { children: React.ReactNode }) {
               ? {
                   ...process,
                   status: 'Em análise',
-                  assignedTo: analystIdentity.name,
+                  assignedTo: triagerIdentity.name,
                   history: [
                     ...process.history,
                     {
                       id: `${process.id}-analysis-${process.history.length + 1}`,
                       title: 'Análise técnica iniciada',
-                      description: 'Processo assumido pelo Analista Técnico.',
+                      description: 'Processo assumido pelo Triador.',
                       date: presentationTimestamp,
-                      user: analystIdentity.name,
+                      user: triagerIdentity.name,
                     },
                   ],
                 }
@@ -213,7 +213,7 @@ export function AnalysisProvider({ children }: { children: React.ReactNode }) {
                           : 'Vistoria prévia dispensada',
                       description: reason.trim(),
                       date: presentationTimestamp,
-                      user: analystIdentity.name,
+                      user: triagerIdentity.name,
                     },
                   ],
                 }
@@ -244,7 +244,7 @@ export function AnalysisProvider({ children }: { children: React.ReactNode }) {
                       title: 'Exigência técnica emitida',
                       description: notes.trim(),
                       date: presentationTimestamp,
-                      user: analystIdentity.name,
+                      user: triagerIdentity.name,
                     },
                   ],
                 }
@@ -273,7 +273,7 @@ export function AnalysisProvider({ children }: { children: React.ReactNode }) {
                     {
                       id: `${process.id}-analysis-${process.history.length + 1}`,
                       title: 'Correção técnica recebida',
-                      description: 'Processo devolvido ao Analista Técnico para reanálise.',
+                      description: 'Processo devolvido ao Triador para nova revisão técnica.',
                       date: presentationTimestamp,
                       user: 'João Carlos da Silva',
                     },

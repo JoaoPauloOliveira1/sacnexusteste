@@ -39,26 +39,9 @@ export const demoIdentities = {
       id: 'profile-triager-001',
       type: 'triager',
       label: 'Triador',
-      role: 'risk-analyst',
+      role: 'fire-safety-reviewer',
       userId: 'user-triager-001',
-      capabilities: ['triage:read', 'triage:review', 'triage:update'],
-    },
-    password: 'demonstracao',
-  },
-  analyst: {
-    user: {
-      id: 'user-analyst-001',
-      email: 'analista@email.com',
-      name: 'Sgt. Júlio Prates',
-      status: 'active',
-    },
-    profile: {
-      id: 'profile-analyst-001',
-      type: 'analyst',
-      label: 'Analista técnico',
-      role: 'technical-analyst',
-      userId: 'user-analyst-001',
-      capabilities: ['analysis:read', 'analysis:review', 'analysis:update'],
+      capabilities: ['triage:read', 'triage:review', 'triage:technical-review', 'triage:update'],
     },
     password: 'demonstracao',
   },
@@ -100,10 +83,8 @@ export const demoIdentities = {
         'document:read-own',
         'triage:read',
         'triage:review',
+        'triage:technical-review',
         'triage:update',
-        'analysis:read',
-        'analysis:review',
-        'analysis:update',
         'inspection:read',
         'inspection:perform',
         'inspection:update',
@@ -123,11 +104,6 @@ export const demoCredentials = {
     email: demoIdentities.triager.user.email,
     password: demoIdentities.triager.password,
     label: 'Triador — análise Risco 2',
-  },
-  analyst: {
-    email: demoIdentities.analyst.user.email,
-    password: demoIdentities.analyst.password,
-    label: 'Analista técnico — análise documental',
   },
   inspector: {
     email: demoIdentities.inspector.user.email,
@@ -186,7 +162,6 @@ export function getDemoSession(): DemoSession | null {
       !candidate.profile?.id ||
       (profileType !== 'contributor' &&
         profileType !== 'triager' &&
-        profileType !== 'analyst' &&
         profileType !== 'inspector' &&
         profileType !== 'admin')
     ) {

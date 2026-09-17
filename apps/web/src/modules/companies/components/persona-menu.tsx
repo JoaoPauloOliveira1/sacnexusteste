@@ -16,7 +16,6 @@ import {
 const PERFIL_LABEL: Record<string, string> = {
   contributor: 'Contribuinte',
   triager: 'Triador (CBMPE)',
-  analyst: 'Analista',
   inspector: 'Vistoriador',
   admin: 'Administrador',
 }

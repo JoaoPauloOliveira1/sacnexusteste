@@ -32,12 +32,6 @@ function SignInPage() {
       return true
     }
 
-    if (identity?.profile.type === 'analyst') {
-      signIn(identity)
-      void navigate({ to: '/analysis' })
-      return true
-    }
-
     if (identity?.profile.type === 'inspector') {
       signIn(identity)
       void navigate({ to: '/inspections' })
@@ -78,9 +72,6 @@ function SignInPage() {
               </li>
               <li>
                 Triador: {demoCredentials.triager.email} · senha {demoCredentials.triager.password}
-              </li>
-              <li>
-                Analista: {demoCredentials.analyst.email} · senha {demoCredentials.analyst.password}
               </li>
               <li>
                 Vistoriador: {demoCredentials.inspector.email} · senha{' '}

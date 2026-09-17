@@ -116,7 +116,7 @@ export function AnalysisProcessPage({ processId }: { processId: string }) {
             { label: 'Ocupação', value: process.occupation },
             { label: 'Área utilizada', value: process.builtArea },
             { label: 'Pavimentos', value: process.floors },
-            { label: 'Analista responsável', value: process.assignedTo ?? 'Não atribuído' },
+            { label: 'Triador responsável', value: process.assignedTo ?? 'Não atribuído' },
           ]}
         />
       </AnalysisComposer.Section>

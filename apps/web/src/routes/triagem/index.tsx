@@ -5,9 +5,9 @@ import { TriagemListPage } from '@/modules/companies'
 
 export const Route = createFileRoute('/triagem/')({
   beforeLoad: () => {
-    // The triagem queue is the CBMPE analyst's area. Contributors reach their
+    // The triagem queue is the CBMPE triager's area. Contributors reach their
     // own process dossiê from the dashboard, not this list.
-    if (!hasDemoProfile('triager') && !hasDemoProfile('analyst')) {
+    if (!hasDemoProfile('triager')) {
       throw redirect({ to: '/dashboard' })
     }
   },

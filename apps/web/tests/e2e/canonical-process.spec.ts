@@ -111,7 +111,9 @@ test('keeps one canonical Risco 2 process across contributor and firefighter pro
   await page.getByRole('button', { name: 'Aprovar triagem' }).click()
 
   await signOut(page, /Cap. Marina Albuquerque/)
-  await signIn(page, 'analista@email.com', 'demonstracao')
+  await signIn(page, 'triador@email.com', 'demonstracao')
+  await expect(page).toHaveURL('/triagem')
+  await page.goto('/analysis')
   await expect(page).toHaveURL('/analysis')
   const analysisRow = page.getByRole('row').filter({ hasText: protocolNumber })
   await expect(analysisRow).toContainText('ABC Logística LTDA')
