@@ -238,6 +238,20 @@ export async function enviarAnalise(
 ): Promise<{ ok: true; analiseStatus: string }> {
   const proc = await deps.processos.getProcessoFull(processoId)
   if (!proc) throw new HttpError(404, 'Processo não encontrado.')
+
+  const itens = await deps.processos.listTriagemItens(processoId)
+  const pendencias = itens.filter((item) => item.estado === 'em_exigencia')
+  if (pendencias.length > 0) {
+    const descricao = pendencias
+      .map((item) => item.observacao?.trim() || item.itemChave)
+      .join('\n')
+    await deps.processos.addExigencia({
+      organizationId: proc.organizationId,
+      processoId,
+      descricao,
+    })
+  }
+
   await deps.processos.setAnaliseStatus({ processoId, status: 'enviada' })
   return { ok: true, analiseStatus: 'enviada' }
 }

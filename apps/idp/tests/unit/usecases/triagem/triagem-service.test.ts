@@ -21,12 +21,25 @@ const processo: ProcessoFull = {
   createdAt: new Date(),
 }
 
-function createDeps(statuses: string[]): TriagemDeps {
+function createDeps(statuses: string[], exigencias: string[] = []): TriagemDeps {
   return {
     processos: {
       getProcessoFull: async () => processo,
       setAnaliseStatus: async ({ status }: { status: string }) => {
         statuses.push(status)
+      },
+      listTriagemItens: async () => [
+        {
+          itemTipo: 'documento',
+          itemChave: 'N1-01',
+          estado: 'em_exigencia',
+          observacao: 'Anexe a planta baixa corrigida.',
+          autor: 'Triador',
+          createdAt: new Date(),
+        },
+      ],
+      addExigencia: async ({ descricao }: { descricao: string }) => {
+        exigencias.push(descricao)
       },
     },
   } as unknown as TriagemDeps
@@ -35,7 +48,8 @@ function createDeps(statuses: string[]): TriagemDeps {
 describe('triagem analysis visibility', () => {
   it('sends and resumes an analysis with the expected status', async () => {
     const statuses: string[] = []
-    const deps = createDeps(statuses)
+    const exigencias: string[] = []
+    const deps = createDeps(statuses, exigencias)
 
     await expect(enviarAnalise(processo.id, deps)).resolves.toEqual({
       ok: true,
@@ -46,5 +60,6 @@ describe('triagem analysis visibility', () => {
       analiseStatus: 'rascunho',
     })
     expect(statuses).toEqual(['enviada', 'rascunho'])
+    expect(exigencias).toEqual(['Anexe a planta baixa corrigida.'])
   })
 })

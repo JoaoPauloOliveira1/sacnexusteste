@@ -137,8 +137,8 @@ export function TriagemAnaliseReview({
     }
   }
 
-  function handleSalvar() {
-    const itens = Object.entries(state).map(([k, v]) => {
+  function itensPendentesDeSalvar() {
+    return Object.entries(state).map(([k, v]) => {
       const [itemTipo, ...rest] = k.split(':')
       return {
         itemTipo: itemTipo as 'informacao' | 'documento',
@@ -147,11 +147,25 @@ export function TriagemAnaliseReview({
         ...(v.observacao ? { observacao: v.observacao } : {}),
       }
     })
+  }
+
+  function handleSalvar() {
+    const itens = itensPendentesDeSalvar()
     if (itens.length === 0) {
       setError('Nada para salvar — marque ao menos um item.')
       return
     }
     void run('salvar', () => salvarAnaliseTriagem(processoId, autor, itens))
+  }
+
+  function handleEnviar() {
+    const itens = itensPendentesDeSalvar()
+    void run('enviar', async () => {
+      if (itens.length > 0) {
+        await salvarAnaliseTriagem(processoId, autor, itens)
+      }
+      return enviarAnaliseTriagem(processoId)
+    })
   }
 
   return (
@@ -263,7 +277,7 @@ export function TriagemAnaliseReview({
               {!enviada ? (
                 <Button
                   type="button"
-                  onClick={() => void run('enviar', () => enviarAnaliseTriagem(processoId))}
+                  onClick={handleEnviar}
                   isLoading={busy === 'enviar'}
                 >
                   Enviar ao contribuinte

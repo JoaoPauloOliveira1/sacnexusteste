@@ -37,8 +37,8 @@ export function NotificationListPage({
                     <time className="text-muted-foreground text-xs">{notification.occurredAt}</time>
                   </div>
                   <Link
-                    to="/processes/$processId/completed"
-                    params={{ processId: notification.processId }}
+                    to="/triagem/$processoId"
+                    params={{ processoId: notification.processId }}
                     className="w-fit cursor-pointer font-medium text-primary hover:underline"
                   >
                     Ver documento

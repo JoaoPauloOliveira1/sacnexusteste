@@ -32,6 +32,16 @@ const RISK_STYLE: Record<string, string> = {
   III: 'bg-red-100 text-red-700',
 }
 
+const FASE_LABEL: Record<string, string> = {
+  aguardando_pagamento: 'Aguardando pagamento',
+  protocolado: 'Protocolado',
+  em_exigencia: 'Em exigência',
+  em_vistoria: 'Em vistoria',
+  aprovado: 'Deferido',
+  reprovado: 'Indeferido',
+  concluido: 'Concluído',
+}
+
 const DADO_LABEL: Record<string, string> = {
   tpei: 'TPEI (nº inscrição do imóvel)',
   pontoReferencia: 'Ponto de referência',
@@ -303,6 +313,21 @@ function Dossie({
         </h1>
       </header>
 
+      {emExigencia ? (
+        <div
+          role="alert"
+          className="flex flex-wrap items-center justify-between gap-3 rounded-md border border-amber-300 bg-amber-50 p-4 text-amber-950 text-sm"
+        >
+          <span>
+            <strong>Ação necessária:</strong> o CBMPE solicitou correções neste processo. Responda à
+            exigência para ele voltar à análise.
+          </span>
+          <a href="#responder-exigencia" className="font-medium underline">
+            Responder agora
+          </a>
+        </div>
+      ) : null}
+
       <Card className="gap-3 rounded-md py-4 shadow-none">
         <CardHeader className="px-5">
           <CardTitle className="text-base">Processo</CardTitle>
@@ -310,7 +335,7 @@ function Dossie({
         <CardContent className="grid gap-2 px-5 text-sm sm:grid-cols-2">
           <Info label="Tipo de solicitação" value={processo.tipoSolicitacao} />
           <Info label="Modalidade" value={processo.modalidade} />
-          <Info label="Fase" value={processo.fase} />
+          <Info label="Fase" value={FASE_LABEL[processo.fase] ?? processo.fase} />
           <Info label="Protocolo" value={processo.protocoloNumero ?? '—'} />
           <Info label="Protocolado em" value={formatDateTime(processo.protocoladoEm)} />
           <Info label="Criado em" value={formatDateTime(processo.createdAt)} />
@@ -555,7 +580,7 @@ function Dossie({
       </Card>
 
       {emExigencia ? (
-        <Card className="gap-3 rounded-md py-4 shadow-none">
+        <Card id="responder-exigencia" className="gap-3 rounded-md py-4 shadow-none">
           <CardHeader className="px-5">
             <CardTitle className="text-base">Responder exigência (contribuinte)</CardTitle>
           </CardHeader>

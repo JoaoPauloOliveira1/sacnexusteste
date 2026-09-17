@@ -1,4 +1,5 @@
 import { Link, useRouterState } from '@tanstack/react-router'
+import { useQuery } from '@tanstack/react-query'
 import {
   BellIcon,
   Building2Icon,
@@ -14,6 +15,7 @@ import {
 } from 'lucide-react'
 
 import { DemoProfileSwitcher, useDemoSession } from '@/modules/auth'
+import { listTriagem } from '@/modules/shared/api/triagem'
 import { ApplicationBrandMark } from '@/modules/shared/components/application-brand-mark'
 import { Avatar, AvatarFallback } from '@/modules/shared/components/ui/avatar'
 import {
@@ -114,6 +116,9 @@ function ContributorSidebar() {
   const isNewProcess = pathname.startsWith('/processes/new')
   const isAvcbList = pathname === '/processes/avcb'
   const isCompletedProcess = pathname.startsWith('/processes/') && !isNewProcess && !isAvcbList
+  const triagemQuery = useQuery({ queryKey: ['triagem'], queryFn: listTriagem })
+  const exigenciasPendentes =
+    triagemQuery.data?.processos.filter((processo) => processo.fase === 'em_exigencia').length ?? 0
 
   return (
     <Sidebar
@@ -265,6 +270,9 @@ function ContributorSidebar() {
               <BellIcon />
               <span>Notificações</span>
             </SidebarMenuButton>
+            {exigenciasPendentes > 0 ? (
+              <SidebarMenuBadge>{exigenciasPendentes}</SidebarMenuBadge>
+            ) : null}
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarContent>
