@@ -144,37 +144,42 @@ export function TriagemListPage() {
         ) : null}
 
         {query.data && query.data.processos.length > 0 ? (
-          <div className="flex flex-col gap-2">
-            {query.data.processos.map((p) => (
-              <Link
-                key={p.processoId}
-                to="/triagem/$processoId"
-                params={{ processoId: p.processoId }}
-                className="flex flex-wrap items-center gap-3 rounded-md border bg-background p-3 text-sm hover:bg-accent/40"
-              >
-                <span
-                  className={cn(
-                    'rounded px-2 py-0.5 font-medium text-xs',
-                    RISK_STYLE[p.risco] ?? 'bg-muted text-muted-foreground',
-                  )}
+          <div className="flex flex-col gap-4">
+            <IndicadoresPanel processos={query.data.processos} />
+            <div className="flex flex-col gap-2">
+              {query.data.processos.map((p) => (
+                <Link
+                  key={p.processoId}
+                  to="/triagem/$processoId"
+                  params={{ processoId: p.processoId }}
+                  className="flex flex-wrap items-center gap-3 rounded-md border bg-background p-3 text-sm hover:bg-accent/40"
                 >
-                  Risco {p.risco}
-                </span>
-                <span className="min-w-40 flex-1">
-                  <span className="font-medium">{p.empresaRazaoSocial}</span>
-                  {p.unidadeNome ? (
-                    <span className="text-muted-foreground"> — {p.unidadeNome}</span>
+                  <span
+                    className={cn(
+                      'rounded px-2 py-0.5 font-medium text-xs',
+                      RISK_STYLE[p.risco] ?? 'bg-muted text-muted-foreground',
+                    )}
+                  >
+                    Risco {p.risco}
+                  </span>
+                  <span className="min-w-40 flex-1">
+                    <span className="font-medium">{p.empresaRazaoSocial}</span>
+                    {p.unidadeNome ? (
+                      <span className="text-muted-foreground"> — {p.unidadeNome}</span>
+                    ) : null}
+                  </span>
+                  <span className="text-muted-foreground text-xs">
+                    {FASE_LABEL[p.fase] ?? p.fase}
+                  </span>
+                  {p.protocoloNumero ? (
+                    <span className="font-medium text-xs tabular-nums">
+                      {p.protocoloNumero}
+                    </span>
                   ) : null}
-                </span>
-                <span className="text-muted-foreground text-xs">
-                  {FASE_LABEL[p.fase] ?? p.fase}
-                </span>
-                {p.protocoloNumero ? (
-                  <span className="font-medium text-xs tabular-nums">{p.protocoloNumero}</span>
-                ) : null}
-                <span className="text-muted-foreground text-xs">{formatDate(p.createdAt)}</span>
-              </Link>
-            ))}
+                  <span className="text-muted-foreground text-xs">{formatDate(p.createdAt)}</span>
+                </Link>
+              ))}
+            </div>
           </div>
         ) : null}
       </div>
