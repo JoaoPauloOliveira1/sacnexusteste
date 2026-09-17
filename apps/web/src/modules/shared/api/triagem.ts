@@ -11,6 +11,10 @@ export interface TriagemProcessoItem {
   empresaCnpj: string
   unidadeNome: string | null
   createdAt: string
+  exigenciaRespondidaEm: string | null
+  mensagensNaoLidasTriador: number
+  mensagensNaoLidasContribuinte: number
+  ultimaMensagemEm: string | null
 }
 
 export interface ProcessoDossie {
@@ -47,6 +51,17 @@ export interface TriagemItem {
   createdAt: string
 }
 
+export type MensagemPerfil = 'triador' | 'contribuinte'
+
+export interface ProcessoMensagem {
+  id: string
+  autorPapel: MensagemPerfil
+  autorNome: string
+  conteudo: string
+  lidaEm: string | null
+  createdAt: string
+}
+
 function apiBase(): string {
   const { apiUrl } = getRuntimeConfig()
   return apiUrl.endsWith('/') ? apiUrl.slice(0, -1) : apiUrl
@@ -79,6 +94,32 @@ export async function getProcessoDossie(processoId: string): Promise<ProcessoDos
   })
   if (!response.ok) return readError(response)
   return response.json() as Promise<ProcessoDossie>
+}
+
+export async function listProcessoMensagens(
+  processoId: string,
+  perfil: MensagemPerfil,
+): Promise<{ mensagens: ProcessoMensagem[] }> {
+  const response = await fetch(
+    `${apiBase()}/triagem/processos/${processoId}/mensagens?perfil=${perfil}`,
+    { credentials: 'include' },
+  )
+  if (!response.ok) return readError(response)
+  return response.json() as Promise<{ mensagens: ProcessoMensagem[] }>
+}
+
+export async function enviarMensagemProcesso(
+  processoId: string,
+  body: { autorPapel: MensagemPerfil; autorNome?: string; conteudo: string },
+): Promise<{ ok: boolean }> {
+  const response = await fetch(`${apiBase()}/triagem/processos/${processoId}/mensagens`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    credentials: 'include',
+    body: JSON.stringify(body),
+  })
+  if (!response.ok) return readError(response)
+  return response.json() as Promise<{ ok: boolean }>
 }
 
 export async function registrarExigencia(

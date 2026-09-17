@@ -16,8 +16,9 @@ export const Route = createFileRoute('/notifications')({
 })
 
 function NotificationsRoute() {
-  const query = useQuery({ queryKey: ['triagem'], queryFn: listTriagem })
-  const notifications = (query.data?.processos ?? [])
+  const query = useQuery({ queryKey: ['triagem'], queryFn: listTriagem, refetchInterval: 10_000 })
+  const processos = query.data?.processos ?? []
+  const exigencias = processos
     .filter((processo) => processo.fase === 'em_exigencia')
     .map((processo) => ({
       id: `exigencia-${processo.processoId}`,
@@ -26,10 +27,19 @@ function NotificationsRoute() {
       description: `${processo.protocoloNumero ?? 'Processo sem protocolo'} — ${processo.unidadeNome ?? processo.empresaRazaoSocial}`,
       occurredAt: processo.createdAt,
     }))
+  const mensagens = processos
+    .filter((processo) => processo.mensagensNaoLidasContribuinte > 0)
+    .map((processo) => ({
+      id: `mensagem-${processo.processoId}`,
+      processId: processo.processoId,
+      title: 'Nova mensagem do triador',
+      description: `${processo.mensagensNaoLidasContribuinte} mensagem${processo.mensagensNaoLidasContribuinte > 1 ? 'ens' : ''} em ${processo.protocoloNumero ?? 'Processo sem protocolo'} — ${processo.unidadeNome ?? processo.empresaRazaoSocial}`,
+      occurredAt: processo.ultimaMensagemEm ?? processo.createdAt,
+    }))
 
   return (
     <ContributorShell title="Notificações">
-      <NotificationListPage notifications={notifications} />
+      <NotificationListPage notifications={[...mensagens, ...exigencias]} />
     </ContributorShell>
   )
 }

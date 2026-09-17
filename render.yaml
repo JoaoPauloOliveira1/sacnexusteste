@@ -18,7 +18,7 @@ services:
     plan: free
     rootDir: .
     buildCommand: pnpm install --frozen-lockfile && pnpm --filter idp build
-    startCommand: pnpm --filter idp start
+    startCommand: pnpm --filter idp db:migrate && pnpm --filter idp start
     healthCheckPath: /health
     envVars:
       - key: NODE_ENV

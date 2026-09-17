@@ -57,6 +57,13 @@
       "when": 1789583529176,
       "tag": "0007_lucky_violations",
       "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1789676400000,
+      "tag": "0008_friendly_talk",
+      "breakpoints": true
     }
   ]
 }

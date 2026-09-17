@@ -11,6 +11,7 @@ import {
   pessoaFisica,
   pessoaJuridica,
   processo,
+  processoMensagem,
   riscoBands,
   unidade,
   unidadeCnae,
@@ -31,6 +32,7 @@ describe('SAC domain schema', () => {
     expect(getTableName(eventoTemporario)).toBe('sac_evento_temporario')
     expect(getTableName(processo)).toBe('sac_processo')
     expect(getTableName(pagamento)).toBe('sac_pagamento')
+    expect(getTableName(processoMensagem)).toBe('sac_processo_mensagem')
   })
 
   it('defines the four risk bands, including the undetermined II/III bucket', () => {
@@ -38,7 +40,7 @@ describe('SAC domain schema', () => {
   })
 
   it('groups every domain table in domainSchema and keeps them out of the identity prefix', () => {
-    expect(Object.keys(domainSchema)).toHaveLength(22)
+    expect(Object.keys(domainSchema)).toHaveLength(23)
     for (const table of Object.values(domainSchema)) {
       expect(getTableName(table)).toMatch(/^sac_/)
     }

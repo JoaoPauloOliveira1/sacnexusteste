@@ -18,6 +18,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/modules/shared/compo
 import { formatCnpj } from '@/modules/shared/lib/formatters/format-cnpj'
 import { cn } from '@/modules/shared/lib/utils'
 import { PersonaMenu } from '../components/persona-menu'
+import { ProcessoChat } from '../components/processo-chat'
 import { TriagemAnaliseReview } from '../components/triagem-analise-review'
 
 const ACAO_LABEL: Record<string, string> = {
@@ -220,6 +221,13 @@ export function TriagemDetailPage({ processoId }: { processoId: string }) {
                 onSubmit: handleResponder,
               }}
             />
+            {isTriador || isContribuinte ? (
+              <ProcessoChat
+                processoId={processoId}
+                perfil={isTriador ? 'triador' : 'contribuinte'}
+                autorNome={session?.user.name ?? (isTriador ? 'Triador' : 'Contribuinte')}
+              />
+            ) : null}
             {query.data.processo.risco !== 'I' ? (
               <TriagemAnaliseReview
                 dossie={query.data}

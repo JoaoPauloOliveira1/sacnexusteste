@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import { Link } from '@tanstack/react-router'
-import { ArrowLeftIcon } from 'lucide-react'
+import { ArrowLeftIcon, CheckCircle2Icon, MessageCircleIcon } from 'lucide-react'
 
 import { useDemoSession } from '@/modules/auth'
 import { listTriagem } from '@/modules/shared/api/triagem'
@@ -95,7 +95,11 @@ export function TriagemListPage() {
   const { session } = useDemoSession()
   const perfil = session?.profile.type
   const isTriador = perfil === 'triager' || perfil === 'admin'
-  const query = useQuery({ queryKey: ['triagem'], queryFn: listTriagem })
+  const query = useQuery({
+    queryKey: ['triagem'],
+    queryFn: listTriagem,
+    refetchInterval: isTriador ? 10_000 : false,
+  })
 
   return (
     <main className="min-h-svh bg-muted/20 px-4 py-8 sm:px-6 lg:py-12">
@@ -122,8 +126,8 @@ export function TriagemListPage() {
         {!isTriador ? (
           <div className="rounded-md border border-amber-200 bg-amber-50 p-3 text-amber-900 text-sm">
             Esta é a área de triagem do CBMPE. Para <strong>registrar exigências</strong> e revisar
-            dados e documentos, entre com o perfil <strong>Triador</strong>. Como
-            contribuinte, você acompanha e responde aos seus processos pelo <strong>Início</strong>.
+            dados e documentos, entre com o perfil <strong>Triador</strong>. Como contribuinte, você
+            acompanha e responde aos seus processos pelo <strong>Início</strong>.
           </div>
         ) : null}
 
@@ -171,10 +175,20 @@ export function TriagemListPage() {
                   <span className="text-muted-foreground text-xs">
                     {FASE_LABEL[p.fase] ?? p.fase}
                   </span>
-                  {p.protocoloNumero ? (
-                    <span className="font-medium text-xs tabular-nums">
-                      {p.protocoloNumero}
+                  {isTriador && p.exigenciaRespondidaEm ? (
+                    <span className="inline-flex items-center gap-1 text-emerald-700 text-xs">
+                      <CheckCircle2Icon className="size-3.5" />
+                      Exigência respondida
                     </span>
+                  ) : null}
+                  {isTriador && p.mensagensNaoLidasTriador > 0 ? (
+                    <span className="inline-flex items-center gap-1 rounded bg-primary/8 px-1.5 py-0.5 font-medium text-primary text-xs">
+                      <MessageCircleIcon className="size-3.5" />
+                      {p.mensagensNaoLidasTriador} nova{p.mensagensNaoLidasTriador > 1 ? 's' : ''}
+                    </span>
+                  ) : null}
+                  {p.protocoloNumero ? (
+                    <span className="font-medium text-xs tabular-nums">{p.protocoloNumero}</span>
                   ) : null}
                   <span className="text-muted-foreground text-xs">{formatDate(p.createdAt)}</span>
                 </Link>

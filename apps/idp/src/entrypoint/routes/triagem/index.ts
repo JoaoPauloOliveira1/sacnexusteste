@@ -8,7 +8,9 @@ import {
   assumirTriagem,
   concluirTriagem,
   enviarAnalise,
+  enviarMensagemProcesso,
   getProcessoDossie,
+  listarMensagensProcesso,
   listTriagem,
   registrarDecisao,
   registrarExigencia,
@@ -153,6 +155,10 @@ export const triagemRoutes: FastifyPluginAsync<AppDependencies> = async (app, de
                     empresaCnpj: { type: 'string' },
                     unidadeNome: { type: 'string', nullable: true },
                     createdAt: { type: 'string' },
+                    exigenciaRespondidaEm: { type: 'string', nullable: true },
+                    mensagensNaoLidasTriador: { type: 'number' },
+                    mensagensNaoLidasContribuinte: { type: 'number' },
+                    ultimaMensagemEm: { type: 'string', nullable: true },
                   },
                 },
               },
@@ -186,6 +192,107 @@ export const triagemRoutes: FastifyPluginAsync<AppDependencies> = async (app, de
       } catch (error) {
         if (error instanceof HttpError) {
           return reply.status(error.statusCode as 404).send({ message: error.message })
+        }
+        throw error
+      }
+    },
+  )
+
+  const procParams = {
+    type: 'object',
+    required: ['processoId'],
+    properties: { processoId: { type: 'string', format: 'uuid' } },
+  } as const
+
+  app.get(
+    '/api/triagem/processos/:processoId/mensagens',
+    {
+      schema: {
+        operationId: 'listarMensagensProcesso',
+        tags: [triagemOpenApiTagName],
+        summary: 'Lista a conversa do processo e confirma a leitura das mensagens recebidas',
+        params: procParams,
+        querystring: {
+          type: 'object',
+          required: ['perfil'],
+          properties: { perfil: { type: 'string', enum: ['triador', 'contribuinte'] } },
+        },
+        response: {
+          200: {
+            type: 'object',
+            additionalProperties: false,
+            required: ['mensagens'],
+            properties: {
+              mensagens: {
+                type: 'array',
+                items: {
+                  type: 'object',
+                  additionalProperties: false,
+                  required: ['id', 'autorPapel', 'autorNome', 'conteudo', 'lidaEm', 'createdAt'],
+                  properties: {
+                    id: { type: 'string', format: 'uuid' },
+                    autorPapel: { type: 'string', enum: ['triador', 'contribuinte'] },
+                    autorNome: { type: 'string' },
+                    conteudo: { type: 'string' },
+                    lidaEm: { type: 'string', nullable: true },
+                    createdAt: { type: 'string' },
+                  },
+                },
+              },
+            },
+          },
+          400: errorResponse,
+          404: errorResponse,
+        },
+      },
+    },
+    async (request, reply) => {
+      const { processoId } = request.params as { processoId: string }
+      const { perfil } = request.query as { perfil: 'triador' | 'contribuinte' }
+      try {
+        return { mensagens: await listarMensagensProcesso(processoId, perfil, deps) }
+      } catch (error) {
+        if (error instanceof HttpError) {
+          return reply.status(error.statusCode as 400 | 404).send({ message: error.message })
+        }
+        throw error
+      }
+    },
+  )
+
+  app.post(
+    '/api/triagem/processos/:processoId/mensagens',
+    {
+      schema: {
+        operationId: 'enviarMensagemProcesso',
+        tags: [triagemOpenApiTagName],
+        summary: 'Envia uma mensagem na conversa entre triador e contribuinte',
+        params: procParams,
+        body: {
+          type: 'object',
+          additionalProperties: false,
+          required: ['autorPapel', 'conteudo'],
+          properties: {
+            autorPapel: { type: 'string', enum: ['triador', 'contribuinte'] },
+            autorNome: { type: 'string' },
+            conteudo: { type: 'string', minLength: 1, maxLength: 2000 },
+          },
+        },
+        response: { 200: okFaseResponse, 400: errorResponse, 404: errorResponse },
+      },
+    },
+    async (request, reply) => {
+      const { processoId } = request.params as { processoId: string }
+      const body = request.body as {
+        autorPapel: 'triador' | 'contribuinte'
+        autorNome?: string
+        conteudo: string
+      }
+      try {
+        return await enviarMensagemProcesso(processoId, body, deps)
+      } catch (error) {
+        if (error instanceof HttpError) {
+          return reply.status(error.statusCode as 400 | 404).send({ message: error.message })
         }
         throw error
       }
@@ -282,12 +389,6 @@ export const triagemRoutes: FastifyPluginAsync<AppDependencies> = async (app, de
       }
     },
   )
-
-  const procParams = {
-    type: 'object',
-    required: ['processoId'],
-    properties: { processoId: { type: 'string', format: 'uuid' } },
-  } as const
 
   app.post(
     '/api/triagem/processos/:processoId/assumir',

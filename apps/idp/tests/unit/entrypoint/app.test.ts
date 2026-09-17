@@ -82,6 +82,17 @@ function createTestDependencies(overrides: TestDependencyOverrides = {}): AppDep
       listTriagemItens: async () => [],
       listTriagemItemHistorico: async () => [],
       setAnaliseStatus: async () => {},
+      getProcessoSinalizadores: async () => ({
+        exigenciaRespondidaEm: null,
+        mensagensNaoLidasTriador: 0,
+        mensagensNaoLidasContribuinte: 0,
+        ultimaMensagemEm: null,
+      }),
+      listProcessoMensagens: async () => [],
+      addProcessoMensagem: async () => {
+        throw new Error('not implemented')
+      },
+      marcarMensagensComoLidas: async () => {},
     },
     storage: overrides.storage ?? {
       isConfigured: () => false,

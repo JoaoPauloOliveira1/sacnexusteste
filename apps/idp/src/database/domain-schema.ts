@@ -639,6 +639,36 @@ export const triagemItem = pgTable(
   ],
 )
 
+/** Conversation between the triager and contributor, scoped to one processo. */
+export const processoMensagemPapeis = {
+  triador: 'triador',
+  contribuinte: 'contribuinte',
+} as const
+export type ProcessoMensagemPapel =
+  (typeof processoMensagemPapeis)[keyof typeof processoMensagemPapeis]
+
+export const processoMensagem = pgTable(
+  'sac_processo_mensagem',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    organizationId: uuid('organization_id')
+      .notNull()
+      .references(() => organization.id, { onDelete: 'restrict' }),
+    processoId: uuid('processo_id')
+      .notNull()
+      .references(() => processo.id, { onDelete: 'cascade' }),
+    autorPapel: text('autor_papel').$type<ProcessoMensagemPapel>().notNull(),
+    autorNome: text('autor_nome').notNull(),
+    conteudo: text('conteudo').notNull(),
+    lidaEm: timestamp('lida_em', { withTimezone: true }),
+    createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
+  },
+  (table) => [
+    index('sac_processo_mensagem_processo_idx').on(table.processoId, table.createdAt),
+    index('sac_processo_mensagem_leitura_idx').on(table.processoId, table.autorPapel),
+  ],
+)
+
 /** Grouping of all domain tables (mirrors `authSchema` in the identity schema). */
 export const domainSchema = {
   cnae,
@@ -663,4 +693,5 @@ export const domainSchema = {
   pagamento,
   historico,
   triagemItem,
+  processoMensagem,
 }

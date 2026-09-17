@@ -1,4 +1,4 @@
-import { and, desc, eq, notInArray } from 'drizzle-orm'
+import { and, desc, eq, isNull, ne, notInArray } from 'drizzle-orm'
 
 import { type Database } from '@/database/client.js'
 import {
@@ -8,11 +8,13 @@ import {
   type ModalidadeProcesso,
   modalidadeProcesso,
   type PagamentoStatus,
+  type ProcessoMensagemPapel,
   pagamento,
   pagamentoFontes,
   pagamentoStatuses,
   pessoaJuridica,
   processo,
+  processoMensagem,
   type RiscoBand,
   type TipoSolicitacao,
   triagemItem,
@@ -116,6 +118,22 @@ export type TriagemItemRecord = {
   createdAt: Date
 }
 
+export type ProcessoMensagemRecord = {
+  id: string
+  autorPapel: ProcessoMensagemPapel
+  autorNome: string
+  conteudo: string
+  lidaEm: Date | null
+  createdAt: Date
+}
+
+export type ProcessoSinalizadores = {
+  exigenciaRespondidaEm: Date | null
+  mensagensNaoLidasTriador: number
+  mensagensNaoLidasContribuinte: number
+  ultimaMensagemEm: Date | null
+}
+
 export type PagamentoRecord = {
   status: PagamentoStatus
   metodo: string | null
@@ -187,6 +205,20 @@ export type ProcessoRepository = {
   listTriagemItemHistorico: (processoId: string) => Promise<TriagemItemRecord[]>
   /** Sets the analysis visibility: `enviada` (contribuinte sees) or `rascunho` (retomar). */
   setAnaliseStatus: (input: { processoId: string; status: string }) => Promise<void>
+  /** Returns process-level signals used by the triage cards and notifications. */
+  getProcessoSinalizadores: (processoId: string) => Promise<ProcessoSinalizadores>
+  listProcessoMensagens: (processoId: string) => Promise<ProcessoMensagemRecord[]>
+  addProcessoMensagem: (input: {
+    organizationId: string
+    processoId: string
+    autorPapel: ProcessoMensagemPapel
+    autorNome: string
+    conteudo: string
+  }) => Promise<ProcessoMensagemRecord>
+  marcarMensagensComoLidas: (input: {
+    processoId: string
+    leitorPapel: ProcessoMensagemPapel
+  }) => Promise<void>
 }
 
 export type HistoricoRecord = { acao: string; descricao: string | null; createdAt: Date }
@@ -533,6 +565,88 @@ export function createDrizzleProcessoRepository(db: Database): ProcessoRepositor
 
     setAnaliseStatus: async ({ processoId, status }) => {
       await db.update(processo).set({ analiseStatus: status }).where(eq(processo.id, processoId))
+    },
+
+    getProcessoSinalizadores: async (processoId) => {
+      const [[ultimoHistorico], mensagens] = await Promise.all([
+        db
+          .select({ acao: historico.acao, createdAt: historico.createdAt })
+          .from(historico)
+          .where(and(eq(historico.entidade, 'processo'), eq(historico.entidadeId, processoId)))
+          .orderBy(desc(historico.createdAt))
+          .limit(1),
+        db
+          .select({
+            autorPapel: processoMensagem.autorPapel,
+            lidaEm: processoMensagem.lidaEm,
+            createdAt: processoMensagem.createdAt,
+          })
+          .from(processoMensagem)
+          .where(eq(processoMensagem.processoId, processoId))
+          .orderBy(desc(processoMensagem.createdAt)),
+      ])
+      return {
+        exigenciaRespondidaEm:
+          ultimoHistorico?.acao === 'resposta_exigencia' ? ultimoHistorico.createdAt : null,
+        mensagensNaoLidasTriador: mensagens.filter(
+          (mensagem) => mensagem.autorPapel === 'contribuinte' && !mensagem.lidaEm,
+        ).length,
+        mensagensNaoLidasContribuinte: mensagens.filter(
+          (mensagem) => mensagem.autorPapel === 'triador' && !mensagem.lidaEm,
+        ).length,
+        ultimaMensagemEm: mensagens[0]?.createdAt ?? null,
+      }
+    },
+
+    listProcessoMensagens: async (processoId) => {
+      const rows = await db
+        .select()
+        .from(processoMensagem)
+        .where(eq(processoMensagem.processoId, processoId))
+        .orderBy(processoMensagem.createdAt)
+      return rows.map((row) => ({
+        id: row.id,
+        autorPapel: row.autorPapel,
+        autorNome: row.autorNome,
+        conteudo: row.conteudo,
+        lidaEm: row.lidaEm,
+        createdAt: row.createdAt,
+      }))
+    },
+
+    addProcessoMensagem: async ({
+      organizationId,
+      processoId,
+      autorPapel,
+      autorNome,
+      conteudo,
+    }) => {
+      const [row] = await db
+        .insert(processoMensagem)
+        .values({ organizationId, processoId, autorPapel, autorNome, conteudo })
+        .returning()
+      if (!row) throw new Error('Falha ao registrar a mensagem.')
+      return {
+        id: row.id,
+        autorPapel: row.autorPapel,
+        autorNome: row.autorNome,
+        conteudo: row.conteudo,
+        lidaEm: row.lidaEm,
+        createdAt: row.createdAt,
+      }
+    },
+
+    marcarMensagensComoLidas: async ({ processoId, leitorPapel }) => {
+      await db
+        .update(processoMensagem)
+        .set({ lidaEm: new Date() })
+        .where(
+          and(
+            eq(processoMensagem.processoId, processoId),
+            ne(processoMensagem.autorPapel, leitorPapel),
+            isNull(processoMensagem.lidaEm),
+          ),
+        )
     },
 
     getProcessoPagamento: async (processoId) => {

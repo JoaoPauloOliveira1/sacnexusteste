@@ -1,4 +1,5 @@
 import { type ClassificacaoRepository } from '@/database/classificacao-repository.js'
+import { type ProcessoMensagemPapel } from '@/database/domain-schema.js'
 import { type EmpresaRepository } from '@/database/empresa-repository.js'
 import { type EventoRepository } from '@/database/evento-repository.js'
 import {
@@ -15,12 +16,33 @@ export type TriagemDeps = {
   eventos: EventoRepository
 }
 
+export type TriagemProcessoResumo = TriagemProcessoItem & {
+  exigenciaRespondidaEm: string | null
+  mensagensNaoLidasTriador: number
+  mensagensNaoLidasContribuinte: number
+  ultimaMensagemEm: string | null
+}
+
 export async function listTriagem(
   input: { organizationId?: string },
   deps: TriagemDeps,
-): Promise<{ processos: TriagemProcessoItem[] }> {
+): Promise<{ processos: TriagemProcessoResumo[] }> {
   const organizationId = input.organizationId ?? (await deps.empresas.ensureDefaultOrganization())
-  return { processos: await deps.processos.listProcessos(organizationId) }
+  const processos = await deps.processos.listProcessos(organizationId)
+  return {
+    processos: await Promise.all(
+      processos.map(async (processo) => {
+        const sinalizadores = await deps.processos.getProcessoSinalizadores(processo.processoId)
+        return {
+          ...processo,
+          exigenciaRespondidaEm: sinalizadores.exigenciaRespondidaEm?.toISOString() ?? null,
+          mensagensNaoLidasTriador: sinalizadores.mensagensNaoLidasTriador,
+          mensagensNaoLidasContribuinte: sinalizadores.mensagensNaoLidasContribuinte,
+          ultimaMensagemEm: sinalizadores.ultimaMensagemEm?.toISOString() ?? null,
+        }
+      }),
+    ),
+  }
 }
 
 export type ProcessoDossie = {
@@ -159,6 +181,58 @@ export async function registrarExigencia(
   return { ok: true, fase: 'em_exigencia' }
 }
 
+const PAPEL_MENSAGEM = new Set<ProcessoMensagemPapel>(['triador', 'contribuinte'])
+
+export async function listarMensagensProcesso(
+  processoId: string,
+  leitorPapel: ProcessoMensagemPapel,
+  deps: TriagemDeps,
+): Promise<
+  Array<{
+    id: string
+    autorPapel: ProcessoMensagemPapel
+    autorNome: string
+    conteudo: string
+    lidaEm: string | null
+    createdAt: string
+  }>
+> {
+  if (!PAPEL_MENSAGEM.has(leitorPapel)) throw new HttpError(400, 'Perfil de leitura inválido.')
+  const proc = await deps.processos.getProcessoFull(processoId)
+  if (!proc) throw new HttpError(404, 'Processo não encontrado.')
+  await deps.processos.marcarMensagensComoLidas({ processoId, leitorPapel })
+  const mensagens = await deps.processos.listProcessoMensagens(processoId)
+  return mensagens.map((mensagem) => ({
+    ...mensagem,
+    lidaEm: mensagem.lidaEm?.toISOString() ?? null,
+    createdAt: mensagem.createdAt.toISOString(),
+  }))
+}
+
+export async function enviarMensagemProcesso(
+  processoId: string,
+  input: { autorPapel: ProcessoMensagemPapel; autorNome?: string; conteudo: string },
+  deps: TriagemDeps,
+): Promise<{ ok: true }> {
+  if (!PAPEL_MENSAGEM.has(input.autorPapel))
+    throw new HttpError(400, 'Perfil de mensagem inválido.')
+  const conteudo = input.conteudo.trim()
+  if (!conteudo) throw new HttpError(400, 'Escreva uma mensagem antes de enviar.')
+  if (conteudo.length > 2_000)
+    throw new HttpError(400, 'A mensagem deve ter no máximo 2.000 caracteres.')
+  const proc = await deps.processos.getProcessoFull(processoId)
+  if (!proc) throw new HttpError(404, 'Processo não encontrado.')
+  await deps.processos.addProcessoMensagem({
+    organizationId: proc.organizationId,
+    processoId,
+    autorPapel: input.autorPapel,
+    autorNome:
+      input.autorNome?.trim() || (input.autorPapel === 'triador' ? 'Triador' : 'Contribuinte'),
+    conteudo,
+  })
+  return { ok: true }
+}
+
 export async function registrarDecisao(
   processoId: string,
   input: { decisao: 'aprovado' | 'reprovado'; observacao?: string },
@@ -245,9 +319,7 @@ export async function enviarAnalise(
   }
   const pendencias = itens.filter((item) => item.estado === 'em_exigencia')
   if (pendencias.length > 0) {
-    const descricao = pendencias
-      .map((item) => item.observacao?.trim() || item.itemChave)
-      .join('\n')
+    const descricao = pendencias.map((item) => item.observacao?.trim() || item.itemChave).join('\n')
     await deps.processos.addExigencia({
       organizationId: proc.organizationId,
       processoId,

@@ -1,7 +1,13 @@
 import { describe, expect, it } from 'vitest'
 
 import { type ProcessoFull } from '@/database/processo-repository.js'
-import { type TriagemDeps, enviarAnalise, retomarAnalise } from '@/usecases/triagem/triagem-service.js'
+import {
+  enviarAnalise,
+  enviarMensagemProcesso,
+  listarMensagensProcesso,
+  retomarAnalise,
+  type TriagemDeps,
+} from '@/usecases/triagem/triagem-service.js'
 
 const processo: ProcessoFull = {
   id: 'processo-1',
@@ -61,5 +67,56 @@ describe('triagem analysis visibility', () => {
     })
     expect(statuses).toEqual(['enviada', 'rascunho'])
     expect(exigencias).toEqual(['Anexe a planta baixa corrigida.'])
+  })
+
+  it('stores process messages and marks the recipient messages as read', async () => {
+    const mensagens: Array<{
+      id: string
+      autorPapel: 'triador' | 'contribuinte'
+      autorNome: string
+      conteudo: string
+      lidaEm: Date | null
+      createdAt: Date
+    }> = [
+      {
+        id: 'mensagem-1',
+        autorPapel: 'contribuinte' as const,
+        autorNome: 'Contribuinte',
+        conteudo: 'Documento corrigido anexado.',
+        lidaEm: null,
+        createdAt: new Date('2026-09-16T12:00:00.000Z'),
+      },
+    ]
+    const leituras: string[] = []
+    const deps = {
+      processos: {
+        getProcessoFull: async () => processo,
+        marcarMensagensComoLidas: async ({ leitorPapel }: { leitorPapel: string }) => {
+          leituras.push(leitorPapel)
+        },
+        listProcessoMensagens: async () => mensagens,
+        addProcessoMensagem: async ({ conteudo }: { conteudo: string }) => {
+          mensagens.push({
+            id: 'mensagem-2',
+            autorPapel: 'triador',
+            autorNome: 'Triador',
+            conteudo,
+            lidaEm: null,
+            createdAt: new Date('2026-09-16T12:01:00.000Z'),
+          })
+          return mensagens[1]
+        },
+      },
+    } as unknown as TriagemDeps
+
+    await expect(
+      enviarMensagemProcesso(
+        processo.id,
+        { autorPapel: 'triador', autorNome: 'Triador', conteudo: 'Recebido, obrigado.' },
+        deps,
+      ),
+    ).resolves.toEqual({ ok: true })
+    await expect(listarMensagensProcesso(processo.id, 'triador', deps)).resolves.toHaveLength(2)
+    expect(leituras).toEqual(['triador'])
   })
 })

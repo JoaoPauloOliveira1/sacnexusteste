@@ -1,5 +1,5 @@
-import { Link, useRouterState } from '@tanstack/react-router'
 import { useQuery } from '@tanstack/react-query'
+import { Link, useRouterState } from '@tanstack/react-router'
 import {
   BellIcon,
   Building2Icon,
@@ -116,9 +116,18 @@ function ContributorSidebar() {
   const isNewProcess = pathname.startsWith('/processes/new')
   const isAvcbList = pathname === '/processes/avcb'
   const isCompletedProcess = pathname.startsWith('/processes/') && !isNewProcess && !isAvcbList
-  const triagemQuery = useQuery({ queryKey: ['triagem'], queryFn: listTriagem })
+  const triagemQuery = useQuery({
+    queryKey: ['triagem'],
+    queryFn: listTriagem,
+    refetchInterval: 10_000,
+  })
   const exigenciasPendentes =
     triagemQuery.data?.processos.filter((processo) => processo.fase === 'em_exigencia').length ?? 0
+  const mensagensNaoLidas =
+    triagemQuery.data?.processos.reduce(
+      (total, processo) => total + processo.mensagensNaoLidasContribuinte,
+      0,
+    ) ?? 0
 
   return (
     <Sidebar
@@ -270,8 +279,8 @@ function ContributorSidebar() {
               <BellIcon />
               <span>Notificações</span>
             </SidebarMenuButton>
-            {exigenciasPendentes > 0 ? (
-              <SidebarMenuBadge>{exigenciasPendentes}</SidebarMenuBadge>
+            {exigenciasPendentes + mensagensNaoLidas > 0 ? (
+              <SidebarMenuBadge>{exigenciasPendentes + mensagensNaoLidas}</SidebarMenuBadge>
             ) : null}
           </SidebarMenuItem>
         </SidebarMenu>
