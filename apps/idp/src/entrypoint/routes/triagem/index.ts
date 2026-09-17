@@ -24,6 +24,16 @@ const okFaseResponse = {
   properties: { ok: { type: 'boolean' } },
 } as const
 
+const okAnaliseStatusResponse = {
+  type: 'object',
+  additionalProperties: false,
+  required: ['ok', 'analiseStatus'],
+  properties: {
+    ok: { type: 'boolean' },
+    analiseStatus: { type: 'string', enum: ['rascunho', 'enviada'] },
+  },
+} as const
+
 const errorResponse = {
   type: 'object',
   additionalProperties: false,
@@ -378,7 +388,7 @@ export const triagemRoutes: FastifyPluginAsync<AppDependencies> = async (app, de
               ? 'Envia a análise ao contribuinte (passa a ficar visível)'
               : 'Retoma a análise (volta a rascunho; contribuinte deixa de ver as novas mudanças)',
           params: procParams,
-          response: { 200: okFaseResponse, 404: errorResponse },
+          response: { 200: okAnaliseStatusResponse, 404: errorResponse },
         },
       },
       async (request, reply) => {
