@@ -158,7 +158,19 @@ export function TriagemListPage() {
 
         {query.data && query.data.processos.length > 0 ? (
           <div className="flex flex-col gap-4">
-            <IndicadoresPanel processos={query.data.processos} />
+            <section className="flex flex-col gap-3" aria-label="Visão geral da triagem">
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <h2 className="font-medium text-sm">Visão geral</h2>
+                <Link
+                  to="/map"
+                  className={cn(buttonVariants({ variant: 'outline', size: 'sm' }), 'w-fit')}
+                >
+                  <MapIcon data-icon="inline-start" />
+                  Mapa de Pernambuco
+                </Link>
+              </div>
+              <IndicadoresPanel processos={query.data.processos} />
+            </section>
             <div className="flex flex-col gap-2">
               {query.data.processos.map((p) => (
                 <Link
